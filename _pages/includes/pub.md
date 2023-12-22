@@ -25,7 +25,7 @@
 </div>
 </div>
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">NeurIPS 2022 <span style="color:red">(Spotlight)</span></div><img src='images/ddb.png' alt="sym" width="100%"></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">NeurIPS 2022 <span style="color:yellow">(Spotlight)</span></div><img src='images/ddb.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
 [Deliberated Domain Bridging for Domain Adaptive Semantic Segmentation](https://arxiv.org/pdf/2209.07695.pdf) \\

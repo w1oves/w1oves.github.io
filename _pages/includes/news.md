@@ -1,4 +1,5 @@
 # 🔥 News
+- *2023.10*: 🔥 [Rein](https://arxiv.org/pdf/2312.04265.pdf) is released and achieves SOTA in domain generalized semantic segmentation!
 - *2023.07*: 🎉 [DTP](https://arxiv.org/pdf/2307.09362.pdf) is accepted in ICCV 2023 and achieves SOTA in night-time and full-time semantic segmentation!
 - *2022.10*: Our [DDB](https://proceedings.neurips.cc/paper_files/paper/2022/hash/61aa557643ae8709b6a4f41140b2234a-Abstract-Conference.html) receives the Spotlight Award in NeurIPS 2022!
 - *2022.09*: [DDB](https://proceedings.neurips.cc/paper_files/paper/2022/hash/61aa557643ae8709b6a4f41140b2234a-Abstract-Conference.html) is accepted in NeurIPS 2022 and achieves SOTA with ResNet counterparts on the single-source, multi-source, and multi-target domain-adaptive semantic segmentation tasks!
