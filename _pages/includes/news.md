@@ -1,9 +1,5 @@
 # 🔥 News
-- *2023.05*: 🎉 Five papers are accepted by ACL 2023
-- *2023.04*: 🔥 We release [AudioGPT](https://github.com/AIGC-Audio/AudioGPT) (⭐️6k+)
-- *2023.04*: 🎉 One paper ([Make-an-Audio](https://text-to-audio.github.io/)) is accepted by ICML 2023
-- *2023.01*: DiffSinger was introduced in [a very popular video](https://www.bilibili.com/video/BV1uM411t7ZJ) (2000k+ views) in Bilibili!
-- *2023.01*: Three papers are accepted by ICLR 2023!
-- *2023.01*: I join [Bytedance AI Lab, Speech & Audio Team](https://ailab.bytedance.com/) <img src='./images/tiktok.png' style='width: 6em;'> as a research scientist in Singapore!
-- *2022.12*: 🎉 My [google scholar](https://scholar.google.com/citations?user=4FA6C0AAAAAJ) citations have exceeded 2000!
-- *2022.02*: I release a modern and responsive academic personal [homepage template](https://github.com/RayeRen/acad-homepage.github.io). Welcome to STAR and FORK!
+- *2023.07*: 🎉 [DTP](https://arxiv.org/pdf/2307.09362.pdf) is accepted in ICCV 2023 and achieves SOTA in night-time and full-time semantic segmentation!
+- *2022.10*: Our [DDB](https://proceedings.neurips.cc/paper_files/paper/2022/hash/61aa557643ae8709b6a4f41140b2234a-Abstract-Conference.html) receives the Spotlight Award in NeurIPS 2022!
+- *2022.09*: [DDB](https://proceedings.neurips.cc/paper_files/paper/2022/hash/61aa557643ae8709b6a4f41140b2234a-Abstract-Conference.html) is accepted in NeurIPS 2022 and achieves SOTA with ResNet counterparts on the single-source, multi-source, and multi-target domain-adaptive semantic segmentation tasks!
+- *2022.03*: A discriminator-free adversarial domain adaptation framework [DALN](https://openaccess.thecvf.com/content/CVPR2022/html/Chen_Reusing_the_Task-Specific_Classifier_as_a_Discriminator_Discriminator-Free_Adversarial_Domain_CVPR_2022_paper.html) is accepted in CVPR 2022!
