@@ -6,7 +6,7 @@
 # `jekyll serve`. If you change this file, please restart the server process.
 
 # Site Settings
-title                    : "Zhixiang Wei"
+title                    : "Zhixiang Wei (魏智翔)"
 description              : "A Ph.D. candidate working on segmentation, computer vision, and deep learning."
 repository               : "w1oves/w1oves.github.io"
 google_scholar_stats_use_cdn : true
@@ -21,7 +21,7 @@ baidu_site_verification  : code-ZxFK3f4pfb
 
 # Site Author
 author:
-  name             : "Zhixiang Wei\n(魏智翔)"
+  name             : "Zhixiang Wei (魏智翔)"
   avatar           : "images/zjz.jpg"
   bio              : "University of Science and Technology of China (USTC)"
   location         : "Hefei, China"
