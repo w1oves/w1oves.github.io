@@ -5,7 +5,7 @@
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge">In Submitting</div><img src='images/rein.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
-[Stronger, Fewer, & Superior: Harnessing Vision Foundation Models for Domain Generalized Semantic Segmentation](https://arxiv.org/pdf/2312.04265.pdf) \\
+[Stronger, Fewer, \& Superior: Harnessing Vision Foundation Models for Domain Generalized Semantic Segmentation](https://arxiv.org/pdf/2312.04265.pdf) \\
 **Zhixiang Wei**\*, Lin Chen\*, Yi Jin\*, Xiaoxiao Ma, Tianle Liu, Pengyang Ling, Ben Wang, Huaian Chen, Jinjin Zheng
 
 [![](https://img.shields.io/github/stars/w1oves/Rein?style=social&label=Rein+Stars)](https://github.com/w1oves/Rein) <strong><span class='show_paper_citations' data='4FA6C0AAAAAJ:qjMakFHDy7sC'></span></strong>
