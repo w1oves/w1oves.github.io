@@ -1,4 +1,6 @@
 # 🔥 News
+- *2024.01*: 🔥 [Rein](https://arxiv.org/pdf/2312.04265.pdf) achieves SOTA in Cityscapes $\rightarrow$ [ACDC](https://acdc.vision.ee.ethz.ch/submissions/65b6848187f1a5171cf44c34) test set! [![](https://img.shields.io/github/stars/w1oves/Rein?style=social&label=Rein+Stars)](https://github.com/w1oves/Rein) [![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/stronger-fewer-superior-harnessing-vision/domain-adaptation-on-cityscapes-to-acdc)](https://paperswithcode.com/sota/domain-adaptation-on-cityscapes-to-acdc?p=stronger-fewer-superior-harnessing-vision)
+- *2024.01*: 🔥 [MPI](https://arxiv.org/abs/2401.14966) and its [code](https://github.com/krennic999/MPI) is released and achieves SOTA in zero-shot denoising!
 - *2023.10*: 🔥 [Rein](https://arxiv.org/pdf/2312.04265.pdf) is released and achieves SOTA in domain generalized semantic segmentation!
 - *2023.07*: 🎉 [DTP](https://arxiv.org/pdf/2307.09362.pdf) is accepted in ICCV 2023 and achieves SOTA in night-time and full-time semantic segmentation!
 - *2022.10*: Our [DDB](https://proceedings.neurips.cc/paper_files/paper/2022/hash/61aa557643ae8709b6a4f41140b2234a-Abstract-Conference.html) receives the Spotlight Award in NeurIPS 2022!
