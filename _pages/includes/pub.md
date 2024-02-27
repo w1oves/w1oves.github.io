@@ -2,7 +2,7 @@
 # 📝 Publications 
 *(\* denotes equal contribution.)*
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">In Submitting</div><img src='images/rein.png' alt="sym" width="100%"></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">CVPR 2024</div><img src='images/rein.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
 [Stronger, Fewer, & Superior: Harnessing Vision Foundation Models for Domain Generalized Semantic Segmentation](https://arxiv.org/pdf/2312.04265.pdf) \\
