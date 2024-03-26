@@ -14,7 +14,7 @@ jobs:
         cd ./github_myprofile_updater
         python3 update.py
         git init
-        git config --local user.name "w1oves"
+        git config --local user.name "${GITHUB_ACTOR}"
         git config --local user.email "18297901734@163.com"
         export remote_repo="https://${GITHUB_ACTOR}:${{ secrets.GITHUB_TOKEN }}@github.com/w1oves/w1oves.git"
         git add README.md
