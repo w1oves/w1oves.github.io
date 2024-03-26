@@ -17,7 +17,7 @@ jobs:
         git config --local user.name "${GITHUB_ACTOR}"
         git config --local user.email "18297901734@163.com"
         export remote_repo="https://${GITHUB_ACTOR}:${{ secrets.GHRS_GITHUB_API_TOKEN }}@github.com/w1oves/w1oves.git"
-        echo "https://${GITHUB_ACTOR}:${{ secrets.GHRS_GITHUB_API_TOKEN }}@github.com/w1oves/w1oves.git"
+        echo "echo: https://${GITHUB_ACTOR}:${{ secrets.GHRS_GITHUB_API_TOKEN }}@github.com/w1oves/w1oves.git"
         git add README.md
         git add images
         git commit -m "update my description automatically"
