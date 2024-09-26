@@ -1,4 +1,5 @@
 # 🔥 News
+- *2024.09*: 🔥 Delighted to announce that [Masked Pre-trained Model Enables Universal Zero-shot Denoiser](https://arxiv.org/abs/2401.14966) were accepted by NeurIPS 2024!
 - *2024.02*: 🔥 Rein is accepted in CVPR 2024! [[Project Page](https://zxwei.site/rein/)]
 
 - *2024.01*: 🔥 [Rein](https://arxiv.org/pdf/2312.04265.pdf) achieves SOTA in Cityscapes $\rightarrow$ [ACDC](https://acdc.vision.ee.ethz.ch/submissions/65b6848187f1a5171cf44c34) test set generalization! [![](https://img.shields.io/github/stars/w1oves/Rein?style=social&label=Rein+Stars)](https://github.com/w1oves/Rein) [![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/stronger-fewer-superior-harnessing-vision/domain-adaptation-on-cityscapes-to-acdc)](https://paperswithcode.com/sota/domain-adaptation-on-cityscapes-to-acdc?p=stronger-fewer-superior-harnessing-vision)
