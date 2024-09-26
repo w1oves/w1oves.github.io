@@ -48,3 +48,6 @@ Lin Chen\*, Huaian Chen\*, **Zhixiang Wei**, Xin Jin, Xiao Tan, Yi Jin, Enhong C
 - We reuse the category classifier as a discriminator to form a discriminator-free adversarial learning framework.
 </div>
 </div>
+
+
+- `NeurIPS 2024` [Masked Pre-trained Model Enables Universal Zero-shot Denoiser](https://arxiv.org/abs/2401.14966), Xiaoxiao Ma, **Zhixiang Wei**\*, et al. [![](https://img.shields.io/github/stars/walker-hyf/ECSS?style=social&label=Code+Stars)](https://github.com/krennic999/MPI)
