@@ -2,6 +2,8 @@
 # 📝 Publications 
 *(\* denotes equal contribution.)*
 
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">投稿中</div><img src='images/teaser.png' alt="sym" width="100%"></div></div>
+
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge">CVPR 2024</div><img src='images/rein.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
