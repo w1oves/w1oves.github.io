@@ -12,11 +12,12 @@
   [![](https://img.shields.io/github/stars/w1oves/DTP?style=social&label=DTP+Stars)](https://github.com/w1oves/DTP)
 
 ### Co-First Author
+- ``NIPS 2022 Spotlight`` [Deliberated Domain Bridging for Domain Adaptive Semantic Segmentation](https://arxiv.org/pdf/2209.07695.pdf), [Lin Chen](https://lin-chen.site/)\*, [**Zhixiang Wei**](https://zxwei.site)\*, [Xin Jin](https://www.eitech.edu.cn/?tid=40&p=teacher)\*, Huaian Chen, et al.
+  [![](https://img.shields.io/github/stars/xiaoachen98/DDB?style=social&label=DDB+Stars)](https://github.com/xiaoachen98/DDB)
+
 - ``NeurIPS 2024`` [Masked Pre-trained Model Enables Universal Zero-shot Denoiser](https://arxiv.org/abs/2401.14966), [Xiaoxiao Ma](https://krennic999.github.io/)\*, [**Zhixiang Wei**](https://zxwei.site)\*, Yi Jin, et al. 
   [![](https://img.shields.io/github/stars/krennic999/MPI?style=social&label=MPI+Stars)](https://github.com/krennic999/MPI)
 
-- ``NIPS 2022 Spotlight`` [Deliberated Domain Bridging for Domain Adaptive Semantic Segmentation](https://arxiv.org/pdf/2209.07695.pdf), [Lin Chen](https://lin-chen.site/)\*, [**Zhixiang Wei**](https://zxwei.site)\*, [Xin Jin](https://www.eitech.edu.cn/?tid=40&p=teacher)\*, Huaian Chen, et al.
-  [![](https://img.shields.io/github/stars/xiaoachen98/DDB?style=social&label=DDB+Stars)](https://github.com/xiaoachen98/DDB)
 
 ### Co-Author
 - ``CVPR 2022`` [Reusing the Task-specific Classifier as a Discriminator: Discriminator-free Adversarial Domain Adaptation](https://openaccess.thecvf.com/content/CVPR2022/papers/Chen_Reusing_the_Task-Specific_Classifier_as_a_Discriminator_Discriminator-Free_Adversarial_Domain_CVPR_2022_paper.pdf), [Lin Chen](https://lin-chen.site/)\*, Huaian Chen\*, [**Zhixiang Wei**](https://zxwei.site), [Xin Jin](https://www.eitech.edu.cn/?tid=40&p=teacher), Xiao Tan, Yi Jin, [Enhong Chen](http://staff.ustc.edu.cn/~cheneh/).
