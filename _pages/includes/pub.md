@@ -56,8 +56,16 @@ GitHub comming soon
 </div>
 </div>
 
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">NeurIPS 2024</div><img src='images/MPI.png' alt="sym" width="100%"></div></div>
+<div class='paper-box-text' markdown="1">
+
 ### Co-First Author
-- `NeurIPS 2024` [Masked Pre-trained Model Enables Universal Zero-shot Denoiser](https://arxiv.org/abs/2401.14966), [Xiaoxiao Ma](https://krennic999.github.io/)\*, [**Zhixiang Wei**](https://zxwei.site)\*, et al.  [![](https://img.shields.io/github/stars/walker-hyf/ECSS?style=social&label=Code+Stars)](https://github.com/krennic999/MPI)
+[Masked Pre-trained Model Enables Universal Zero-shot Denoiser](https://arxiv.org/abs/2401.14966) \\
+, [Xiaoxiao Ma](https://krennic999.github.io/)\*, [**Zhixiang Wei**](https://zxwei.site)\*, et al.  
+
+[![](https://img.shields.io/github/stars/walker-hyf/ECSS?style=social&label=Code+Stars)](https://github.com/krennic999/MPI)
+</div>
+</div>
 
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge">CVPR 2022</div><img src='images/daln.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
