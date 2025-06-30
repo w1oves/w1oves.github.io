@@ -64,6 +64,7 @@ GitHub comming soon
 , [Xiaoxiao Ma](https://krennic999.github.io/)\*, [**Zhixiang Wei**](https://zxwei.site)\*, et al.  
 
 [![](https://img.shields.io/github/stars/walker-hyf/ECSS?style=social&label=Code+Stars)](https://github.com/krennic999/MPI)
+- MPI is a zero-shot denoising pipeline designed for many types of noise degradations.
 </div>
 </div>
 
