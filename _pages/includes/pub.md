@@ -1,10 +1,12 @@
 
 # 📝 Publications 
 *(\* denotes equal contribution.)*
-### First Author
+
+
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge">ICCV 2025</div><img src='images/iccv25.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
+### First Author
 HQCLIP: Leveraging Vision-Language Models to Create High-Quality Image-Text Datasets and CLIP Models (arXiV comming soon) \\
 
 [**Zhixiang Wei**](https://zxwei.site)\*, [Guangting Wang](https://scholar.google.com/citations?user=cKY8e8sAAAAJ&hl=zh-CN)\*, [Xiaoxiao Ma](https://krennic999.github.io/), et al.
@@ -19,6 +21,7 @@ GitHub comming soon
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge">CVPR 2024</div><img src='images/rein.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
+### First Author
 [Stronger, Fewer, & Superior: Harnessing Vision Foundation Models for Domain Generalized Semantic Segmentation](https://arxiv.org/pdf/2312.04265.pdf) \\
 [**Zhixiang Wei**](https://zxwei.site)\*, [Lin Chen](https://lin-chen.site/)\*, Yi Jin\*, [Xiaoxiao Ma](https://krennic999.github.io/), et al.
 
@@ -32,6 +35,7 @@ GitHub comming soon
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge">ICCV 2023</div><img src='images/dtp.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
+### First Author
 [Disentangle then Parse: Night-time Semantic Segmentation with Illumination Disentanglement](https://arxiv.org/pdf/2307.09362.pdf) \\
 [**Zhixiang Wei**](https://zxwei.site)\*, [Lin Chen](https://lin-chen.site/)\*, et al.
 
@@ -52,12 +56,11 @@ GitHub comming soon
 </div>
 </div>
 
+### Co-First Author
+- `NeurIPS 2024` [Masked Pre-trained Model Enables Universal Zero-shot Denoiser](https://arxiv.org/abs/2401.14966), [Xiaoxiao Ma](https://krennic999.github.io/)\*, [**Zhixiang Wei**](https://zxwei.site)\*, et al.  [![](https://img.shields.io/github/stars/walker-hyf/ECSS?style=social&label=Code+Stars)](https://github.com/krennic999/MPI)
 
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge">CVPR 2022</div><img src='images/daln.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
-
-- `NeurIPS 2024` [Masked Pre-trained Model Enables Universal Zero-shot Denoiser](https://arxiv.org/abs/2401.14966), [Xiaoxiao Ma](https://krennic999.github.io/)\*, [**Zhixiang Wei**](https://zxwei.site)\*, et al.  [![](https://img.shields.io/github/stars/walker-hyf/ECSS?style=social&label=Code+Stars)](https://github.com/krennic999/MPI)
-
 
 ### Co-Author
 [Reusing the Task-specific Classifier as a Discriminator: Discriminator-free Adversarial Domain Adaptation](https://openaccess.thecvf.com/content/CVPR2022/papers/Chen_Reusing_the_Task-Specific_Classifier_as_a_Discriminator_Discriminator-Free_Adversarial_Domain_CVPR_2022_paper.pdf) \\
