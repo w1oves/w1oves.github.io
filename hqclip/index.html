@@ -2,39 +2,30 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
-  <!-- Replace the content tag with appropriate information -->
   <meta name="description" content="HQ-CLIP">
   <meta property="og:title" content="HQ-CLIP"/>
   <meta property="og:description" content="[ICCV 2025] HQ-CLIP: Leveraging Large Vision-Language Models to Create High-Quality Image-Text Datasets and CLIP Models"/>
   <meta property="og:url" content="zxwei.site/hqclip"/>
-  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
   <meta property="og:image" content="../images/iccv25.png" />
   <meta property="og:image:width" content="1200"/>
   <meta property="og:image:height" content="630"/>
 
-
   <meta name="twitter:title" content="Rein">
   <meta name="twitter:description" content="[ICCV 2025] HQ-CLIP: Leveraging Large Vision-Language Models to Create High-Quality Image-Text Datasets and CLIP Models">
-  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
   <meta name="twitter:image" content="../images/iccv25.png">
   <meta name="twitter:card" content="summary_large_image">
-  <!-- Keywords for your paper to be indexed by-->
   <meta name="keywords" content="HQ-CLIP">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-
   <title>[ICCV 2025] HQ-CLIP</title>
   <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
-  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
-  rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
 
   <link rel="stylesheet" href="static/css/bulma.min.css">
   <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
   <link rel="stylesheet" href="static/css/bulma-slider.min.css">
   <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
-  <link rel="stylesheet"
-  href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <link rel="stylesheet" href="static/css/index.css">
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -46,7 +37,7 @@
 </head>
 <body>
 
-
+  <!-- 顶部标题和作者信息 -->
   <section class="hero">
     <div class="hero-body">
       <div class="container is-max-desktop">
@@ -55,293 +46,278 @@
             <h1 class="title is-1 publication-title" style="font-family: Helvetica, sans-serif;">HQ-CLIP:</h1>
             <h3 class="title is-1 publication-title" style="font-family: Helvetica, sans-serif;">Leveraging Large Vision-Language Models to Create High-Quality Image-Text Datasets and CLIP Models</h3>
             <div class="is-size-5 publication-authors">
-              <!-- Paper authors -->
+              <!-- 论文作者 -->
               <span class="author-block">
-                <a href="https://zxwei.site" target="_blank">Zhixiang Wei</a><sup>*</sup>,</span>
-                <span class="author-block">
-                  <a href="https://scholar.google.com/citations?user=cKY8e8sAAAAJ&hl=zh-CN" target="_blank">Guangting Wang</a><sup>*</sup>,</span>
-                  <span class="author-block">
-                    <a href="https://krennic999.github.io/" target="_blank">Xiaoxiao Ma</a>, Ke Mei, Huaian Chen, Yi Jin, Fengyun Rao.
+                <a href="https://zxwei.site" target="_blank">Zhixiang Wei</a><sup>*</sup>,
+              </span>
+              <span class="author-block">
+                <a href="https://scholar.google.com/citations?user=cKY8e8sAAAAJ&hl=zh-CN" target="_blank">Guangting Wang</a><sup>*</sup>,
+              </span>
+              <span class="author-block">
+                <a href="https://krennic999.github.io/" target="_blank">Xiaoxiao Ma</a>,
+                Ke Mei, Huaian Chen, Yi Jin, Fengyun Rao.
+              </span>
+            </div>
+
+            <div class="is-size-5 publication-authors">
+              <div class="author-block"><sup>1&nbsp;</sup>University of Science and Technology of China</div>
+              <div class="author-block"><sup>2&nbsp;</sup>WeChat Vision, Tencent Inc.</div><br>
+              <span class="author-block">ICCV 2025</span>
+              <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span>
+            </div>
+
+            <!-- 按钮区域 - 排列为两行 -->
+            <div class="column has-text-centered">
+              <div class="publication-links">
+                <!-- 第一行按钮 -->
+                <div class="button-row">
+                  <span class="link-block">
+                    <a href="https://arxiv.org/pdf/xxx.pdf" target="_blank"
+                      class="external-link button is-normal is-rounded is-dark">
+                      <span class="icon">
+                        <i class="fas fa-file-pdf"></i>
+                      </span>
+                      <span>Paper</span>
+                    </a>
                   </span>
-                  </div>
 
-                  <div class="is-size-5 publication-authors">
-                    <div class="author-block"><sup>1&nbsp;</sup>University of Science and Technology of China</div>
-                    &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-                    <div class="author-block"><sup>2&nbsp;</sup>WeChat Vision, Tencent Inc.</div><br>
-                    <span class="author-block"><br>ICCV 2025</span>
-                    <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span>
-                  </div>
-
-                  <div class="column has-text-centered">
-                    <div class="publication-links">
-                         <!-- Arxiv PDF link -->
-                      <span class="link-block">
-                        <a href="https://arxiv.org/pdf/xxx.pdf" target="_blank"
-                        class="external-link button is-normal is-rounded is-dark">
-                        <span class="icon">
-                          <i class="fas fa-file-pdf"></i>
-                        </span>
-                        <span>Paper</span>
-                      </a>
-                    </span>
-
-                  <!-- Github link -->
                   <span class="link-block">
                     <a href="https://github.com/w1oves/hqclip" target="_blank"
-                    class="external-link button is-normal is-rounded is-dark">
-                    <span class="icon">
-                      <i class="fab fa-github"></i>
-                    </span>
-                    <span>Code</span>
-                  </a>
-                </span>
-
-                <span class="link-block">
-                  <a href="https://arxiv.org/abs/2312.04265" target="_blank"
-                  class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                    <i class="ai ai-arxiv"></i>
+                      class="external-link button is-normal is-rounded is-dark">
+                      <span class="icon">
+                        <i class="fab fa-github"></i>
+                      </span>
+                      <span>Code</span>
+                    </a>
                   </span>
-                  <span>arXiv</span>
-                </a>
-              </span>
-              
 
-                <span class="link-block">
-                  <a href="https://huggingface.co/spaces/zhixiangwei/hqclip" target="_blank"
-                    class="external-link button is-normal is-rounded is-dark">
-                    <span class="icon">
-                      <i class="fab fa-github"></i>
-                    </span>
-                    <span>Demo</span>
-                  </a>
-                </span>
+                  <span class="link-block">
+                    <a href="https://arxiv.org/abs/2312.04265" target="_blank"
+                      class="external-link button is-normal is-rounded is-dark">
+                      <span class="icon">
+                        <i class="ai ai-arxiv"></i>
+                      </span>
+                      <span>arXiv</span>
+                    </a>
+                  </span>
 
-                <span class="link-block">
-                  <a href="https://huggingface.co/datasets/zhixiangwei/VLM-1B" target="_blank"
-                    class="external-link button is-normal is-rounded is-dark">
-                    <span class="icon">
-                      <i class="fab fa-github"></i>
-                    </span>
-                    <span>VLM-1B</span>
-                  </a>
-                </span>
+                  <span class="link-block">
+                    <a href="https://huggingface.co/spaces/zhixiangwei/hqclip" target="_blank"
+                      class="external-link button is-normal is-rounded is-dark">
+                      <span class="icon">
+                        <i class="fab fa-github"></i>
+                      </span>
+                      <span>Demo</span>
+                    </a>
+                  </span>
 
-                <span class="link-block">
-                  <a href="https://huggingface.co/datasets/zhixiangwei/VLM-150M" target="_blank"
-                    class="external-link button is-normal is-rounded is-dark">
-                    <span class="icon">
-                      <i class="fab fa-github"></i>
-                    </span>
-                    <span>VLM-150M</span>
-                  </a>
-                </span>
+                  <span class="link-block">
+                    <a href="https://huggingface.co/datasets/zhixiangwei/VLM-1B" target="_blank"
+                      class="external-link button is-normal is-rounded is-dark">
+                      <span class="icon">
+                        <i class="fab fa-github"></i>
+                      </span>
+                      <span>VLM-1B</span>
+                    </a>
+                  </span>
+                </div>
 
-                <span class="link-block">
-                  <a href="https://huggingface.co/zhixiangwei/qwen2-7b-full" target="_blank"
-                    class="external-link button is-normal is-rounded is-dark">
-                    <span class="icon">
-                      <i class="fab fa-github"></i>
-                    </span>
-                    <span>Recaption Model</span>
-                  </a>
-                </span>
+                <!-- 第二行按钮 -->
+                <div class="button-row" style="margin-top: 10px;">
+                  <span class="link-block">
+                    <a href="https://huggingface.co/datasets/zhixiangwei/VLM-150M" target="_blank"
+                      class="external-link button is-normal is-rounded is-dark">
+                      <span class="icon">
+                        <i class="fab fa-github"></i>
+                      </span>
+                      <span>VLM-150M</span>
+                    </a>
+                  </span>
 
-                <span class="link-block">
-                  <a href="https://huggingface.co/zhixiangwei/vlm150m-hqclip-large-vitb16" target="_blank"
-                    class="external-link button is-normal is-rounded is-dark">
-                    <span class="icon">
-                      <i class="fab fa-github"></i>
-                    </span>
-                    <span>HQ-CLIP-B</span>
-                  </a>
-                </span>
-                
-                <span class="link-block">
-                  <a href="https://huggingface.co/zhixiangwei/vlm1b-hqclip-xlarge-vitl14-clipa" target="_blank"
-                    class="external-link button is-normal is-rounded is-dark">
-                    <span class="icon">
-                      <i class="fab fa-github"></i>
-                    </span>
-                    <span>HQ-CLIP-L</span>
-                  </a>
-                </span>
+                  <span class="link-block">
+                    <a href="https://huggingface.co/zhixiangwei/qwen2-7b-full" target="_blank"
+                      class="external-link button is-normal is-rounded is-dark">
+                      <span class="icon">
+                        <i class="fab fa-github"></i>
+                      </span>
+                      <span>Recaption Model</span>
+                    </a>
+                  </span>
 
-                <span class="link-block">
-                  <a href="https://huggingface.co/zhixiangwei/hqclip-openai-large-ft-vlm1b" target="_blank"
-                    class="external-link button is-normal is-rounded is-dark">
-                    <span class="icon">
-                      <i class="fab fa-github"></i>
-                    </span>
-                    <span>HQ-OpenAI-CLIP-L</span>
-                  </a>
-                </span>
+                  <span class="link-block">
+                    <a href="https://huggingface.co/zhixiangwei/vlm150m-hqclip-large-vitb16" target="_blank"
+                      class="external-link button is-normal is-rounded is-dark">
+                      <span class="icon">
+                        <i class="fab fa-github"></i>
+                      </span>
+                      <span>HQ-CLIP-B</span>
+                    </a>
+                  </span>
+                  
+                  <span class="link-block">
+                    <a href="https://huggingface.co/zhixiangwei/vlm1b-hqclip-xlarge-vitl14-clipa" target="_blank"
+                      class="external-link button is-normal is-rounded is-dark">
+                      <span class="icon">
+                        <i class="fab fa-github"></i>
+                      </span>
+                      <span>HQ-CLIP-L</span>
+                    </a>
+                  </span>
 
-                <!-- ArXiv abstract Link -->
-                
+                  <span class="link-block">
+                    <a href="https://huggingface.co/zhixiangwei/hqclip-openai-large-ft-vlm1b" target="_blank"
+                      class="external-link button is-normal is-rounded is-dark">
+                      <span class="icon">
+                        <i class="fab fa-github"></i>
+                      </span>
+                      <span>HQ-OpenAI-CLIP-L</span>
+                    </a>
+                  </span>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-
-<!-- Teaser video-->
-<section class="hero teaser">
-  <div class="container is-max-desktop">
-    <div class="hero-body">
-      <video poster="" id="tree" autoplay controls muted loop height="100%">
-        <!-- Your video here -->
-        <source src="https://github.com/w1oves/Rein/releases/download/Videos/all.mp4"
-        type="video/mp4">
-      </video>
-      <h2 class="subtitle has-text-centered">
-        Trained on Cityscapes, <b>Rein</b> generalizes to <b>unseen</b> driving scenes and cities:
-        <br>Nighttime Shanghai, Foggy Countryside, and Rainy Hollywood.
-      </h2>
+  <!-- 预览视频 -->
+  <section class="hero teaser">
+    <div class="container is-max-desktop">
+      <div class="hero-body">
+        <video poster="" id="tree" autoplay controls muted loop height="100%">
+          <source src="https://github.com/w1oves/Rein/releases/download/Videos/all.mp4" type="video/mp4">
+        </video>
+        <h2 class="subtitle has-text-centered">
+          Trained on Cityscapes, <b>Rein</b> generalizes to <b>unseen</b> driving scenes and cities:
+          <br>Nighttime Shanghai, Foggy Countryside, and Rainy Hollywood.
+        </h2>
+      </div>
     </div>
-  </div>
-</section>
-<!-- End teaser video -->
+  </section>
 
-<!-- Paper abstract -->
-<section class="section hero is-light">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Abstract</h2>
-        <div class="content has-text-justified">              
-          <p>
-            In this paper, we first assess and harness various Vision Foundation Models (VFMs) in the context of Domain Generalized Semantic Segmentation (DGSS). Driven by the motivation that Leveraging Stronger pre-trained models and Fewer trainable parameters for Superior generalizability, we introduce a robust fine-tuning approach, namely Rein, to parameter-efficiently harness VFMs for DGSS. Built upon a set of trainable tokens, each linked to distinct instances, Rein precisely refines and forwards the feature maps from each layer to the next layer within the backbone. This process produces diverse refinements for different categories within a single image. With fewer trainable parameters, Rein efficiently fine-tunes VFMs for DGSS tasks, surprisingly surpassing full parameter fine-tuning. Extensive experiments across various settings demonstrate that Rein significantly outperforms state-of-the-art methods. Remarkably, with just an extra 1% of trainable parameters within the frozen backbone, Rein achieves a mIoU of 78.4% on the Cityscapes, without accessing any real urban-scene datasets.
-          </p>
-          <a href="https://paperswithcode.com/sota/domain-adaptation-on-cityscapes-to-acdc?p=stronger-fewer-superior-harnessing-vision">
-            <img src="https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/stronger-fewer-superior-harnessing-vision/domain-adaptation-on-cityscapes-to-acdc" alt="SOTA Domain Adaptation on Cityscapes to ACDC">
-          </a>
-          <a href="https://paperswithcode.com/sota/domain-generalization-on-gta-to-avg?p=stronger-fewer-superior-harnessing-vision">
-            <img src="https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/stronger-fewer-superior-harnessing-vision/domain-generalization-on-gta-to-avg" alt="SOTA Domain Generalization on GTA to AVG">
-          </a>
-          <a href="https://paperswithcode.com/sota/domain-generalization-on-gta5-to-cityscapes?p=stronger-fewer-superior-harnessing-vision">
-            <img src="https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/stronger-fewer-superior-harnessing-vision/domain-generalization-on-gta5-to-cityscapes" alt="SOTA Domain Generalization on GTA5 to Cityscapes">
-          </a>
+  <!-- 摘要部分 -->
+  <section class="section hero is-light">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Abstract</h2>
+          <div class="content has-text-justified">              
+            <p>
+              In this paper, we first assess and harness various Vision Foundation Models (VFMs) in the context of Domain Generalized Semantic Segmentation (DGSS). Driven by the motivation that Leveraging Stronger pre-trained models and Fewer trainable parameters for Superior generalizability, we introduce a robust fine-tuning approach, namely Rein, to parameter-efficiently harness VFMs for DGSS. Built upon a set of trainable tokens, each linked to distinct instances, Rein precisely refines and forwards the feature maps from each layer to the next layer within the backbone. This process produces diverse refinements for different categories within a single image. With fewer trainable parameters, Rein efficiently fine-tunes VFMs for DGSS tasks, surprisingly surpassing full parameter fine-tuning. Extensive experiments across various settings demonstrate that Rein significantly outperforms state-of-the-art methods. Remarkably, with just an extra 1% of trainable parameters within the frozen backbone, Rein achieves a mIoU of 78.4% on the Cityscapes, without accessing any real urban-scene datasets.
+            </p>
+            <a href="https://paperswithcode.com/sota/domain-adaptation-on-cityscapes-to-acdc?p=stronger-fewer-superior-harnessing-vision">
+              <img src="https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/stronger-fewer-superior-harnessing-vision/domain-adaptation-on-cityscapes-to-acdc" alt="SOTA Domain Adaptation on Cityscapes to ACDC">
+            </a>
+            <a href="https://paperswithcode.com/sota/domain-generalization-on-gta-to-avg?p=stronger-fewer-superior-harnessing-vision">
+              <img src="https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/stronger-fewer-superior-harnessing-vision/domain-generalization-on-gta-to-avg" alt="SOTA Domain Generalization on GTA to AVG">
+            </a>
+            <a href="https://paperswithcode.com/sota/domain-generalization-on-gta5-to-cityscapes?p=stronger-fewer-superior-harnessing-vision">
+              <img src="https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/stronger-fewer-superior-harnessing-vision/domain-generalization-on-gta5-to-cityscapes" alt="SOTA Domain Generalization on GTA5 to Cityscapes">
+            </a>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
-<!-- End paper abstract -->
-<!-- Image carousel -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <div id="results-carousel" class="carousel results-carousel">
-       <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/8fd046f2-e41d0000.jpg" alt="night"/>
-        <h2 class="subtitle has-text-centered">
-          Inference on unseen <b>night</b> image.
-        </h2>
-       </div>
-       <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/GOPR0477_frame_000949_rgb_anon.png" alt="foggy"/>
-        <h2 class="subtitle has-text-centered">
-          Inference on unseen <b>foggy</b> image.
-        </h2>
-       </div>
-       <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/GOPR0572_frame_000501_rgb_anon.png" alt="rainy"/>
-        <h2 class="subtitle has-text-centered">
-         Inference on unseen <b>rainy</b> image.
-       </h2>
-       </div>
-       <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/GOPR0494_frame_000134_rgb_anon.png" alt="snowy"/>
-        <h2 class="subtitle has-text-centered">
-          Inference on unseen <b>snowy</b> image.
-        </h2>
-       </div>
-       <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/nightbdd.jpg" alt="night"/>
-        <h2 class="subtitle has-text-centered">
-          Inference on unseen <b>night</b> image.
-        </h2>
-      </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/GOPR0478_frame_000526_rgb_anon.png" alt="foggy"/>
-        <h2 class="subtitle has-text-centered">
-          Inference on unseen <b>foggy</b> image.
-        </h2>
-      </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/GOPR0572_frame_000995_rgb_anon.png" alt="rainy"/>
-        <h2 class="subtitle has-text-centered">
-         Inference on unseen <b>rainy</b> image.
-       </h2>
-      </div>
-      <div class="item">
-      <!-- Your image here -->
-      <img src="static/images/GOPR0494_frame_000284_rgb_anon.png" alt="snowy"/>
-      <h2 class="subtitle has-text-centered">
-        Inference on unseen <b>snowy</b> image.
-      </h2>
-      </div>
-      <div class="item">
-      <!-- Your image here -->
-        <img src="static/images/GOPR0594_frame_000193_rgb_anon.png" alt="night"/>
-        <h2 class="subtitle has-text-centered">
-          Inference on unseen <b>night</b> image.
-        </h2>
-      </div>
-  </div>
- </div>
-</div>
-</section>
-<!-- End image carousel -->
+  </section>
 
-<section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title">Overview</h2>
-      <img  src="static/images/rein.png" width="100%" height="550">
-      </img>
+  <!-- 图片轮播 -->
+  <section class="hero is-small">
+    <div class="hero-body">
+      <div class="container">
+        <div id="results-carousel" class="carousel results-carousel">
+          <!-- 图片项列表 -->
+          <div class="item">
+            <img src="static/images/8fd046f2-e41d0000.jpg" alt="night"/>
+            <h2 class="subtitle has-text-centered">
+              Inference on unseen <b>night</b> image.
+            </h2>
+          </div>
+          <div class="item">
+            <img src="static/images/GOPR0477_frame_000949_rgb_anon.png" alt="foggy"/>
+            <h2 class="subtitle has-text-centered">
+              Inference on unseen <b>foggy</b> image.
+            </h2>
+          </div>
+          <div class="item">
+            <img src="static/images/GOPR0572_frame_000501_rgb_anon.png" alt="rainy"/>
+            <h2 class="subtitle has-text-centered">
+              Inference on unseen <b>rainy</b> image.
+            </h2>
+          </div>
+          <div class="item">
+            <img src="static/images/GOPR0494_frame_000134_rgb_anon.png" alt="snowy"/>
+            <h2 class="subtitle has-text-centered">
+              Inference on unseen <b>snowy</b> image.
+            </h2>
+          </div>
+          <div class="item">
+            <img src="static/images/nightbdd.jpg" alt="night"/>
+            <h2 class="subtitle has-text-centered">
+              Inference on unseen <b>night</b> image.
+            </h2>
+          </div>
+          <div class="item">
+            <img src="static/images/GOPR0478_frame_000526_rgb_anon.png" alt="foggy"/>
+            <h2 class="subtitle has-text-centered">
+              Inference on unseen <b>foggy</b> image.
+            </h2>
+          </div>
+          <div class="item">
+            <img src="static/images/GOPR0572_frame_000995_rgb_anon.png" alt="rainy"/>
+            <h2 class="subtitle has-text-centered">
+              Inference on unseen <b>rainy</b> image.
+            </h2>
+          </div>
+          <div class="item">
+            <img src="static/images/GOPR0494_frame_000284_rgb_anon.png" alt="snowy"/>
+            <h2 class="subtitle has-text-centered">
+              Inference on unseen <b>snowy</b> image.
+            </h2>
+          </div>
+          <div class="item">
+            <img src="static/images/GOPR0594_frame_000193_rgb_anon.png" alt="night"/>
+            <h2 class="subtitle has-text-centered">
+              Inference on unseen <b>night</b> image.
+            </h2>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
-<section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title">Framework</h2>
-      <img  src="static/images/framework.png" width="100%" height="550">
-      </img>
+  <!-- 概述部分 -->
+  <section class="hero is-small is-light">
+    <div class="hero-body">
+      <div class="container">
+        <h2 class="title">Overview</h2>
+        <img src="static/images/rein.png" width="100%" height="550">
       </div>
     </div>
   </section>
 
-<!-- Paper poster -->
-<section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title">Poster</h2>
-
-      <img  src="static/images/poster.png" width="100%" height="550">
-          </img>
-        
+  <!-- 框架部分 -->
+  <section class="hero is-small is-light">
+    <div class="hero-body">
+      <div class="container">
+        <h2 class="title">Framework</h2>
+        <img src="static/images/framework.png" width="100%" height="550">
       </div>
     </div>
   </section>
-<!--End paper poster -->
 
+  <!-- 海报部分 -->
+  <section class="hero is-small is-light">
+    <div class="hero-body">
+      <div class="container">
+        <h2 class="title">Poster</h2>
+        <img src="static/images/poster.png" width="100%" height="550">
+      </div>
+    </div>
+  </section>
 
-<!--BibTex citation -->
+  <!-- BibTeX 引用 -->
   <section class="section" id="BibTeX">
     <div class="container is-max-desktop content">
       <h2 class="title">BibTeX</h2>
@@ -354,33 +330,63 @@
     pages     = {28619-28630}
 }</code></pre>
     </div>
-</section>
-<!--End BibTex citation -->
+  </section>
 
-
+  <!-- 页脚 -->
   <footer class="footer">
-  <div class="container">
-    <div class="columns is-centered">
-      <div class="column is-8">
-        <div class="content">
-
-          <p>
-            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
-            You are free to borrow the of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
-            Commons Attribution-ShareAlike 4.0 International License</a>.
-          </p>
-
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-8">
+          <div class="content">
+            <p>
+              This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+              You are free to borrow the of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
+              Commons Attribution-ShareAlike 4.0 International License</a>.
+            </p>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</footer>
+  </footer>
 
-<!-- Statcounter tracking code -->
-  
-<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
-
-    <!-- End of Statcounter Code -->
-
-  </body>
-  </html>
+  <!-- 添加CSS样式 -->
+  <style>
+    .publication-links {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 20px;
+    }
+    
+    .button-row {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 10px;
+      width: 100%;
+      max-width: 900px;
+    }
+    
+    .link-block {
+      margin: 0 4px;
+    }
+    
+    /* 响应式设计 */
+    @media (max-width: 768px) {
+      .button-row {
+        flex-direction: column;
+        align-items: center;
+      }
+      
+      .link-block {
+        margin: 5px 0;
+        width: 100%;
+      }
+      
+      .link-block .button {
+        width: 250px;
+      }
+    }
+  </style>
+</body>
+</html>
