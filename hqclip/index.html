@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="description" content="HQ-CLIP">
@@ -10,11 +10,11 @@
   <meta property="og:image:width" content="1200"/>
   <meta property="og:image:height" content="630"/>
 
-  <meta name="twitter:title" content="Rein">
+  <meta name="twitter:title" content="HQ-CLIP">
   <meta name="twitter:description" content="[ICCV 2025] HQ-CLIP: Leveraging Large Vision-Language Models to Create High-Quality Image-Text Datasets and CLIP Models">
   <meta name="twitter:image" content="../images/iccv25.png">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="keywords" content="HQ-CLIP">
+  <meta name="keywords" content="HQ-CLIP, Vision-Language Models, CLIP, Image-Text Datasets">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>[ICCV 2025] HQ-CLIP</title>
@@ -34,365 +34,64 @@
   <script src="static/js/bulma-carousel.min.js"></script>
   <script src="static/js/bulma-slider.min.js"></script>
   <script src="static/js/index.js"></script>
-</head>
-<body>
-
-  <!-- 顶部标题和作者信息 -->
-<section class="hero">
-  <div class="hero-body">
-    <div class="container is-max-desktop">
-      <div class="columns is-centered">
-        <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title" style="font-family: Helvetica, sans-serif;">HQ-CLIP:</h1>
-          <h3 class="title is-1 publication-title" style="font-family: Helvetica, sans-serif;">Leveraging Large Vision-Language Models to Create High-Quality Image-Text Datasets and CLIP Models</h3>
-          <div class="is-size-5 publication-authors">
-            <!-- 论文作者 -->
-            <span class="author-block">
-              <a href="https://zxwei.site" target="_blank">Zhixiang Wei</a><sup>1&nbsp;</sup><sup>2&nbsp;</sup><sup>*</sup>,
-            </span>
-            <span class="author-block">
-              <a href="https://scholar.google.com/citations?user=cKY8e8sAAAAJ&hl=zh-CN" target="_blank">Guangting Wang</a><sup>2&nbsp;</sup><sup>*</sup>,
-            </span>
-            <span class="author-block">
-              <a href="https://krennic999.github.io/" target="_blank">Xiaoxiao Ma</a><sup>1&nbsp;</sup>,
-              Ke Mei<sup>2&nbsp;</sup>, Huaian Chen<sup>1&nbsp;</sup>, Yi Jin<sup>1&nbsp;</sup>, Fengyun Rao<sup>2&nbsp;</sup>.
-            </span>
-          </div>
-
-          <div class="is-size-5 publication-authors">
-            <div class="author-block"><sup>1&nbsp;</sup>University of Science and Technology of China</div>
-            <div class="author-block"><sup>2&nbsp;</sup>WeChat Vision, Tencent Inc.</div><br>
-            <span class="author-block">ICCV 2025</span>
-            <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span>
-          </div>
-
-          <!-- 优化后的按钮区域 - 清晰的两行排列 -->
-          <div class="column has-text-centered">
-            <div class="publication-links">
-              <!-- 第一行按钮（主要入口）-->
-              <div class="button-row">
-                <!-- ArXiv链接（学术图标） -->
-                <span class="link-block">
-                  <a href="https://arxiv.org/abs/2312.04265" target="_blank"
-                    class="external-link button is-normal is-rounded is-dark">
-                    <span class="icon">
-                      <i class="ai ai-arxiv"></i>
-                    </span>
-                    <span>arXiv</span>
-                  </a>
-                </span>
-                
-                <!-- GitHub链接（代码仓库） -->
-                <span class="link-block">
-                  <a href="https://github.com/w1oves/hqclip" target="_blank"
-                    class="external-link button is-normal is-rounded is-dark">
-                    <span class="icon">
-                      <i class="fab fa-github"></i>
-                    </span>
-                    <span>Code</span>
-                  </a>
-                </span>
-                
-                <!-- Demo链接（在线演示） -->
-                <span class="link-block">
-                  <a href="https://huggingface.co/spaces/zhixiangwei/hqclip" target="_blank"
-                    class="external-link button is-normal is-rounded is-info">
-                    <span class="icon">
-                      <i class="fas fa-play-circle"></i>
-                    </span>
-                    <span>Live Demo</span>
-                  </a>
-                </span>
-              </div>
-              
-              <!-- 第二行按钮（数据集和模型）-->
-              <div class="button-row" style="margin-top: 10px;">
-                <!-- 数据集链接1（数据库图标） -->
-                <span class="link-block">
-                  <a href="https://huggingface.co/datasets/zhixiangwei/VLM-150M" target="_blank"
-                    class="external-link button is-normal is-rounded is-warning">
-                    <span class="icon">
-                      <i class="fas fa-database"></i>
-                    </span>
-                    <span>VLM-150M Dataset</span>
-                  </a>
-                </span>
-                
-                <!-- 数据集链接2（数据库图标） -->
-                <span class="link-block">
-                  <a href="https://huggingface.co/datasets/zhixiangwei/VLM-1B" target="_blank"
-                    class="external-link button is-normal is-rounded is-warning">
-                    <span class="icon">
-                      <i class="fas fa-database"></i>
-                    </span>
-                    <span>VLM-1B Dataset</span>
-                  </a>
-                </span>
-                </div>
-                
-                <!-- 模型链接1（神经网络图标） -->
-                <div class="button-row" style="margin-top: 10px;">
-                  <span class="link-block">
-                  <a href="https://huggingface.co/zhixiangwei/qwen2-7b-full" target="_blank"
-                    class="external-link button is-normal is-rounded is-success">
-                    <span class="icon">
-                      <i class="fas fa-cube"></i>
-                    </span>
-                    <span>Recaption Model</span>
-                  </a>
-                </span>
-                
-                <!-- 模型链接2（模型图标） -->
-                <span class="link-block">
-                  <a href="https://huggingface.co/zhixiangwei/vlm150m-hqclip-large-vitb16" target="_blank"
-                    class="external-link button is-normal is-rounded is-success">
-                    <span class="icon">
-                      <i class="fas fa-cube"></i>
-                    </span>
-                    <span>HQ-CLIP-B</span>
-                  </a>
-                </span>
-                
-                <!-- 模型链接3（模型图标） -->
-                <span class="link-block">
-                  <a href="https://huggingface.co/zhixiangwei/vlm1b-hqclip-xlarge-vitl14-clipa" target="_blank"
-                    class="external-link button is-normal is-rounded is-success">
-                    <span class="icon">
-                      <i class="fas fa-cube"></i>
-                    </span>
-                    <span>HQ-CLIP-L</span>
-                  </a>
-                </span>
-                
-                <!-- 模型链接4（模型图标） -->
-                <span class="link-block">
-                  <a href="https://huggingface.co/zhixiangwei/hqclip-openai-large-ft-vlm1b" target="_blank"
-                    class="external-link button is-normal is-rounded is-success">
-                    <span class="icon">
-                      <i class="fas fa-cube"></i>
-                    </span>
-                    <span>HQ-OpenAI-CLIP</span>
-                  </a>
-                </span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- 添加图标样式 -->
-<style>
-  .publication-links {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 20px;
-  }
   
-  .button-row {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 10px;
-    width: 100%;
-    max-width: 900px;
-  }
-  
-  .link-block {
-    margin: 0 4px;
-  }
-  
-  /* 响应式设计 */
-  @media (max-width: 768px) {
-    .button-row {
-      flex-direction: column;
-      align-items: center;
-    }
-    
-    .link-block {
-      margin: 5px 0;
-      width: 100%;
-    }
-    
-    .link-block .button {
-      width: 250px;
-      justify-content: center;
-    }
-  }
-</style>
-
-  <!-- 预览视频 -->
-  <section class="hero teaser">
-    <div class="container is-max-desktop">
-      <div class="hero-body">
-        <video poster="" id="tree" autoplay controls muted loop height="100%">
-          <source src="https://github.com/w1oves/Rein/releases/download/Videos/all.mp4" type="video/mp4">
-        </video>
-        <h2 class="subtitle has-text-centered">
-          Trained on Cityscapes, <b>Rein</b> generalizes to <b>unseen</b> driving scenes and cities:
-          <br>Nighttime Shanghai, Foggy Countryside, and Rainy Hollywood.
-        </h2>
-      </div>
-    </div>
-  </section>
-
-  <!-- 摘要部分 -->
-  <section class="section hero is-light">
-    <div class="container is-max-desktop">
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">
-          <h2 class="title is-3">Abstract</h2>
-          <div class="content has-text-justified">              
-            <p>
-              In this paper, we first assess and harness various Vision Foundation Models (VFMs) in the context of Domain Generalized Semantic Segmentation (DGSS). Driven by the motivation that Leveraging Stronger pre-trained models and Fewer trainable parameters for Superior generalizability, we introduce a robust fine-tuning approach, namely Rein, to parameter-efficiently harness VFMs for DGSS. Built upon a set of trainable tokens, each linked to distinct instances, Rein precisely refines and forwards the feature maps from each layer to the next layer within the backbone. This process produces diverse refinements for different categories within a single image. With fewer trainable parameters, Rein efficiently fine-tunes VFMs for DGSS tasks, surprisingly surpassing full parameter fine-tuning. Extensive experiments across various settings demonstrate that Rein significantly outperforms state-of-the-art methods. Remarkably, with just an extra 1% of trainable parameters within the frozen backbone, Rein achieves a mIoU of 78.4% on the Cityscapes, without accessing any real urban-scene datasets.
-            </p>
-            <a href="https://paperswithcode.com/sota/domain-adaptation-on-cityscapes-to-acdc?p=stronger-fewer-superior-harnessing-vision">
-              <img src="https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/stronger-fewer-superior-harnessing-vision/domain-adaptation-on-cityscapes-to-acdc" alt="SOTA Domain Adaptation on Cityscapes to ACDC">
-            </a>
-            <a href="https://paperswithcode.com/sota/domain-generalization-on-gta-to-avg?p=stronger-fewer-superior-harnessing-vision">
-              <img src="https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/stronger-fewer-superior-harnessing-vision/domain-generalization-on-gta-to-avg" alt="SOTA Domain Generalization on GTA to AVG">
-            </a>
-            <a href="https://paperswithcode.com/sota/domain-generalization-on-gta5-to-cityscapes?p=stronger-fewer-superior-harnessing-vision">
-              <img src="https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/stronger-fewer-superior-harnessing-vision/domain-generalization-on-gta5-to-cityscapes" alt="SOTA Domain Generalization on GTA5 to Cityscapes">
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- 图片轮播 -->
-  <section class="hero is-small">
-    <div class="hero-body">
-      <div class="container">
-        <div id="results-carousel" class="carousel results-carousel">
-          <!-- 图片项列表 -->
-          <div class="item">
-            <img src="static/images/8fd046f2-e41d0000.jpg" alt="night"/>
-            <h2 class="subtitle has-text-centered">
-              Inference on unseen <b>night</b> image.
-            </h2>
-          </div>
-          <div class="item">
-            <img src="static/images/GOPR0477_frame_000949_rgb_anon.png" alt="foggy"/>
-            <h2 class="subtitle has-text-centered">
-              Inference on unseen <b>foggy</b> image.
-            </h2>
-          </div>
-          <div class="item">
-            <img src="static/images/GOPR0572_frame_000501_rgb_anon.png" alt="rainy"/>
-            <h2 class="subtitle has-text-centered">
-              Inference on unseen <b>rainy</b> image.
-            </h2>
-          </div>
-          <div class="item">
-            <img src="static/images/GOPR0494_frame_000134_rgb_anon.png" alt="snowy"/>
-            <h2 class="subtitle has-text-centered">
-              Inference on unseen <b>snowy</b> image.
-            </h2>
-          </div>
-          <div class="item">
-            <img src="static/images/nightbdd.jpg" alt="night"/>
-            <h2 class="subtitle has-text-centered">
-              Inference on unseen <b>night</b> image.
-            </h2>
-          </div>
-          <div class="item">
-            <img src="static/images/GOPR0478_frame_000526_rgb_anon.png" alt="foggy"/>
-            <h2 class="subtitle has-text-centered">
-              Inference on unseen <b>foggy</b> image.
-            </h2>
-          </div>
-          <div class="item">
-            <img src="static/images/GOPR0572_frame_000995_rgb_anon.png" alt="rainy"/>
-            <h2 class="subtitle has-text-centered">
-              Inference on unseen <b>rainy</b> image.
-            </h2>
-          </div>
-          <div class="item">
-            <img src="static/images/GOPR0494_frame_000284_rgb_anon.png" alt="snowy"/>
-            <h2 class="subtitle has-text-centered">
-              Inference on unseen <b>snowy</b> image.
-            </h2>
-          </div>
-          <div class="item">
-            <img src="static/images/GOPR0594_frame_000193_rgb_anon.png" alt="night"/>
-            <h2 class="subtitle has-text-centered">
-              Inference on unseen <b>night</b> image.
-            </h2>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- 概述部分 -->
-  <section class="hero is-small is-light">
-    <div class="hero-body">
-      <div class="container">
-        <h2 class="title">Overview</h2>
-        <img src="static/images/rein.png" width="100%" height="550">
-      </div>
-    </div>
-  </section>
-
-  <!-- 框架部分 -->
-  <section class="hero is-small is-light">
-    <div class="hero-body">
-      <div class="container">
-        <h2 class="title">Framework</h2>
-        <img src="static/images/framework.png" width="100%" height="550">
-      </div>
-    </div>
-  </section>
-
-  <!-- 海报部分 -->
-  <section class="hero is-small is-light">
-    <div class="hero-body">
-      <div class="container">
-        <h2 class="title">Poster</h2>
-        <img src="static/images/poster.png" width="100%" height="550">
-      </div>
-    </div>
-  </section>
-
-  <!-- BibTeX 引用 -->
-  <section class="section" id="BibTeX">
-    <div class="container is-max-desktop content">
-      <h2 class="title">BibTeX</h2>
-      <pre><code>@InProceedings{Wei_2024_CVPR,
-    author    = {Wei, Zhixiang and Chen, Lin and Jin, Yi and Ma, Xiaoxiao and Liu, Tianle and Ling, Pengyang and Wang, Ben and Chen, Huaian and Zheng, Jinjin},
-    title     = {Stronger Fewer \& Superior: Harnessing Vision Foundation Models for Domain Generalized Semantic Segmentation},
-    booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
-    month     = {June},
-    year      = {2024},
-    pages     = {28619-28630}
-}</code></pre>
-    </div>
-  </section>
-
-  <!-- 页脚 -->
-  <footer class="footer">
-    <div class="container">
-      <div class="columns is-centered">
-        <div class="column is-8">
-          <div class="content">
-            <p>
-              This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
-              You are free to borrow the of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
-              Commons Attribution-ShareAlike 4.0 International License</a>.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </footer>
-
-  <!-- 添加CSS样式 -->
   <style>
+    :root {
+      --primary-color: #4361ee;
+      --secondary-color: #3f37c9;
+      --accent-color: #4895ef;
+      --light-color: #f8f9fa;
+      --dark-color: #212529;
+    }
+    
+    .hero-title {
+      font-family: 'Google Sans', Helvetica, sans-serif;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+    }
+    
+    .section-title {
+      position: relative;
+      padding-bottom: 0.5rem;
+      margin-bottom: 1.5rem;
+    }
+    
+    .section-title::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 60px;
+      height: 4px;
+      background: var(--primary-color);
+      border-radius: 2px;
+    }
+    
+    .teaser-container {
+      background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+      border-radius: 12px;
+      padding: 2rem;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+    }
+    
+    .feature-card {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      border-radius: 12px;
+      overflow: hidden;
+      height: 100%;
+    }
+    
+    .feature-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+    }
+    
+    .feature-icon {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      color: var(--primary-color);
+    }
+    
     .publication-links {
       display: flex;
       flex-direction: column;
@@ -413,6 +112,51 @@
       margin: 0 4px;
     }
     
+    .abstract-box {
+      background: white;
+      border-radius: 12px;
+      padding: 2rem;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    }
+    
+    .teaser-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+    
+    .teaser-item {
+      background: white;
+      border-radius: 12px;
+      padding: 1.5rem;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    }
+    
+    .teaser-icon {
+      font-size: 2rem;
+      color: var(--primary-color);
+      margin-bottom: 1rem;
+    }
+    
+    .result-table {
+      width: 100%;
+      overflow-x: auto;
+    }
+    
+    .result-table img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    }
+    
+    .citation-box {
+      background: #f8f9fa;
+      border-radius: 8px;
+      padding: 1.5rem;
+    }
+    
     /* 响应式设计 */
     @media (max-width: 768px) {
       .button-row {
@@ -426,9 +170,377 @@
       }
       
       .link-block .button {
-        width: 250px;
+        width: 100%;
+        max-width: 300px;
+        justify-content: center;
+      }
+      
+      .hero-title {
+        font-size: 2rem;
       }
     }
   </style>
+</head>
+<body>
+
+  <!-- 顶部标题和作者信息 -->
+  <section class="hero is-primary is-bold">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 hero-title">HQ-CLIP</h1>
+            <h2 class="subtitle is-3 has-text-weight-light">Leveraging Large Vision-Language Models to Create High-Quality Image-Text Datasets and CLIP Models</h2>
+            
+            <div class="is-size-5 publication-authors">
+              <!-- 论文作者 -->
+              <span class="author-block">
+                <a href="https://zxwei.site" target="_blank" class="has-text-white">Zhixiang Wei</a><sup>1&nbsp;</sup><sup>2&nbsp;</sup><sup>*</sup>,
+              </span>
+              <span class="author-block">
+                <a href="https://scholar.google.com/citations?user=cKY8e8sAAAAJ&hl=zh-CN" target="_blank" class="has-text-white">Guangting Wang</a><sup>2&nbsp;</sup><sup>*</sup>,
+              </span>
+              <span class="author-block">
+                <a href="https://krennic999.github.io/" target="_blank" class="has-text-white">Xiaoxiao Ma</a><sup>1&nbsp;</sup>,
+              </span>
+              <span class="author-block">
+                Ke Mei<sup>2&nbsp;</sup>, Huaian Chen<sup>1&nbsp;</sup>, Yi Jin<sup>1&nbsp;</sup>, Fengyun Rao<sup>2&nbsp;</sup>
+              </span>
+            </div>
+
+            <div class="is-size-5 publication-authors mt-3">
+              <div class="author-block"><sup>1&nbsp;</sup>University of Science and Technology of China</div>
+              <div class="author-block"><sup>2&nbsp;</sup>WeChat Vision, Tencent Inc.</div>
+            </div>
+            
+            <div class="mt-3">
+              <span class="tag is-info is-medium">ICCV 2025</span>
+              <span class="eql-cntrb"><small class="has-text-white"><sup>*</sup>Equal Contribution</small></span>
+            </div>
+
+            <!-- 优化后的按钮区域 - 清晰的两行排列 -->
+            <div class="column has-text-centered mt-5">
+              <div class="publication-links">
+                <!-- 第一行按钮（主要入口）-->
+                <div class="button-row">
+                  <!-- ArXiv链接（学术图标） -->
+                  <span class="link-block">
+                    <a href="https://arxiv.org/abs/2312.04265" target="_blank"
+                      class="external-link button is-normal is-rounded is-light">
+                      <span class="icon">
+                        <i class="ai ai-arxiv"></i>
+                      </span>
+                      <span>arXiv</span>
+                    </a>
+                  </span>
+                  
+                  <!-- GitHub链接（代码仓库） -->
+                  <span class="link-block">
+                    <a href="https://github.com/w1oves/hqclip" target="_blank"
+                      class="external-link button is-normal is-rounded is-light">
+                      <span class="icon">
+                        <i class="fab fa-github"></i>
+                      </span>
+                      <span>Code</span>
+                    </a>
+                  </span>
+                  
+                  <!-- Demo链接（在线演示） -->
+                  <span class="link-block">
+                    <a href="https://huggingface.co/spaces/zhixiangwei/hqclip" target="_blank"
+                      class="external-link button is-normal is-rounded is-info">
+                      <span class="icon">
+                        <i class="fas fa-play-circle"></i>
+                      </span>
+                      <span>Live Demo</span>
+                    </a>
+                  </span>
+                </div>
+                
+                <!-- 第二行按钮（数据集和模型）-->
+                <div class="button-row mt-3">
+                  <!-- 数据集链接1（数据库图标） -->
+                  <span class="link-block">
+                    <a href="https://huggingface.co/datasets/zhixiangwei/VLM-150M" target="_blank"
+                      class="external-link button is-normal is-rounded is-warning">
+                      <span class="icon">
+                        <i class="fas fa-database"></i>
+                      </span>
+                      <span>VLM-150M Dataset</span>
+                    </a>
+                  </span>
+                  
+                  <!-- 数据集链接2（数据库图标） -->
+                  <span class="link-block">
+                    <a href="https://huggingface.co/datasets/zhixiangwei/VLM-1B" target="_blank"
+                      class="external-link button is-normal is-rounded is-warning">
+                      <span class="icon">
+                        <i class="fas fa-database"></i>
+                      </span>
+                      <span>VLM-1B Dataset</span>
+                    </a>
+                  </span>
+                </div>
+                
+                <!-- 第三行按钮（模型） -->
+                <div class="button-row mt-3">
+                  <!-- 模型链接1（神经网络图标） -->
+                  <span class="link-block">
+                    <a href="https://huggingface.co/zhixiangwei/qwen2-7b-full" target="_blank"
+                      class="external-link button is-normal is-rounded is-success">
+                      <span class="icon">
+                        <i class="fas fa-cube"></i>
+                      </span>
+                      <span>Recaption Model</span>
+                    </a>
+                  </span>
+                  
+                  <!-- 模型链接2（模型图标） -->
+                  <span class="link-block">
+                    <a href="https://huggingface.co/zhixiangwei/vlm150m-hqclip-large-vitb16" target="_blank"
+                      class="external-link button is-normal is-rounded is-success">
+                      <span class="icon">
+                        <i class="fas fa-cube"></i>
+                      </span>
+                      <span>HQ-CLIP-B</span>
+                    </a>
+                  </span>
+                  
+                  <!-- 模型链接3（模型图标） -->
+                  <span class="link-block">
+                    <a href="https://huggingface.co/zhixiangwei/vlm1b-hqclip-xlarge-vitl14-clipa" target="_blank"
+                      class="external-link button is-normal is-rounded is-success">
+                      <span class="icon">
+                        <i class="fas fa-cube"></i>
+                      </span>
+                      <span>HQ-CLIP-L</span>
+                    </a>
+                  </span>
+                  
+                  <!-- 模型链接4（模型图标） -->
+                  <span class="link-block">
+                    <a href="https://huggingface.co/zhixiangwei/hqclip-openai-large-ft-vlm1b" target="_blank"
+                      class="external-link button is-normal is-rounded is-success">
+                      <span class="icon">
+                        <i class="fas fa-cube"></i>
+                      </span>
+                      <span>HQ-OpenAI-CLIP</span>
+                    </a>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Teaser 部分 -->
+  <section class="section">
+    <div class="container is-max-desktop">
+      <h2 class="title is-2 section-title">Key Contributions</h2>
+      
+      <div class="teaser-container">
+        <div class="content has-text-centered">
+          <p class="is-size-4">
+            We propose an LVLM-driven data refinement pipeline to create <strong>high-quality image-text datasets</strong> and train <strong>state-of-the-art CLIP models</strong>.
+          </p>
+        </div>
+        
+        <div class="teaser-grid">
+          <div class="teaser-item">
+            <div class="teaser-icon">
+              <i class="fas fa-sync-alt"></i>
+            </div>
+            <h3 class="title is-4">Refined Dataset</h3>
+            <p>
+              We efficiently synthesize <strong>150 million high-quality image-text pairs</strong> using LVLM, each with four complementary texts (positive/negative, long/short).
+            </p>
+          </div>
+          
+          <div class="teaser-item">
+            <div class="teaser-icon">
+              <i class="fas fa-trophy"></i>
+            </div>
+            <h3 class="title is-4">SOTA Performance</h3>
+            <p>
+              With a comparable scale of training data, our method <strong>achieves SOTA performance</strong> across multiple datasets.
+            </p>
+          </div>
+          
+          <div class="teaser-item">
+            <div class="teaser-icon">
+              <i class="fas fa-chart-line"></i>
+            </div>
+            <h3 class="title is-4">Superior Efficiency</h3>
+            <p>
+              Using the same architecture, our method's <strong>retrieval performance even surpassed models</strong> trained on 2 billion data.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 摘要部分 -->
+  <section class="section">
+    <div class="container is-max-desktop">
+      <h2 class="title is-2 section-title">Abstract</h2>
+      
+      <div class="abstract-box">
+        <div class="content has-text-justified">
+          <p>
+            Large-scale but noisy image-text pair data have paved the way for the success of Contrastive Language-Image Pretraining (CLIP). As the foundation vision encoder, CLIP in turn serves as the cornerstone for most large vision-language models (LVLMs). This interdependence naturally raises an interesting question: Can we reciprocally leverage LVLMs to enhance the quality of image-text pair data, thereby opening the possibility of a self-reinforcing cycle for continuous improvement?
+          </p>
+          
+          <p>
+            In this work, we take a significant step toward this vision by introducing an LVLM-driven data refinement pipeline. Our framework leverages LVLMs to process images and their raw alt-text, generating four complementary textual formulas: long positive descriptions, long negative descriptions, short positive tags, and short negative tags. Applying this pipeline to the curated DFN-Large dataset yields <strong>VLM-150M</strong>, a refined dataset enriched with multi-grained annotations.
+          </p>
+          
+          <p>
+            Based on this dataset, we further propose a training paradigm that extends conventional contrastive learning by incorporating negative descriptions and short tags as additional supervised signals. The resulting model, namely <strong>HQ-CLIP</strong>, demonstrates remarkable improvements across diverse benchmarks. Within a comparable training data scale, our approach achieves state-of-the-art performance in zero-shot classification, cross-modal retrieval, and fine-grained visual understanding tasks. In retrieval benchmarks, HQ-CLIP even surpasses standard CLIP models trained on the DFN-2B dataset, which contains 10× more training data than ours.
+          </p>
+          
+          <p>
+            All code, data, and models will be made publicly available to support further research.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 框架部分 -->
+  <section class="section">
+    <div class="container is-max-desktop">
+      <h2 class="title is-2 section-title">Methodology</h2>
+      
+      <div class="content has-text-centered">
+        <figure class="image">
+          <img src="static/framework.png" alt="HQ-CLIP Framework">
+          <figcaption class="mt-3">
+            <strong>Figure 1:</strong> The framework of our efficient LVLM-driven dataset refinement pipeline and HQ-CLIP training strategy.
+          </figcaption>
+        </figure>
+      </div>
+      
+      <div class="columns is-vcentered mt-5">
+        <div class="column">
+          <h3 class="title is-4">LVLM-Driven Refinement</h3>
+          <p>
+            Our pipeline processes raw image-text pairs through large vision-language models to generate:
+          </p>
+          <ul>
+            <li>Long positive descriptions</li>
+            <li>Long negative descriptions</li>
+            <li>Short positive tags</li>
+            <li>Short negative tags</li>
+          </ul>
+          <p>
+            This multi-grained annotation approach significantly enhances dataset quality.
+          </p>
+        </div>
+        <div class="column">
+          <h3 class="title is-4">Enhanced Training</h3>
+          <p>
+            HQ-CLIP extends conventional contrastive learning by:
+          </p>
+          <ul>
+            <li>Incorporating negative descriptions</li>
+            <li>Utilizing short tags as additional signals</li>
+            <li>Optimizing for fine-grained understanding</li>
+            <li>Improving cross-modal alignment</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 结果部分 -->
+  <section class="section">
+    <div class="container is-max-desktop">
+      <h2 class="title is-2 section-title">Results</h2>
+      
+      <div class="content">
+        <h3 class="title is-4">Quantitative Evaluation</h3>
+        <div class="result-table">
+          <figure class="image">
+            <img src="static/table2.png" alt="Performance Comparison">
+            <figcaption class="mt-3">
+              <strong>Table 2:</strong> Performance comparison on zero-shot classification tasks.
+            </figcaption>
+          </figure>
+        </div>
+        
+        <div class="result-table mt-6">
+          <figure class="image">
+            <img src="static/table34.png" alt="Cross-Modal Retrieval Results">
+            <figcaption class="mt-3">
+              <strong>Table 3 & 4:</strong> Cross-modal retrieval results on various benchmarks.
+            </figcaption>
+          </figure>
+        </div>
+        
+        <div class="columns mt-6">
+          <div class="column">
+            <h3 class="title is-4">Qualitative Analysis</h3>
+            <div class="result-table">
+              <figure class="image">
+                <img src="static/fig4.png" alt="Qualitative Results">
+                <figcaption class="mt-3">
+                  <strong>Figure 4:</strong> Qualitative comparison of retrieval results.
+                </figcaption>
+              </figure>
+            </div>
+          </div>
+          <div class="column">
+            <h3 class="title is-4">Ablation Study</h3>
+            <div class="result-table">
+              <figure class="image">
+                <img src="static/table5.png" alt="Ablation Study">
+                <figcaption class="mt-3">
+                  <strong>Table 5:</strong> Ablation study on different components of our approach.
+                </figcaption>
+              </figure>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BibTeX 引用 -->
+  <section class="section">
+    <div class="container is-max-desktop">
+      <h2 class="title is-2 section-title">Citation</h2>
+      
+      <div class="citation-box">
+        <pre><code>@InProceedings{Wei_2025_ICCV,
+    author    = {Wei, Zhixiang and Wang, Guangting and Ma, Xiaoxiao and Mei, Ke and Chen, Huaian and Jin, Yi and Rao, Fengyun},
+    title     = {HQ-CLIP: Leveraging Large Vision-Language Models to Create High-Quality Image-Text Datasets and CLIP Models},
+    booktitle = {Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV)},
+    month     = {October},
+    year      = {2025},
+    pages     = {TBD}
+}</code></pre>
+      </div>
+    </div>
+  </section>
+
+  <!-- 页脚 -->
+  <footer class="footer">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-8 has-text-centered">
+          <p>
+            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+          </p>
+          <p class="mt-3">
+            This website is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
 </body>
 </html>
