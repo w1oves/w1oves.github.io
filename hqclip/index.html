@@ -38,149 +38,189 @@
 <body>
 
   <!-- 顶部标题和作者信息 -->
-  <section class="hero">
-    <div class="hero-body">
-      <div class="container is-max-desktop">
-        <div class="columns is-centered">
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title" style="font-family: Helvetica, sans-serif;">HQ-CLIP:</h1>
+          <h3 class="title is-1 publication-title" style="font-family: Helvetica, sans-serif;">Leveraging Large Vision-Language Models to Create High-Quality Image-Text Datasets and CLIP Models</h3>
+          <div class="is-size-5 publication-authors">
+            <!-- 论文作者 -->
+            <span class="author-block">
+              <a href="https://zxwei.site" target="_blank">Zhixiang Wei</a><sup>*</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?user=cKY8e8sAAAAJ&hl=zh-CN" target="_blank">Guangting Wang</a><sup>*</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://krennic999.github.io/" target="_blank">Xiaoxiao Ma</a>,
+              Ke Mei, Huaian Chen, Yi Jin, Fengyun Rao.
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <div class="author-block"><sup>1&nbsp;</sup>University of Science and Technology of China</div>
+            <div class="author-block"><sup>2&nbsp;</sup>WeChat Vision, Tencent Inc.</div><br>
+            <span class="author-block">ICCV 2025</span>
+            <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span>
+          </div>
+
+          <!-- 优化后的按钮区域 - 清晰的两行排列 -->
           <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title" style="font-family: Helvetica, sans-serif;">HQ-CLIP:</h1>
-            <h3 class="title is-1 publication-title" style="font-family: Helvetica, sans-serif;">Leveraging Large Vision-Language Models to Create High-Quality Image-Text Datasets and CLIP Models</h3>
-            <div class="is-size-5 publication-authors">
-              <!-- 论文作者 -->
-              <span class="author-block">
-                <a href="https://zxwei.site" target="_blank">Zhixiang Wei</a><sup>*</sup>,
-              </span>
-              <span class="author-block">
-                <a href="https://scholar.google.com/citations?user=cKY8e8sAAAAJ&hl=zh-CN" target="_blank">Guangting Wang</a><sup>*</sup>,
-              </span>
-              <span class="author-block">
-                <a href="https://krennic999.github.io/" target="_blank">Xiaoxiao Ma</a>,
-                Ke Mei, Huaian Chen, Yi Jin, Fengyun Rao.
-              </span>
-            </div>
-
-            <div class="is-size-5 publication-authors">
-              <div class="author-block"><sup>1&nbsp;</sup>University of Science and Technology of China</div>
-              <div class="author-block"><sup>2&nbsp;</sup>WeChat Vision, Tencent Inc.</div><br>
-              <span class="author-block">ICCV 2025</span>
-              <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span>
-            </div>
-
-            <!-- 按钮区域 - 排列为两行 -->
-            <div class="column has-text-centered">
-              <div class="publication-links">
-                <!-- 第一行按钮 -->
-                <div class="button-row">
-                  <span class="link-block">
-                    <a href="https://arxiv.org/pdf/xxx.pdf" target="_blank"
-                      class="external-link button is-normal is-rounded is-dark">
-                      <span class="icon">
-                        <i class="fas fa-file-pdf"></i>
-                      </span>
-                      <span>Paper</span>
-                    </a>
-                  </span>
-
-                  <span class="link-block">
-                    <a href="https://github.com/w1oves/hqclip" target="_blank"
-                      class="external-link button is-normal is-rounded is-dark">
-                      <span class="icon">
-                        <i class="fab fa-github"></i>
-                      </span>
-                      <span>Code</span>
-                    </a>
-                  </span>
-
-                  <span class="link-block">
-                    <a href="https://arxiv.org/abs/2312.04265" target="_blank"
-                      class="external-link button is-normal is-rounded is-dark">
-                      <span class="icon">
-                        <i class="ai ai-arxiv"></i>
-                      </span>
-                      <span>arXiv</span>
-                    </a>
-                  </span>
-
-                  <span class="link-block">
-                    <a href="https://huggingface.co/spaces/zhixiangwei/hqclip" target="_blank"
-                      class="external-link button is-normal is-rounded is-dark">
-                      <span class="icon">
-                        <i class="fab fa-github"></i>
-                      </span>
-                      <span>Demo</span>
-                    </a>
-                  </span>
-
-                  <span class="link-block">
-                    <a href="https://huggingface.co/datasets/zhixiangwei/VLM-1B" target="_blank"
-                      class="external-link button is-normal is-rounded is-dark">
-                      <span class="icon">
-                        <i class="fab fa-github"></i>
-                      </span>
-                      <span>VLM-1B</span>
-                    </a>
-                  </span>
-                </div>
-
-                <!-- 第二行按钮 -->
-                <div class="button-row" style="margin-top: 10px;">
-                  <span class="link-block">
-                    <a href="https://huggingface.co/datasets/zhixiangwei/VLM-150M" target="_blank"
-                      class="external-link button is-normal is-rounded is-dark">
-                      <span class="icon">
-                        <i class="fab fa-github"></i>
-                      </span>
-                      <span>VLM-150M</span>
-                    </a>
-                  </span>
-
-                  <span class="link-block">
-                    <a href="https://huggingface.co/zhixiangwei/qwen2-7b-full" target="_blank"
-                      class="external-link button is-normal is-rounded is-dark">
-                      <span class="icon">
-                        <i class="fab fa-github"></i>
-                      </span>
-                      <span>Recaption Model</span>
-                    </a>
-                  </span>
-
-                  <span class="link-block">
-                    <a href="https://huggingface.co/zhixiangwei/vlm150m-hqclip-large-vitb16" target="_blank"
-                      class="external-link button is-normal is-rounded is-dark">
-                      <span class="icon">
-                        <i class="fab fa-github"></i>
-                      </span>
-                      <span>HQ-CLIP-B</span>
-                    </a>
-                  </span>
-                  
-                  <span class="link-block">
-                    <a href="https://huggingface.co/zhixiangwei/vlm1b-hqclip-xlarge-vitl14-clipa" target="_blank"
-                      class="external-link button is-normal is-rounded is-dark">
-                      <span class="icon">
-                        <i class="fab fa-github"></i>
-                      </span>
-                      <span>HQ-CLIP-L</span>
-                    </a>
-                  </span>
-
-                  <span class="link-block">
-                    <a href="https://huggingface.co/zhixiangwei/hqclip-openai-large-ft-vlm1b" target="_blank"
-                      class="external-link button is-normal is-rounded is-dark">
-                      <span class="icon">
-                        <i class="fab fa-github"></i>
-                      </span>
-                      <span>HQ-OpenAI-CLIP-L</span>
-                    </a>
-                  </span>
-                </div>
+            <div class="publication-links">
+              <!-- 第一行按钮（主要入口）-->
+              <div class="button-row">
+                <!-- ArXiv链接（学术图标） -->
+                <span class="link-block">
+                  <a href="https://arxiv.org/abs/2312.04265" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                    </span>
+                    <span>arXiv</span>
+                  </a>
+                </span>
+                
+                <!-- GitHub链接（代码仓库） -->
+                <span class="link-block">
+                  <a href="https://github.com/w1oves/hqclip" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code</span>
+                  </a>
+                </span>
+                
+                <!-- Demo链接（在线演示） -->
+                <span class="link-block">
+                  <a href="https://huggingface.co/spaces/zhixiangwei/hqclip" target="_blank"
+                    class="external-link button is-normal is-rounded is-info">
+                    <span class="icon">
+                      <i class="fas fa-play-circle"></i>
+                    </span>
+                    <span>Live Demo</span>
+                  </a>
+                </span>
+              </div>
+              
+              <!-- 第二行按钮（数据集和模型）-->
+              <div class="button-row" style="margin-top: 10px;">
+                <!-- 数据集链接1（数据库图标） -->
+                <span class="link-block">
+                  <a href="https://huggingface.co/datasets/zhixiangwei/VLM-150M" target="_blank"
+                    class="external-link button is-normal is-rounded is-warning">
+                    <span class="icon">
+                      <i class="fas fa-database"></i>
+                    </span>
+                    <span>VLM-150M Dataset</span>
+                  </a>
+                </span>
+                
+                <!-- 数据集链接2（数据库图标） -->
+                <span class="link-block">
+                  <a href="https://huggingface.co/datasets/zhixiangwei/VLM-1B" target="_blank"
+                    class="external-link button is-normal is-rounded is-warning">
+                    <span class="icon">
+                      <i class="fas fa-database"></i>
+                    </span>
+                    <span>VLM-1B Dataset</span>
+                  </a>
+                </span>
+                
+                <!-- 模型链接1（神经网络图标） -->
+                <span class="link-block">
+                  <a href="https://huggingface.co/zhixiangwei/qwen2-7b-full" target="_blank"
+                    class="external-link button is-normal is-rounded is-success">
+                    <span class="icon">
+                      <i class="fas fa-brain"></i>
+                    </span>
+                    <span>Recaption Model</span>
+                  </a>
+                </span>
+                
+                <!-- 模型链接2（模型图标） -->
+                <span class="link-block">
+                  <a href="https://huggingface.co/zhixiangwei/vlm150m-hqclip-large-vitb16" target="_blank"
+                    class="external-link button is-normal is-rounded is-success">
+                    <span class="icon">
+                      <i class="fas fa-cube"></i>
+                    </span>
+                    <span>HQ-CLIP-B</span>
+                  </a>
+                </span>
+                
+                <!-- 模型链接3（模型图标） -->
+                <span class="link-block">
+                  <a href="https://huggingface.co/zhixiangwei/vlm1b-hqclip-xlarge-vitl14-clipa" target="_blank"
+                    class="external-link button is-normal is-rounded is-success">
+                    <span class="icon">
+                      <i class="fas fa-cube"></i>
+                    </span>
+                    <span>HQ-CLIP-L</span>
+                  </a>
+                </span>
+                
+                <!-- 模型链接4（模型图标） -->
+                <span class="link-block">
+                  <a href="https://huggingface.co/zhixiangwei/hqclip-openai-large-ft-vlm1b" target="_blank"
+                    class="external-link button is-normal is-rounded is-success">
+                    <span class="icon">
+                      <i class="fas fa-cube"></i>
+                    </span>
+                    <span>HQ-OpenAI-CLIP</span>
+                  </a>
+                </span>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
+
+<!-- 添加图标样式 -->
+<style>
+  .publication-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  .button-row {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    width: 100%;
+    max-width: 900px;
+  }
+  
+  .link-block {
+    margin: 0 4px;
+  }
+  
+  /* 响应式设计 */
+  @media (max-width: 768px) {
+    .button-row {
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    .link-block {
+      margin: 5px 0;
+      width: 100%;
+    }
+    
+    .link-block .button {
+      width: 250px;
+      justify-content: center;
+    }
+  }
+</style>
 
   <!-- 预览视频 -->
   <section class="hero teaser">
