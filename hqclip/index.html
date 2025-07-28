@@ -26,7 +26,8 @@
       --light: #f8f9fa;
       --dark: #212529;
       --border: #dee2e6;
-      --shadow: rgba(0,0,0,0.1);
+      /* A more subtle, modern shadow */
+      --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
     }
     
     * {
@@ -68,16 +69,17 @@
       margin: 0 auto;
       padding: 0 1.5rem;
       position: relative;
-      z-index: 2;
+      z-index: 2; /* Keep hero content above its own background */
     }
     
     .hero-body {
       padding: 2rem 0;
+      text-align: center;
     }
     
     .publication-title {
       font-family: 'Libre Baskerville', serif;
-      font-size: 2.5rem;
+      font-size: 2.8rem;
       font-weight: 700;
       margin-bottom: 1rem;
       text-shadow: 0 2px 4px rgba(0,0,0,0.2);
@@ -115,7 +117,7 @@
     
     .divider {
       height: 1px;
-      background: rgba(255,255,255,0.2);
+      background: rgba(255,255,255,0.25);
       margin: 1.5rem auto;
       max-width: 600px;
     }
@@ -126,30 +128,33 @@
       flex-wrap: wrap;
       gap: 15px;
       margin-top: 2rem;
-      position: relative;
-      z-index: 100;
     }
     
+    /* --- Unified Button and Link Styling --- */
     .btn {
-      display: flex;
+      display: inline-flex; /* Use inline-flex for better alignment */
       align-items: center;
       justify-content: center;
-      padding: 12px 20px;
-      background: rgba(255,255,255,0.9);
+      gap: 10px; /* Space between icon and text */
+      padding: 12px 24px;
+      background: rgba(255,255,255,0.95);
       color: var(--primary);
-      border-radius: 6px;
+      border-radius: 8px;
+      border: none;
       text-decoration: none;
       font-weight: 500;
+      font-size: 1rem;
+      font-family: 'Roboto', sans-serif;
       transition: all 0.3s ease;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      box-shadow: var(--shadow);
       text-align: center;
       min-width: 160px;
-      position: relative;
+      cursor: pointer;
     }
     
     .btn:hover {
       transform: translateY(-3px);
-      box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+      box-shadow: 0 6px 12px -2px rgba(0,0,0,0.15), 0 3px 7px -3px rgba(0,0,0,0.15);
       background: white;
       color: var(--accent);
     }
@@ -160,16 +165,16 @@
       font-weight: 600;
     }
     
-    .btn .icon {
-      margin-right: 10px;
-      font-size: 1.2em;
+    .btn svg {
+      width: 1.2em;
+      height: 1.2em;
     }
     
     /* Main Content Sections */
     section {
       padding: 4rem 0;
       position: relative;
-      z-index: 10;
+      /* KEY FIX: Removed z-index: 10 to prevent it from overlapping the hero's dropdown */
     }
     
     .section-header {
@@ -191,17 +196,21 @@
     .section-header h2::after {
       content: "";
       position: absolute;
-      left: 0;
+      left: 50%;
+      transform: translateX(-50%);
       bottom: -10px;
-      width: 100%;
+      width: 60%;
       height: 3px;
       background: var(--accent);
+      border-radius: 2px;
     }
     
     .content {
       font-size: 1.05rem;
       line-height: 1.8;
       color: #444;
+      max-width: 800px;
+      margin: 0 auto;
     }
     
     .content p {
@@ -213,6 +222,7 @@
       padding: 3px 6px;
       border-radius: 4px;
       font-weight: 500;
+      color: var(--accent);
     }
     
     /* Problem-Solution Section */
@@ -233,8 +243,9 @@
       padding: 2rem;
       background: white;
       border-radius: 10px;
-      box-shadow: 0 5px 15px var(--shadow);
+      box-shadow: var(--shadow);
       transition: transform 0.3s ease;
+      border-top: 4px solid var(--secondary);
     }
     
     .ps-item:hover {
@@ -259,12 +270,14 @@
       height: 25px;
       width: 4px;
       background: var(--accent);
+      border-radius: 2px;
     }
     
     /* Approach Section */
     .approach-container {
       display: flex;
       flex-wrap: wrap;
+      align-items: center;
       gap: 2.5rem;
       margin-top: 2rem;
     }
@@ -275,11 +288,11 @@
     }
     
     .approach-image {
-      flex: 1;
+      flex: 1.2;
       min-width: 300px;
       border-radius: 10px;
       overflow: hidden;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
     }
     
     .approach-image img {
@@ -304,28 +317,30 @@
     /* Methodology Items */
     .methodology-items {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 2rem;
-      margin-top: 2rem;
+      margin-top: 3rem;
     }
     
     .method-item {
       background: white;
       border-radius: 10px;
       padding: 2rem;
-      box-shadow: 0 5px 15px var(--shadow);
+      box-shadow: var(--shadow);
       border-top: 4px solid var(--accent);
-      transition: transform 0.3s ease;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
     
     .method-item:hover {
       transform: translateY(-5px);
+      box-shadow: 0 10px 20px -5px rgba(0,0,0,0.15);
     }
     
     .method-icon {
       font-size: 2.5rem;
       color: var(--accent);
       margin-bottom: 1rem;
+      display: inline-block;
     }
     
     .method-title {
@@ -342,7 +357,7 @@
     
     .results-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
       gap: 2rem;
       margin-top: 2rem;
     }
@@ -351,12 +366,18 @@
       background: white;
       border-radius: 10px;
       overflow: hidden;
-      box-shadow: 0 5px 15px var(--shadow);
+      box-shadow: var(--shadow);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .results-item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px -5px rgba(0,0,0,0.15);
     }
     
     .result-image {
       height: 200px;
       overflow: hidden;
+      background-color: #e9ecef;
     }
     
     .result-image img {
@@ -366,7 +387,7 @@
       transition: transform 0.5s ease;
     }
     
-    .result-image img:hover {
+    .result-image:hover img {
       transform: scale(1.05);
     }
     
@@ -387,12 +408,8 @@
       color: white;
     }
     
-    .contributions .section-header h2 {
+    .contributions .section-header h2, .contributions .content {
       color: white;
-    }
-    
-    .contributions .content {
-      color: rgba(255,255,255,0.9);
     }
     
     .contrib-list {
@@ -403,7 +420,7 @@
     
     .contrib-list li {
       margin-bottom: 1.5rem;
-      padding-left: 2rem;
+      padding-left: 2.5rem;
       position: relative;
       font-size: 1.1rem;
     }
@@ -415,6 +432,8 @@
       top: 0;
       color: var(--accent);
       font-weight: bold;
+      font-size: 1.5rem;
+      line-height: 1;
     }
     
     /* BibTeX Section */
@@ -437,6 +456,7 @@
       margin-top: 2rem;
       box-shadow: 0 10px 20px rgba(0,0,0,0.2);
       border-left: 4px solid var(--accent);
+      text-align: left;
     }
     
     /* Footer */
@@ -460,34 +480,57 @@
       color: rgba(255,255,255,0.5);
     }
     
-    /* Dropdown Styles */
+    /* --- Dropdown Styles --- */
     .dropdown {
       position: relative;
       display: inline-block;
+    }
+    
+    .dropdown-btn::after {
+      content: "▼";
+      margin-left: 8px;
+      font-size: 0.7em;
+      transition: transform 0.3s ease;
+    }
+    
+    .dropdown:hover .dropdown-btn::after {
+      transform: rotate(180deg);
     }
     
     .dropdown-content {
       display: none;
       position: absolute;
       background-color: white;
-      min-width: 220px;
+      min-width: 100%; /* Match button width */
       box-shadow: 0 8px 16px rgba(0,0,0,0.2);
-      z-index: 1000;
+      z-index: 1000; /* High z-index for visibility */
       border-radius: 6px;
       overflow: hidden;
-      margin-top: 5px;
+      margin-top: 12px; /* Space from button */
       left: 0;
-      right: 0;
       animation: fadeIn 0.3s ease;
+      text-align: left;
+    }
+    
+    /* Upward pointing caret for the dropdown */
+    .dropdown-content::before {
+      content: '';
+      position: absolute;
+      top: -6px;
+      left: 50%;
+      transform: translateX(-50%);
+      border-width: 0 6px 6px 6px;
+      border-style: solid;
+      border-color: transparent transparent white transparent;
     }
     
     .dropdown-content a {
-      color: #2c5e92;
+      color: var(--primary);
       padding: 12px 16px;
       text-decoration: none;
       display: block;
       font-size: 0.95rem;
-      transition: background-color 0.3s;
+      transition: background-color 0.2s, color 0.2s;
       border-bottom: 1px solid #f0f0f0;
     }
     
@@ -496,50 +539,12 @@
     }
     
     .dropdown-content a:hover {
-      background-color: #f0f7ff;
-      color: #e63946;
+      background-color: var(--light);
+      color: var(--accent);
     }
     
     .dropdown:hover .dropdown-content {
       display: block;
-    }
-    
-    .dropdown-btn {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 12px 20px;
-      background: rgba(255,255,255,0.9);
-      color: var(--primary);
-      border-radius: 6px;
-      text-decoration: none;
-      font-weight: 500;
-      transition: all 0.3s ease;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-      text-align: center;
-      min-width: 160px;
-      cursor: pointer;
-      border: none;
-      font-family: 'Roboto', sans-serif;
-      font-size: 1rem;
-    }
-    
-    .dropdown-btn:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 6px 12px rgba(0,0,0,0.15);
-      background: white;
-      color: var(--accent);
-    }
-    
-    .dropdown-btn .icon {
-      margin-right: 10px;
-      font-size: 1.2em;
-    }
-    
-    .dropdown-btn::after {
-      content: "▼";
-      margin-left: 8px;
-      font-size: 0.7em;
     }
     
     @keyframes fadeIn {
@@ -550,7 +555,7 @@
     /* Responsive Design */
     @media (max-width: 768px) {
       .publication-title {
-        font-size: 2rem;
+        font-size: 2.2rem;
       }
       
       .hero-subtitle {
@@ -566,10 +571,9 @@
         align-items: center;
       }
       
-      .btn, .dropdown-btn {
+      .btn {
         width: 100%;
-        max-width: 280px;
-        margin-bottom: 10px;
+        max-width: 320px;
       }
       
       .ps-container, .approach-container {
@@ -580,30 +584,27 @@
         position: static;
         margin-top: 10px;
         width: 100%;
+        max-width: 320px;
         box-shadow: none;
         border: 1px solid var(--border);
+        display: none; /* Hide by default on mobile */
       }
       
       .dropdown:hover .dropdown-content {
-        display: block;
+        display: block; /* Show on hover/tap */
+      }
+      
+      .dropdown-content::before {
+        display: none; /* Hide caret on mobile stacked layout */
       }
     }
     
     @media (max-width: 480px) {
       .publication-title {
-        font-size: 1.8rem;
+        font-size: 2rem;
       }
-      
-      .hero-subtitle {
-        font-size: 1.1rem;
-      }
-      
-      .authors {
-        font-size: 1rem;
-      }
-      
-      .affiliations {
-        font-size: 0.85rem;
+      .authors, .affiliations {
+        font-size: 0.9rem;
       }
     }
   </style>
@@ -638,19 +639,23 @@
 
       <div class="publication-links">
         <a href="https://arxiv.org/abs/xxxx" class="btn btn-primary">
-          <span class="icon">📄</span> Paper
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M15 4H5V20H19V8H15V4ZM5 2H16L20 6V20C20 21.1046 19.1046 22 18 22H6C4.89543 22 4 21.1046 4 20V4C4 2.89543 4.89543 2 6 2H5ZM14 9V5L18 9H14Z"></path></svg>
+          <span>Paper</span>
         </a>
         <a href="https://github.com/w1oves/hqclip" class="btn">
-          <span class="icon">💻</span> Code
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.475 2 2 6.475 2 12C2 16.425 4.8625 20.1625 8.8375 21.4875C9.3375 21.575 9.525 21.275 9.525 21.0125C9.525 20.775 9.5125 20.0125 9.5125 19.2C6.7375 19.7125 5.9125 17.7625 5.9125 17.7625C5.4625 16.6375 4.6875 16.3375 4.6875 16.3375C3.7875 15.725 4.7625 15.7375 4.7625 15.7375C5.75 15.8125 6.35 16.7625 6.35 16.7625C7.225 18.25 8.7125 17.8 9.3 17.5375C9.3875 16.9125 9.6375 16.525 9.8875 16.3125C7.65 16.0625 5.2875 15.2 5.2875 11.475C5.2875 10.3875 5.675 9.5125 6.3 8.8375C6.2 8.5875 5.8625 7.55 6.4 6.4625C6.4 6.4625 7.2125 6.2 9.525 7.7C10.2875 7.5 11.15 7.4 12 7.4C12.85 7.4 13.7125 7.5 14.475 7.7C16.7875 6.2 17.6 6.4625 17.6 6.4625C18.1375 7.55 17.8 8.5875 17.7 8.8375C18.325 9.5125 18.7125 10.3875 18.7125 11.475C18.7125 15.2125 16.3375 16.0625 14.1 16.3125C14.425 16.5875 14.725 17.125 14.725 18C14.725 19.2375 14.7125 20.2 14.7125 20.5125C14.7125 20.775 14.9 21.0875 15.4125 21.4875C19.1375 20.1625 22 16.425 22 12C22 6.475 17.525 2 12 2Z"></path></svg>
+          <span>Code</span>
         </a>
         <a href="https://huggingface.co/spaces/zhixiangwei/hqclip" class="btn">
-          <span class="icon">🚀</span> Demo
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M21.6521 11.121L18.2161 3.33303C17.9361 2.69603 17.2881 2.25003 16.5711 2.25003H7.42811C6.71111 2.25003 6.06311 2.69603 5.78311 3.33303L2.34711 11.121C2.13311 11.62 2.13211 12.17 2.34411 12.668L5.78411 20.667C6.06411 21.304 6.71211 21.75 7.42911 21.75H16.5711C17.2881 21.75 17.9361 21.304 18.2161 20.667L21.6521 12.879C21.8671 12.38 21.8671 11.62 21.6521 11.121ZM16.5711 19.5H7.42811L4.55311 12.913L6.42811 12L11.0001 14.25V6.75L6.42811 9L4.55311 7.08703L7.42811 4.5H16.5711L19.4461 11.087L17.5711 12L13.0001 9.75V17.25L17.5711 15L19.4461 16.913L16.5711 19.5Z"></path></svg>
+          <span>Demo</span>
         </a>
         
-        <!-- 数据集链接 -->
+        <!-- Datasets Dropdown -->
         <div class="dropdown">
-          <button class="dropdown-btn">
-            <span class="icon">📊</span> Datasets
+          <button class="btn dropdown-btn">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M20 7V17C20 17.5523 19.5523 18 19 18H5C4.44772 18 4 17.5523 4 17V7C4 6.44772 4.44772 6 5 6H19C19.5523 6 20 6.44772 20 7ZM18 4H6C4.89543 4 4 4.89543 4 6V8H2V6C2 3.79086 3.79086 2 6 2H18C20.2091 2 22 3.79086 22 6V8H20V6C20 4.89543 19.1046 4 18 4ZM2 18V16H4V18C4 19.1046 4.89543 20 6 20H18C19.1046 20 20 19.1046 20 18V16H22V18C22 20.2091 20.2091 22 18 22H6C3.79086 22 2 20.2091 2 18Z"></path></svg>
+            <span>Datasets</span>
           </button>
           <div class="dropdown-content">
             <a href="https://huggingface.co/datasets/zhixiangwei/VLM-150M">VLM-150M (147M samples)</a>
@@ -658,10 +663,11 @@
           </div>
         </div>
         
-        <!-- 模型链接 -->
+        <!-- Models Dropdown -->
         <div class="dropdown">
-          <button class="dropdown-btn">
-            <span class="icon">🧠</span> Models
+          <button class="btn dropdown-btn">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C13.1046 2 14 2.89543 14 4V6.14286C16.8043 6.54843 19 8.9995 19 12C19 14.9995 16.8049 17.451 14 17.8571V20C14 21.1046 13.1046 22 12 22C10.8954 22 10 21.1046 10 20V17.8571C7.19511 17.451 5 14.9995 5 12C5 8.9995 7.1957 6.54843 10 6.14286V4C10 2.89543 10.8954 2 12 2ZM12 8C9.79086 8 8 9.79086 8 12C8 14.2091 9.79086 16 12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8Z"></path></svg>
+            <span>Models</span>
           </button>
           <div class="dropdown-content">
             <a href="https://huggingface.co/zhixiangwei/vlm150m-hqclip-large-vitb16">CLIP-B-16 (VLM-150M)</a>
@@ -743,8 +749,7 @@
       </div>
       
       <div class="approach-container">
-        <div class="approach-text">
-          <div class="content">
+        <div class="approach-text content">
             <p>Our approach creates a unified data generation pipeline where a single LVLM simultaneously processes both images and paired texts to generate enriched textual descriptions. The framework has two key design considerations:</p>
             
             <h3 style="color: var(--primary); margin: 1.5rem 0 1rem;">Model Selection Strategy</h3>
@@ -757,11 +762,10 @@
             
             <h3 style="color: var(--primary); margin: 1.5rem 0 1rem;">Multi-Formulation Description</h3>
             <p>Our methodology synthesizes four complementary textual formulations:</p>
-          </div>
         </div>
         
         <div class="approach-image">
-          <img src="https://via.placeholder.com/600x350/4a7bab/ffffff?text=Framework+Diagram" alt="HQ-CLIP Framework">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 450' width='800' height='450'%3E%3Cdefs%3E%3Cstyle%3E.bg%7Bfill:%23f8f9fa;%7D.p%7Bfill:%232c5e92;%7D.s%7Bfill:%234a7bab;%7D.a%7Bfill:%23e63946;%7D.light%7Bfill:%23fff;%7D.text%7Bfont-family:Roboto,sans-serif;font-size:16px;fill:%23333;%7D.title%7Bfont-family:Libre Baskerville,serif;font-size:20px;font-weight:bold;fill:%232c5e92;%7D%3C/style%3E%3C/defs%3E%3Crect class='bg' width='800' height='450'/%3E%3C!-- Data Pipeline --%3E%3Crect x='50' y='50' width='300' height='150' rx='10' class='s'/%3E%3Ctext x='200' y='80' class='title' fill='%23fff' text-anchor='middle'%3ELVLM Data Pipeline%3C/text%3E%3Ctext x='70' y='120' class='text' fill='%23fff'%3E1. Image + Raw Text Input%3C/text%3E%3Ctext x='70' y='150' class='text' fill='%23fff'%3E2. SFT LVLM Processing%3C/text%3E%3Ctext x='70' y='180' class='text' fill='%23fff'%3E3. Generate 4 Descriptions%3C/text%3E%3C!-- Arrow --%3E%3Cpath d='M200,200 v40 l-10,-10 m10,10 l10,-10' stroke='%23e63946' stroke-width='3' fill='none'/%3E%3C!-- HQ-CLIP Training --%3E%3Crect x='50' y='250' width='300' height='150' rx='10' class='p'/%3E%3Ctext x='200' y='280' class='title' fill='%23fff' text-anchor='middle'%3EHQ-CLIP Training%3C/text%3E%3Ctext x='70' y='320' class='text' fill='%23fff'%3E- Contrastive Loss%3C/text%3E%3Ctext x='70' y='350' class='text' fill='%23fff'%3E- HNI (Hard Negatives)%3C/text%3E%3Ctext x='70' y='380' class='text' fill='%23fff'%3E- STC (Short Tags)%3C/text%3E%3C!-- Output Descriptions --%3E%3Cg transform='translate(450, 50)'%3E%3Crect width='300' height='80' rx='5' class='light' stroke='%23ccc'/%3E%3Ctext x='150' y='30' class='title' text-anchor='middle'%3ELong Positive%3C/text%3E%3Ctext x='150' y='55' class='text' text-anchor='middle'%3E'A detailed photo of...'%3C/text%3E%3C/g%3E%3Cg transform='translate(450, 150)'%3E%3Crect width='300' height='80' rx='5' class='light' stroke='%23ccc'/%3E%3Ctext x='150' y='30' class='title' text-anchor='middle'%3ELong Negative%3C/text%3E%3Ctext x='150' y='55' class='text' text-anchor='middle'%3E'A drawing of...'%3C/text%3E%3C/g%3E%3Cg transform='translate(450, 250)'%3E%3Crect width='300' height='80' rx='5' class='light' stroke='%23ccc'/%3E%3Ctext x='150' y='30' class='title' text-anchor='middle'%3EShort Positive Tags%3C/text%3E%3Ctext x='150' y='55' class='text' text-anchor='middle'%3E'animal, dog, outdoor'%3C/text%3E%3C/g%3E%3Cg transform='translate(450, 350)'%3E%3Crect width='300' height='80' rx='5' class='light' stroke='%23ccc'/%3E%3Ctext x='150' y='30' class='title' text-anchor='middle'%3EShort Negative Tags%3C/text%3E%3Ctext x='150' y='55' class='text' text-anchor='middle'%3E'cat, indoor, vehicle'%3C/text%3E%3C/g%3E%3C!-- Connecting Lines --%3E%3Cpath d='M350,125 h50 l20,-20' stroke='%23a0a0a0' stroke-width='2' fill='none' stroke-dasharray='5,5'/%3E%3Cpath d='M350,125 h50 l20,70' stroke='%23a0a0a0' stroke-width='2' fill='none' stroke-dasharray='5,5'/%3E%3Cpath d='M350,325 h50 l20,-20' stroke='%23a0a0a0' stroke-width='2' fill='none' stroke-dasharray='5,5'/%3E%3Cpath d='M350,325 h50 l20,70' stroke='%23a0a0a0' stroke-width='2' fill='none' stroke-dasharray='5,5'/%3E%3C/svg%3E" alt="HQ-CLIP Framework">
           <p class="approach-caption">Figure: LVLM-driven data processing pipeline and HQ-CLIP training paradigm</p>
         </div>
       </div>
@@ -821,7 +825,7 @@
       <div class="results-grid">
         <div class="results-item">
           <div class="result-image">
-            <img src="https://via.placeholder.com/400x200/2c5e92/ffffff?text=Zero-Shot+Classification" alt="Zero-shot Classification Results">
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 200'%3E%3Crect width='400' height='200' fill='%232c5e92'/%3E%3Ctext x='50%25' y='50%25' fill='white' font-family='Roboto, sans-serif' font-size='20' dy='.3em' text-anchor='middle'%3EZero-Shot Classification%3C/text%3E%3Cpath d='M50,150 C100,100 150,160 200,120 S280,80 350,130' stroke='%23e63946' stroke-width='4' fill='none'/%3E%3Cpath d='M50,160 C120,130 180,170 250,150 S300,120 350,140' stroke='rgba(255,255,255,0.5)' stroke-width='3' fill='none' stroke-dasharray='5,5'/%3E%3C/svg%3E" alt="Zero-shot Classification Results">
           </div>
           <div class="result-content">
             <h3 class="result-title">Zero-Shot Classification</h3>
@@ -831,7 +835,7 @@
         
         <div class="results-item">
           <div class="result-image">
-            <img src="https://via.placeholder.com/400x200/4a7bab/ffffff?text=Cross-Modal+Retrieval" alt="Cross-Modal Retrieval Results">
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 200'%3E%3Crect width='400' height='200' fill='%234a7bab'/%3E%3Ctext x='50%25' y='50%25' fill='white' font-family='Roboto, sans-serif' font-size='20' dy='.3em' text-anchor='middle'%3ECross-Modal Retrieval%3C/text%3E%3Ccircle cx='100' cy='120' r='30' fill='rgba(255,255,255,0.3)'/%3E%3Crect x='270' y='90' width='60' height='60' fill='rgba(255,255,255,0.3)'/%3E%3Cpath d='M135,120 Q200,80 265,120' stroke='%23e63946' stroke-width='3' fill='none' stroke-dasharray='4,4'/%3E%3C/svg%3E" alt="Cross-Modal Retrieval Results">
           </div>
           <div class="result-content">
             <h3 class="result-title">Cross-Modal Retrieval</h3>
@@ -841,7 +845,7 @@
         
         <div class="results-item">
           <div class="result-image">
-            <img src="https://via.placeholder.com/400x200/e63946/ffffff?text=LVLM+Visual+Backbone" alt="LVLM Visual Backbone Results">
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 200'%3E%3Crect width='400' height='200' fill='%23e63946'/%3E%3Ctext x='50%25' y='50%25' fill='white' font-family='Roboto, sans-serif' font-size='20' dy='.3em' text-anchor='middle'%3ELVLM Visual Backbone%3C/text%3E%3Crect x='50' y='100' width='100' height='50' fill='rgba(255,255,255,0.4)' rx='5'/%3E%3Cpath d='M155,125 H245' stroke='white' stroke-width='3' fill='none'/%3E%3Cpath d='M240,120 l5,5 l-5,5' stroke='white' stroke-width='3' fill='none'/%3E%3Crect x='250' y='100' width='100' height='50' fill='rgba(44,94,146,0.7)' rx='5'/%3E%3C/svg%3E" alt="LVLM Visual Backbone Results">
           </div>
           <div class="result-content">
             <h3 class="result-title">LVLM Visual Backbone</h3>
