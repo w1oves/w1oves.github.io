@@ -1,543 +1,202 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>[ICCV 2025] HQ-CLIP: High-Quality Datasets for Vision-Language Models</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        :root {
-            --primary: #2c3e50;
-            --secondary: #3498db;
-            --accent: #e74c3c;
-            --light: #f8f9fa;
-            --dark: #212529;
-        }
-        
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #f5f7fa;
-            color: #333;
-            padding-top: 20px;
-        }
-        
-        .header-badge {
-            font-size: 0.8rem;
-            padding: 5px 10px;
-            border-radius: 20px;
-            background-color: var(--accent);
-            color: white;
-            font-weight: bold;
-        }
-        
-        .paper-card {
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-            border: none;
-            transition: transform 0.3s, box-shadow 0.3s;
-            background: white;
-            margin-bottom: 30px;
-            overflow: hidden;
-        }
-        
-        .paper-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
-        }
-        
-        .card-header {
-            background: linear-gradient(135deg, var(--primary), #1a2530);
-            color: white;
-            padding: 20px 25px;
-            font-weight: 600;
-            border: none;
-        }
-        
-        .card-body {
-            padding: 25px;
-        }
-        
-        .contribution-item {
-            background-color: rgba(231, 76, 60, 0.08);
-            border-radius: 10px;
-            padding: 15px 20px;
-            margin-bottom: 15px;
-            border-left: 4px solid var(--accent);
-            transition: all 0.2s ease;
-        }
-        
-        .contribution-item:hover {
-            background-color: rgba(231, 76, 60, 0.15);
-            transform: translateX(5px);
-        }
-        
-        .model-table th {
-            background-color: var(--primary);
-            color: white;
-        }
-        
-        .dataset-highlight {
-            background: linear-gradient(to right, rgba(52, 152, 219, 0.1), rgba(46, 204, 113, 0.1));
-            padding: 25px;
-            border-radius: 15px;
-            margin: 25px 0;
-        }
-        
-        .feature-icon {
-            font-size: 2.2rem;
-            color: var(--secondary);
-            margin-bottom: 15px;
-        }
-        
-        .methodology-section {
-            background-color: rgba(52, 152, 219, 0.07);
-            padding: 40px 0;
-            border-radius: 15px;
-            margin: 40px 0;
-        }
-        
-        .diagram-container {
-            background: white;
-            padding: 25px;
-            border-radius: 15px;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
-            margin: 30px 0;
-        }
-        
-        .citation-box {
-            background-color: #1a2530;
-            color: #ecf0f1;
-            border-radius: 10px;
-            padding: 25px;
-            font-family: 'Courier New', monospace;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .citation-box::before {
-            content: "BibTeX";
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            background: var(--accent);
-            color: white;
-            padding: 3px 10px;
-            border-radius: 20px;
-            font-size: 0.8rem;
-        }
-        
-        .footer-buttons .btn {
-            font-weight: 600;
-            border-radius: 30px;
-            padding: 8px 20px;
-            margin: 5px;
-        }
-        
-        .author-img {
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 2px solid var(--secondary);
-        }
-        
-        .dataset-card {
-            transition: transform 0.3s;
-            height: 100%;
-        }
-        
-        .dataset-card:hover {
-            transform: scale(1.03);
-        }
-        
-        .dataset-card .card-icon {
-            font-size: 2.5rem;
-            color: var(--secondary);
-            margin-bottom: 15px;
-        }
-        
-        .badge-pill {
-            font-weight: normal;
-            padding: 5px 10px;
-        }
-        
-        .hover-underline {
-            position: relative;
-            display: inline-block;
-        }
-        
-        .hover-underline::after {
-            content: '';
-            position: absolute;
-            width: 100%;
-            height: 2px;
-            bottom: -3px;
-            left: 0;
-            background-color: var(--accent);
-            transform: scaleX(0);
-            transition: transform 0.3s;
-        }
-        
-        .hover-underline:hover::after {
-            transform: scaleX(1);
-        }
-    </style>
+  <meta charset="UTF-8">
+  <title>[ICCV 2025] HQ-CLIP: Leveraging Large Vision-Language Models to Create High-Quality Image-Text Datasets 🚀</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body { font-family: 'Segoe UI', Arial, sans-serif; margin: 0; padding: 0; background: #f9f9fb; color: #222; }
+    .container { max-width: 900px; margin: 0 auto; padding: 32px 16px 64px 16px; background: #fff; box-shadow: 0 2px 8px rgba(0,0,0,0.04);}
+    h1 { font-size: 2.2em; margin-bottom: 0.2em; }
+    h2 { border-bottom: 2px solid #eee; padding-bottom: 0.2em; margin-top: 2em; }
+    h3 { margin-top: 1.5em; }
+    .badges { margin-bottom: 1.5em; }
+    .badges a { margin-right: 8px; vertical-align: middle; }
+    .authors { margin-bottom: 1.5em; font-size: 1.1em; }
+    .authors sup { font-size: 0.8em; }
+    .affiliations { color: #666; font-size: 0.98em; margin-bottom: 2em; }
+    ul.keypoints { list-style: none; padding-left: 0; }
+    ul.keypoints li { margin-bottom: 1em; padding-left: 2em; position: relative; }
+    ul.keypoints li:before { content: "•"; position: absolute; left: 0; color: #0072c6; font-size: 1.3em; top: 0.1em;}
+    .model-overview { display: block; margin: 2em auto 2em auto; max-width: 100%; border-radius: 8px; box-shadow: 0 1px 6px rgba(0,0,0,0.07);}
+    table { border-collapse: collapse; width: 100%; margin: 1.5em 0; background: #fcfcfc;}
+    th, td { border: 1px solid #e0e0e0; padding: 8px 12px; text-align: center; }
+    th { background: #f2f6fa; font-weight: 600;}
+    tr:nth-child(even) { background: #f7f9fa;}
+    .img-table { display: block; margin: 2em auto; max-width: 100%; border-radius: 6px; box-shadow: 0 1px 4px rgba(0,0,0,0.05);}
+    .section-note { color: #888; font-size: 0.98em; margin-bottom: 1em;}
+    .citation { background: #f6f8fa; border-left: 4px solid #0072c6; padding: 1em; margin: 2em 0;}
+    .acknowledgments { background: #f9f9fb; border-left: 4px solid #e0e0e0; padding: 1em; margin: 2em 0;}
+    .footnote { color: #888; font-size: 0.95em;}
+    a { color: #0072c6; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    @media (max-width: 600px) {
+      .container { padding: 12px 2vw; }
+      h1 { font-size: 1.3em; }
+      table, th, td { font-size: 0.96em; }
+    }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <!-- Header Section -->
-        <header class="text-center mb-5">
-            <div class="d-flex justify-content-center mb-3">
-                <span class="header-badge">ICCV 2025</span>
-            </div>
-            <h1 class="display-4 fw-bold mb-3">HQ-CLIP: Leveraging Large Vision-Language Models to Create High-Quality Image-Text Datasets <span class="text-danger">🚀</span></h1>
-            
-            <!-- Authors -->
-            <div class="d-flex justify-content-center align-items-center flex-wrap gap-3 mt-4">
-                <div class="d-flex align-items-center gap-2">
-                    <img src="https://via.placeholder.com/50" class="author-img" alt="Zhixiang Wei">
-                    <div>
-                        <div><a href="https://zxwei.site" class="text-decoration-none hover-underline">Zhixiang Wei</a><sup>1</sup></div>
-                        <small class="text-muted">University of Science and Technology of China</small>
-                    </div>
-                </div>
-                <div class="d-flex align-items-center gap-2">
-                    <img src="https://via.placeholder.com/50" class="author-img" alt="Guangting Wang">
-                    <div>
-                        <div>Guangting Wang<sup>2</sup> et al.</div>
-                        <small class="text-muted">WeChat Vision, Tencent Inc.</small>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Action Buttons -->
-            <div class="footer-buttons mt-4">
-                <a href="https://arxiv.org/pdf/xxxx.xxxx.pdf" class="btn btn-danger">
-                    <i class="fas fa-file-pdf me-2"></i> Paper PDF
-                </a>
-                <a href="https://zxwei.site/hqclip/" class="btn btn-primary">
-                    <i class="fas fa-globe me-2"></i> Project Page
-                </a>
-                <a href="https://huggingface.co/spaces/zhixiangwei/hqclip" class="btn btn-warning">
-                    <i class="fas fa-play-circle me-2"></i> Demo
-                </a>
-            </div>
-        </header>
-
-        <!-- Abstract Card -->
-        <div class="paper-card">
-            <div class="card-header">
-                <i class="fas fa-search me-2"></i> Key Contributions
-            </div>
-            <div class="card-body">
-                <div class="contribution-item">
-                    <div class="fw-bold"><i class="fas fa-industry me-2 text-secondary"></i> Efficient Data Generation Pipeline</div>
-                    <div class="ms-4 mt-2">Multi-grained annotation pipeline using Large Vision-Language Models (LVLMs)</div>
-                </div>
-                
-                <div class="contribution-item">
-                    <div class="fw-bold"><i class="fas fa-database me-2 text-secondary"></i> High-Quality Image-Text Datasets</div>
-                    <div class="ms-4 mt-2">Generated by state-of-the-art LVLMs with positive/negative examples and rich text descriptions:</div>
-                    <div class="row mt-3">
-                        <div class="col-md-6">
-                            <div class="d-flex align-items-center">
-                                <i class="fas fa-chart-line me-3 text-success" style="font-size: 1.5rem;"></i>
-                                <div>
-                                    <a href="https://huggingface.co/datasets/zhixiangwei/VLM-1B" class="text-decoration-none fw-bold">VLM-1B</a>
-                                    <div>Billion-scale dataset</div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="d-flex align-items-center">
-                                <i class="fas fa-star me-3 text-warning" style="font-size: 1.5rem;"></i>
-                                <div>
-                                    <a href="https://huggingface.co/datasets/zhixiangwei/VLM-150M" class="text-decoration-none fw-bold">VLM-150M</a>
-                                    <div>Curated 150M samples</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="contribution-item">
-                    <div class="fw-bold"><i class="fas fa-brain me-2 text-secondary"></i> HQ-CLIP Training Framework</div>
-                    <div class="ms-4 mt-2">Novel CLIP training paradigm extending contrastive learning with:</div>
-                    <ul class="mt-2 ms-4">
-                        <li>Negative description supervision</li>
-                        <li>Short tag augmentation</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-        <!-- Methodology Diagram -->
-        <div class="diagram-container text-center">
-            <h4 class="mb-4"><i class="fas fa-project-diagram me-2 text-primary"></i> Model Overview</h4>
-            <img src="https://github.com/user-attachments/assets/e700f75b-e0a5-4328-8466-6b496a4f971d" alt="Model Overview" class="img-fluid rounded" style="max-height: 400px;">
-            <div class="text-muted mt-3">Figure: HQ-CLIP multi-stage annotation pipeline using Large Vision-Language Models</div>
-        </div>
-
-        <!-- Model Zoo -->
-        <div class="paper-card">
-            <div class="card-header">
-                <i class="fas fa-dragon me-2"></i> Model Zoo
-            </div>
-            <div class="card-body">
-                <div class="table-responsive">
-                    <table class="table table-hover model-table">
-                        <thead>
-                            <tr>
-                                <th>Model</th>
-                                <th>Pretrained</th>
-                                <th>ImageNet Top-1</th>
-                                <th>DataComp Score</th>
-                                <th>Download</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td><span class="badge bg-secondary">CLIP-B-16</span></td>
-                                <td>VLM-150M-Medium</td>
-                                <td>70.6</td>
-                                <td>58.6</td>
-                                <td><a href="https://huggingface.co/zhixiangwei/vlm150m-hqclip-large-vitb16"><i class="fas fa-download"></i> HF Link</a></td>
-                            </tr>
-                            <tr>
-                                <td><span class="badge bg-primary">CLIP-L-14-CLIPA</span></td>
-                                <td>VLM-1B</td>
-                                <td>78.6</td>
-                                <td>63.8</td>
-                                <td><a href="https://huggingface.co/zhixiangwei/vlm1b-hqclip-xlarge-vitl14-clipa"><i class="fas fa-download"></i> HF Link</a></td>
-                            </tr>
-                            <tr>
-                                <td><span class="badge bg-success">CLIP-L-14-OPENAI</span></td>
-                                <td>VLM-1B</td>
-                                <td>76.5</td>
-                                <td>63.7</td>
-                                <td><a href="https://huggingface.co/zhixiangwei/hqclip-openai-large-ft-vlm1b"><i class="fas fa-download"></i> HF Link</a></td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-                
-                <div class="mt-4">
-                    <span class="fw-bold">Recaption Model:</span>
-                    <a href="https://huggingface.co/zhixiangwei/qwen2-7b-full" class="badge bg-info text-dark">Qwen2VL</a>
-                </div>
-            </div>
-        </div>
-
-        <!-- Datasets -->
-        <div class="paper-card">
-            <div class="card-header">
-                <i class="fas fa-database me-2"></i> Datasets
-            </div>
-            <div class="card-body">
-                <div class="row">
-                    <div class="col-md-6 mb-4">
-                        <div class="dataset-card card h-100">
-                            <div class="card-body">
-                                <div class="d-flex align-items-center mb-3">
-                                    <i class="fas fa-compact-disc fa-2x text-warning me-3"></i>
-                                    <div>
-                                        <h5 class="card-title mb-0">VLM-150M</h5>
-                                        <span class="text-muted">147M Samples</span>
-                                    </div>
-                                </div>
-                                <p class="card-text">High-quality curated dataset with multi-granular annotations, object tags, and negative text examples.</p>
-                                <div class="mt-auto">
-                                    <a href="https://huggingface.co/datasets/zhixiangwei/VLM-150M" class="btn btn-outline-success mt-2">
-                                        <i class="fas fa-download me-2"></i> Download Dataset
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="col-md-6 mb-4">
-                        <div class="dataset-card card h-100">
-                            <div class="card-body">
-                                <div class="d-flex align-items-center mb-3">
-                                    <i class="fas fa-database fa-2x text-primary me-3"></i>
-                                    <div>
-                                        <h5 class="card-title mb-0">VLM-1B</h5>
-                                        <span class="text-muted">Billion-scale Dataset</span>
-                                    </div>
-                                </div>
-                                <p class="card-text">Large-scale dataset generated using our annotation pipeline, ideal for training foundation models.</p>
-                                <div class="mt-auto">
-                                    <a href="https://huggingface.co/datasets/zhixiangwei/VLM-1B" class="btn btn-outline-primary mt-2">
-                                        <i class="fas fa-download me-2"></i> Download Dataset
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Dataset Usage Guide -->
-        <div class="paper-card">
-            <div class="card-header">
-                <i class="fas fa-book-open me-2"></i> Dataset Usage Guide
-            </div>
-            <div class="card-body">
-                <h5 class="mb-4"><i class="fas fa-list-ol me-2 text-info"></i> Preparation Steps</h5>
-                <ol class="list-group list-group-numbered">
-                    <li class="list-group-item d-flex justify-content-between align-items-start">
-                        <div class="ms-2 me-auto">
-                            <div class="fw-bold">(Optional) Download CommonPool Foundation Datasets</div>
-                            Access CommonPool Large and XLarge versions via:
-                            <br>
-                            <a href="https://github.com/mlfoundations/datacomp#downloading-commonpool" class="badge bg-primary text-decoration-none mt-2">CommonPool GitHub Repository</a>
-                        </div>
-                        <span class="badge bg-warning rounded-pill">Step 1</span>
-                    </li>
-                    <li class="list-group-item d-flex justify-content-between align-items-start">
-                        <div class="ms-2 me-auto">
-                            <div class="fw-bold">Acquire DFN Base Datasets</div>
-                            Download DFN Large and XLarge from:
-                            <br>
-                            <a href="https://huggingface.co/datasets/apf1/datafilteringnetworks_2b" class="badge bg-info text-decoration-none mt-2">DFN Hugging Face Datasets</a>
-                        </div>
-                        <span class="badge bg-warning rounded-pill">Step 2</span>
-                    </li>
-                    <li class="list-group-item d-flex justify-content-between align-items-start">
-                        <div class="ms-2 me-auto">
-                            <div class="fw-bold">Download HQ-CLIP Datasets</div>
-                            Obtain our enhanced datasets:
-                            <div class="mt-2">
-                                <span class="badge bg-warning badge-pill me-2"><i class="fas fa-database"></i> VLM-150M</span>
-                                <span class="badge bg-primary badge-pill"><i class="fas fa-database"></i> VLM-1B</span>
-                            </div>
-                        </div>
-                        <span class="badge bg-warning rounded-pill">Step 3</span>
-                    </li>
-                </ol>
-
-                <h5 class="mt-5 mb-4"><i class="fas fa-code me-2 text-success"></i> Integration Instructions</h5>
-                <p>Each JSON entry in VLM-150M and VLM-1B corresponds directly to a DFN dataset UID through matching filenames. To utilize our enhanced annotations:</p>
-                
-                <div class="row mt-4">
-                    <div class="col-md-6 mb-4">
-                        <div class="card h-100">
-                            <div class="card-header bg-success text-white">Option 1: Direct Caption Replacement</div>
-                            <div class="card-body">
-                                <p>Substitute the original DFN captions with our generated annotations</p>
-                                <div class="mt-3">
-                                    <pre class="bg-light p-3 rounded"># Python pseudo-code
-import json
-
-# Load original DFN dataset
-dfn_data = load_dfn_data()
-
-# Load HQ-CLIP annotations
-hqclip_annotations = load_hqclip_data()
-
-# Replace captions
-for item in dfn_data:
-    uid = item['filename']
-    if uid in hqclip_annotations:
-        item['caption'] = hqclip_annotations[uid]</pre>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 mb-4">
-                        <div class="card h-100">
-                            <div class="card-header bg-primary text-white">Option 2: Dynamic Data Loading</div>
-                            <div class="card-body">
-                                <p>Modify the Open CLIP dataloader to load our annotations during training runtime</p>
-                                <div class="mt-3">
-                                    <pre class="bg-light p-3 rounded"># Python pseudo-code
-class HqClipDataset(Dataset):
-    def __init__(self, dfn_path, hqclip_path):
-        self.dfn_data = load_dfn_data(dfn_path)
-        self.hqclip_annos = load_hqclip_annotations(hqclip_path)
-        
-    def __getitem__(self, idx):
-        item = self.dfn_data[idx]
-        uid = item['filename']
-        # Use HQ-CLIP annotations if available
-        caption = self.hqclip_annos.get(uid, item['caption'])
-        return item['image'], caption</pre>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="alert alert-info mt-4">
-                    <i class="fas fa-info-circle me-2"></i> <strong>Note:</strong> Detailed implementation guidance will be published in future releases.
-                </div>
-            </div>
-        </div>
-
-        <!-- Citation -->
-        <div class="paper-card">
-            <div class="card-header">
-                <i class="fas fa-quote-right me-2"></i> Citation
-            </div>
-            <div class="card-body">
-                <div class="citation-box">
-                    @InProceedings&#123;Wei2025HQCLIP,<br>
-                    &nbsp;&nbsp;title&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;= &nbsp;&#123;HQ-CLIP: Leveraging Large Vision-Language Models to Create High-Quality Image-Text Datasets&#125;,<br>
-                    &nbsp;&nbsp;author&nbsp;&nbsp;&nbsp;&nbsp;= &nbsp;&#123;Wei, Zhixiang and Wang, Guangting and et al.&#125;,<br>
-                    &nbsp;&nbsp;booktitle = &#123;Proceedings of the IEEE/CVF International Conference on Computer Vision&#125;,<br>
-                    &nbsp;&nbsp;year&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;= &nbsp;&#123;2025&#125;<br>
-                    &#125;
-                </div>
-            </div>
-        </div>
-
-        <!-- Acknowledgments -->
-        <div class="paper-card">
-            <div class="card-header">
-                <i class="fas fa-hands-helping me-2"></i> Acknowledgments
-            </div>
-            <div class="card-body">
-                <p>These works have greatly inspired us, providing us with codebases, data, and support. We thank their authors!</p>
-                
-                <div class="d-flex flex-wrap gap-2 mt-3">
-                    <a href="https://github.com/mlfoundations/open_clip.git" class="btn btn-outline-secondary">
-                        <i class="fab fa-github me-2"></i> open_clip
-                    </a>
-                    <a href="https://github.com/LAION-AI/CLIP_benchmark" class="btn btn-outline-secondary">
-                        <i class="fas fa-chart-bar me-2"></i> clip_benchmark
-                    </a>
-                    <a href="https://github.com/mlfoundations/datacomp" class="btn btn-outline-secondary">
-                        <i class="fas fa-compress-arrows-alt me-2"></i> datacomp
-                    </a>
-                    <a href="https://huggingface.co/collections/apple/dfn-models-data-659ecf85cebd98088a9d9a3b" class="btn btn-outline-secondary">
-                        <i class="fab fa-apple me-2"></i> DFN
-                    </a>
-                    <a href="https://huggingface.co/datasets/UCSC-VLAA/Recap-DataComp-1B" class="btn btn-outline-secondary">
-                        <i class="fas fa-question-circle me-2"></i> What If
-                    </a>
-                </div>
-            </div>
-        </div>
-
-        <!-- Footer -->
-        <footer class="text-center text-muted mt-5 py-4">
-            <p>© 2025 HQ-CLIP Project - ICCV 2025</p>
-            <div class="d-flex justify-content-center gap-3 mt-2">
-                <a href="https://zxwei.site" class="text-decoration-none text-primary">
-                    <i class="fas fa-user-circle me-1"></i> Zhixiang Wei
-                </a>
-                <a href="https://www.ustc.edu.cn" class="text-decoration-none text-success">
-                    <i class="fas fa-university me-1"></i> USTC
-                </a>
-                <a href="https://www.tencent.com" class="text-decoration-none text-info">
-                    <i class="fab fa-tencent me-1"></i> Tencent
-                </a>
-            </div>
-        </footer>
+  <div class="container">
+    <h1>
+      [ICCV 2025] HQ-CLIP: Leveraging Large Vision-Language Models to Create High-Quality Image-Text Datasets 🚀
+    </h1>
+    <div class="badges">
+      <a href="https://arxiv.org/pdf/xxxx.xxxx.pdf"><img src="https://img.shields.io/badge/📄_Paper-PDF-critical?logo=adobeacrobatreader" alt="Paper PDF"></a>
+      <a href="https://zxwei.site/hqclip/"><img src="https://img.shields.io/badge/🌐_Project-Page-blue?logo=googlechrome" alt="Project Page"></a>
+      <a href="https://huggingface.co/spaces/zhixiangwei/hqclip"><img src="https://img.shields.io/badge/🤗_Demo-HuggingFace_Spaces-yellow" alt="Demo"></a>
+      <a href="https://huggingface.co/datasets/zhixiangwei/VLM-150M"><img src="https://img.shields.io/badge/📀_Dataset-VLM--150M-brightgreen" alt="Dataset VLM-150M"></a>
+      <a href="https://huggingface.co/datasets/zhixiangwei/VLM-1B"><img src="https://img.shields.io/badge/💿_Dataset-VLM--1B-success" alt="Dataset VLM-1B"></a>
+    </div>
+    <div class="authors">
+      <strong>Authors</strong><br>
+      <a href="https://zxwei.site">Zhixiang Wei</a><sup>1</sup>, Guangting Wang <em>et al.</em>
+    </div>
+    <div class="affiliations">
+      <sup>1</sup> University of Science and Technology of China<br>
+      <sup>2</sup> WeChat Vision, Tencent Inc.
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <h2>🔍 Key Contributions</h2>
+    <ul class="keypoints">
+      <li>
+        <b>🏭 Efficient Data Generation Pipeline</b><br>
+        Multi-grained annotation pipeline using Large Vision-Language Models (LVLMs)
+      </li>
+      <li>
+        <b>🗂️ High-Quality Image-Text Datasets</b><br>
+        Generated by state-of-the-art LVLMs with positive/negative examples and rich text descriptions:<br>
+        &nbsp;&nbsp;• <a href="https://huggingface.co/datasets/zhixiangwei/VLM-1B"><b>VLM-1B</b></a>: Billion-scale dataset<br>
+        &nbsp;&nbsp;• <a href="https://huggingface.co/datasets/zhixiangwei/VLM-150M"><b>VLM-150M</b></a>: Curated 150M samples
+      </li>
+      <li>
+        <b>🧠 HQ-CLIP Training Framework</b><br>
+        Novel CLIP training paradigm extending contrastive learning with:<br>
+        &nbsp;&nbsp;• Negative description supervision<br>
+        &nbsp;&nbsp;• Short tag augmentation
+      </li>
+    </ul>
+
+    <img class="model-overview" src="https://github.com/user-attachments/assets/e700f75b-e0a5-4328-8466-6b496a4f971d" alt="Model Overview">
+
+    <h2>Model Zoo</h2>
+    <table>
+      <tr>
+        <th>Model</th>
+        <th>Pretrained</th>
+        <th>ImageNet Top-1</th>
+        <th>DataComp Score</th>
+      </tr>
+      <tr>
+        <td><a href="https://huggingface.co/zhixiangwei/vlm150m-hqclip-large-vitb16">CLIP-B-16</a></td>
+        <td>VLM-150M-Medium</td>
+        <td>70.6</td>
+        <td>58.6</td>
+      </tr>
+      <tr>
+        <td><a href="https://huggingface.co/zhixiangwei/vlm1b-hqclip-xlarge-vitl14-clipa">CLIP-L-14-CLIPA</a></td>
+        <td>VLM-1B</td>
+        <td>78.6</td>
+        <td>63.8</td>
+      </tr>
+      <tr>
+        <td><a href="https://huggingface.co/zhixiangwei/hqclip-openai-large-ft-vlm1b">CLIP-L-14-OPENAI</a></td>
+        <td>VLM-1B</td>
+        <td>76.5</td>
+        <td>63.7</td>
+      </tr>
+    </table>
+    <div class="section-note">
+      Recaption Model: <a href="https://huggingface.co/zhixiangwei/qwen2-7b-full">Qwen2VL</a>
+    </div>
+
+    <h2>Datasets</h2>
+    <table>
+      <tr>
+        <th>Dataset</th>
+        <th>Samples</th>
+        <th>URL</th>
+      </tr>
+      <tr>
+        <td>VLM-150M</td>
+        <td>147M</td>
+        <td><a href="https://huggingface.co/datasets/zhixiangwei/VLM-150M">Link</a></td>
+      </tr>
+      <tr>
+        <td>VLM-1B</td>
+        <td>-</td>
+        <td><a href="https://huggingface.co/datasets/zhixiangwei/VLM-1B">Link</a></td>
+      </tr>
+    </table>
+
+    <h2>Dataset Usage Guide</h2>
+    <h3>Preparation Steps</h3>
+    <ol>
+      <li>
+        <b>(Optional) Download CommonPool Foundation Datasets</b><br>
+        Access CommonPool Large and XLarge versions via:<br>
+        <a href="https://github.com/mlfoundations/datacomp#downloading-commonpool">CommonPool GitHub Repository</a>
+      </li>
+      <li>
+        <b>Acquire DFN Base Datasets</b><br>
+        Download DFN Large and XLarge from:<br>
+        <a href="https://huggingface.co/datasets/apf1/datafilteringnetworks_2b">DFN Hugging Face Datasets</a>
+      </li>
+      <li>
+        <b>Download HQ-CLIP Datasets</b><br>
+        Obtain our enhanced datasets:<br>
+        &nbsp;&nbsp;• VLM-150M<br>
+        &nbsp;&nbsp;• VLM-1B
+      </li>
+    </ol>
+    <h3>Integration Instructions</h3>
+    <p>
+      Each JSON entry in VLM-150M and VLM-1B corresponds directly to a DFN dataset UID through matching filenames. To utilize our enhanced annotations:
+    </p>
+    <ul>
+      <li>
+        <b>Option 1: Direct Caption Replacement</b><br>
+        Substitute the original DFN captions with our generated annotations
+      </li>
+      <li>
+        <b>Option 2: Dynamic Data Loading</b><br>
+        Modify the Open CLIP dataloader to load our annotations during training runtime
+      </li>
+    </ul>
+    <p class="section-note">🔜 Detailed implementation guidance will be published in future releases.</p>
+
+    <h2>🧪 Experimental Results</h2>
+    <h3>Comparison with SoTA Models</h3>
+    <img class="img-table" src="table2.png" alt="Comparison with SoTA models (Table 2)">
+    <h3>Performance as LVLM Visual Encoder</h3>
+    <img class="img-table" src="table5.png" alt="Performance as LVLM Visual Encoder (Table 5)">
+    <h3>Ablation Study</h3>
+    <img class="img-table" src="table34.png" alt="Ablation Study (Table 3/4)">
+
+    <h2>📝 Citation</h2>
+    <div class="citation">
+      <pre>
+@InProceedings{Wei2025HQCLIP,
+  title     = {HQ-CLIP: Leveraging Large Vision-Language Models to Create High-Quality Image-Text Datasets},
+  author    = {Wei, Zhixiang and Wang, Guangting and et al.},
+  booktitle = {Proceedings of the IEEE/CVF International Conference on Computer Vision},
+  year      = {2025}
+}
+      </pre>
+    </div>
+
+    <h2>🙏 Acknowledgments</h2>
+    <div class="acknowledgments">
+      These works have greatly inspired us, providing us with codebases, data, and support. We thank their authors!
+      <ul>
+        <li><a href="https://github.com/mlfoundations/open_clip.git">open_clip</a></li>
+        <li><a href="https://github.com/LAION-AI/CLIP_benchmark">clip_benchmark</a></li>
+        <li><a href="https://github.com/mlfoundations/datacomp">datacomp</a></li>
+        <li><a href="https://huggingface.co/collections/apple/dfn-models-data-659ecf85cebd98088a9d9a3b">DFN</a></li>
+        <li><a href="https://huggingface.co/datasets/UCSC-VLAA/Recap-DataComp-1B">What If</a></li>
+      </ul>
+    </div>
+  </div>
 </body>
 </html>
