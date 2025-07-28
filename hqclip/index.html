@@ -26,7 +26,6 @@
       --light: #f8f9fa;
       --dark: #212529;
       --border: #dee2e6;
-      /* A more subtle, modern shadow */
       --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
     }
     
@@ -50,7 +49,7 @@
       color: white;
       padding: 3rem 1rem;
       position: relative;
-      overflow: hidden;
+      /* KEY FIX: Removed 'overflow: hidden' which was clipping the dropdown menu. */
     }
     
     .hero::before {
@@ -69,7 +68,7 @@
       margin: 0 auto;
       padding: 0 1.5rem;
       position: relative;
-      z-index: 2; /* Keep hero content above its own background */
+      z-index: 2;
     }
     
     .hero-body {
@@ -130,12 +129,11 @@
       margin-top: 2rem;
     }
     
-    /* --- Unified Button and Link Styling --- */
     .btn {
-      display: inline-flex; /* Use inline-flex for better alignment */
+      display: inline-flex;
       align-items: center;
       justify-content: center;
-      gap: 10px; /* Space between icon and text */
+      gap: 10px;
       padding: 12px 24px;
       background: rgba(255,255,255,0.95);
       color: var(--primary);
@@ -170,11 +168,9 @@
       height: 1.2em;
     }
     
-    /* Main Content Sections */
     section {
       padding: 4rem 0;
       position: relative;
-      /* KEY FIX: Removed z-index: 10 to prevent it from overlapping the hero's dropdown */
     }
     
     .section-header {
@@ -225,7 +221,30 @@
       color: var(--accent);
     }
     
-    /* Problem-Solution Section */
+    .image-caption {
+      text-align: center;
+      font-size: 0.9rem;
+      color: #666;
+      margin-top: 1rem;
+      font-style: italic;
+    }
+    
+    .full-width-image-container {
+        max-width: 1000px;
+        margin: 2rem auto 0 auto;
+        padding: 1rem;
+        background: white;
+        border-radius: 10px;
+        box-shadow: var(--shadow);
+    }
+
+    .full-width-image-container img {
+        width: 100%;
+        height: auto;
+        display: block;
+        border-radius: 6px;
+    }
+
     .problem-solution {
       background: var(--light);
     }
@@ -273,48 +292,6 @@
       border-radius: 2px;
     }
     
-    /* Approach Section */
-    .approach-container {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      gap: 2.5rem;
-      margin-top: 2rem;
-    }
-    
-    .approach-text {
-      flex: 1;
-      min-width: 300px;
-    }
-    
-    .approach-image {
-      flex: 1.2;
-      min-width: 300px;
-      border-radius: 10px;
-      overflow: hidden;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-    }
-    
-    .approach-image img {
-      width: 100%;
-      height: auto;
-      display: block;
-      transition: transform 0.5s ease;
-    }
-    
-    .approach-image img:hover {
-      transform: scale(1.03);
-    }
-    
-    .approach-caption {
-      text-align: center;
-      font-size: 0.9rem;
-      color: #666;
-      margin-top: 10px;
-      font-style: italic;
-    }
-    
-    /* Methodology Items */
     .methodology-items {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -350,59 +327,33 @@
       font-weight: 600;
     }
     
-    /* Results Section */
     .results-section {
       background: var(--light);
     }
     
-    .results-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-      gap: 2rem;
-      margin-top: 2rem;
+    .result-block {
+        margin-bottom: 4rem;
     }
-    
-    .results-item {
-      background: white;
-      border-radius: 10px;
-      overflow: hidden;
-      box-shadow: var(--shadow);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    .result-block:last-child {
+        margin-bottom: 0;
     }
-    .results-item:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 10px 20px -5px rgba(0,0,0,0.15);
-    }
-    
-    .result-image {
-      height: 200px;
-      overflow: hidden;
-      background-color: #e9ecef;
-    }
-    
-    .result-image img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      transition: transform 0.5s ease;
-    }
-    
-    .result-image:hover img {
-      transform: scale(1.05);
-    }
-    
-    .result-content {
-      padding: 1.5rem;
-    }
-    
+
     .result-title {
-      font-size: 1.2rem;
+      font-size: 1.5rem;
       font-weight: 600;
       color: var(--primary);
-      margin-bottom: 0.8rem;
+      margin-bottom: 0.5rem;
+      text-align: center;
+    }
+
+    .result-description {
+        text-align: center;
+        color: #555;
+        max-width: 700px;
+        margin: 0 auto 1.5rem auto;
     }
     
-    /* Contributions Section */
     .contributions {
       background: linear-gradient(to right, var(--primary), var(--secondary));
       color: white;
@@ -436,7 +387,6 @@
       line-height: 1;
     }
     
-    /* BibTeX Section */
     .bibtex-section {
       background: var(--dark);
       color: white;
@@ -459,7 +409,6 @@
       text-align: left;
     }
     
-    /* Footer */
     footer {
       background: var(--dark);
       color: rgba(255,255,255,0.7);
@@ -480,7 +429,6 @@
       color: rgba(255,255,255,0.5);
     }
     
-    /* --- Dropdown Styles --- */
     .dropdown {
       position: relative;
       display: inline-block;
@@ -501,18 +449,17 @@
       display: none;
       position: absolute;
       background-color: white;
-      min-width: 100%; /* Match button width */
+      min-width: 100%;
       box-shadow: 0 8px 16px rgba(0,0,0,0.2);
-      z-index: 1000; /* High z-index for visibility */
+      z-index: 1000;
       border-radius: 6px;
       overflow: hidden;
-      margin-top: 12px; /* Space from button */
+      margin-top: 12px;
       left: 0;
       animation: fadeIn 0.3s ease;
       text-align: left;
     }
     
-    /* Upward pointing caret for the dropdown */
     .dropdown-content::before {
       content: '';
       position: absolute;
@@ -552,34 +499,13 @@
       to { opacity: 1; transform: translateY(0); }
     }
     
-    /* Responsive Design */
     @media (max-width: 768px) {
-      .publication-title {
-        font-size: 2.2rem;
-      }
-      
-      .hero-subtitle {
-        font-size: 1.2rem;
-      }
-      
-      .section-header h2 {
-        font-size: 1.8rem;
-      }
-      
-      .publication-links {
-        flex-direction: column;
-        align-items: center;
-      }
-      
-      .btn {
-        width: 100%;
-        max-width: 320px;
-      }
-      
-      .ps-container, .approach-container {
-        flex-direction: column;
-      }
-      
+      .publication-title { font-size: 2.2rem; }
+      .hero-subtitle { font-size: 1.2rem; }
+      .section-header h2 { font-size: 1.8rem; }
+      .publication-links { flex-direction: column; align-items: center; }
+      .btn { width: 100%; max-width: 320px; }
+      .ps-container { flex-direction: column; }
       .dropdown-content {
         position: static;
         margin-top: 10px;
@@ -587,25 +513,15 @@
         max-width: 320px;
         box-shadow: none;
         border: 1px solid var(--border);
-        display: none; /* Hide by default on mobile */
+        display: none;
       }
-      
-      .dropdown:hover .dropdown-content {
-        display: block; /* Show on hover/tap */
-      }
-      
-      .dropdown-content::before {
-        display: none; /* Hide caret on mobile stacked layout */
-      }
+      .dropdown:hover .dropdown-content { display: block; }
+      .dropdown-content::before { display: none; }
     }
     
     @media (max-width: 480px) {
-      .publication-title {
-        font-size: 2rem;
-      }
-      .authors, .affiliations {
-        font-size: 0.9rem;
-      }
+      .publication-title { font-size: 2rem; }
+      .authors, .affiliations { font-size: 0.9rem; }
     }
   </style>
 </head>
@@ -651,7 +567,6 @@
           <span>Demo</span>
         </a>
         
-        <!-- Datasets Dropdown -->
         <div class="dropdown">
           <button class="btn dropdown-btn">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M20 7V17C20 17.5523 19.5523 18 19 18H5C4.44772 18 4 17.5523 4 17V7C4 6.44772 4.44772 6 5 6H19C19.5523 6 20 6.44772 20 7ZM18 4H6C4.89543 4 4 4.89543 4 6V8H2V6C2 3.79086 3.79086 2 6 2H18C20.2091 2 22 3.79086 22 6V8H20V6C20 4.89543 19.1046 4 18 4ZM2 18V16H4V18C4 19.1046 4.89543 20 6 20H18C19.1046 20 20 19.1046 20 18V16H22V18C22 20.2091 20.2091 22 18 22H6C3.79086 22 2 20.2091 2 18Z"></path></svg>
@@ -663,7 +578,6 @@
           </div>
         </div>
         
-        <!-- Models Dropdown -->
         <div class="dropdown">
           <button class="btn dropdown-btn">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C13.1046 2 14 2.89543 14 4V6.14286C16.8043 6.54843 19 8.9995 19 12C19 14.9995 16.8049 17.451 14 17.8571V20C14 21.1046 13.1046 22 12 22C10.8954 22 10 21.1046 10 20V17.8571C7.19511 17.451 5 14.9995 5 12C5 8.9995 7.1957 6.54843 10 6.14286V4C10 2.89543 10.8954 2 12 2ZM12 8C9.79086 8 8 9.79086 8 12C8 14.2091 9.79086 16 12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8Z"></path></svg>
@@ -687,14 +601,21 @@
       <div class="section-header">
         <h2>Abstract</h2>
       </div>
-      
       <div class="content">
         <p>Large-scale but noisy image-text pair data have paved the way for the success of Contrastive Language-Image Pretraining (CLIP). As the foundation vision encoder, CLIP in turn serves as the cornerstone for most large vision-language models (LVLMs). This interdependence naturally raises an interesting question: Can we reciprocally leverage LVLMs to enhance the quality of image-text pair data, thereby opening the possibility of a self-reinforcing cycle for continuous improvement? In this work, we take a significant step toward this vision by introducing an LVLM-driven data refinement pipeline.</p>
-        
         <p>Our framework leverages LVLMs to process images and their raw alt-text, generating <span class="highlight">four complementary textual formulas</span>: long positive descriptions, long negative descriptions, short positive tags, and short negative tags. Applying this pipeline to the curated DFN-Large dataset yields <span class="highlight">VLM-150M</span>, a refined dataset enriched with multi-grained annotations. Based on this dataset, we further propose a training paradigm that extends conventional contrastive learning by incorporating negative descriptions and short tags as additional supervised signals.</p>
-        
         <p>The resulting model, <span class="highlight">HQ-CLIP</span>, demonstrates remarkable improvements across diverse benchmarks. Within a comparable training data scale, our approach achieves state-of-the-art performance in zero-shot classification, cross-modal retrieval, and fine-grained visual understanding tasks. In retrieval benchmarks, HQ-CLIP even surpasses standard CLIP models trained on the DFN-2B dataset, which contains <span class="highlight">10x more training data than ours</span>.</p>
       </div>
+    </div>
+  </section>
+
+  <!-- Teaser Image Section -->
+  <section style="padding-top: 0;">
+    <div class="container">
+        <div class="full-width-image-container">
+            <img src="static/teaser.jpg" alt="A visual comparison showing how HQ-CLIP refines noisy web data into high-quality, multi-grained image-text pairs.">
+            <p class="image-caption">HQ-CLIP leverages advanced LVLMs to transform noisy, raw image-text pairs from the web into a high-quality dataset with rich, multi-grained annotations, significantly boosting model performance.</p>
+        </div>
     </div>
   </section>
 
@@ -704,11 +625,10 @@
       <div class="section-header">
         <h2>Research Challenge</h2>
       </div>
-      
       <div class="ps-container">
         <div class="ps-item">
           <h3 class="ps-title">Problem</h3>
-          <div class="content">
+          <div class="content" style="max-width: none;">
             <p>Existing methods for enhancing CLIP with LLMs suffer from limitations:</p>
             <ul style="padding-left: 1.5rem; margin-top: 1rem;">
               <li>Single-modality approaches (LaCLIP, WhatIf) neglect cross-modal correlations</li>
@@ -719,16 +639,15 @@
             </ul>
           </div>
         </div>
-        
         <div class="ps-item">
           <h3 class="ps-title">Our Solution</h3>
-          <div class="content">
+          <div class="content" style="max-width: none;">
             <p>HQ-CLIP introduces a unified approach:</p>
             <ul style="padding-left: 1.5rem; margin-top: 1rem;">
               <li>Single LVLM processes both images and paired texts simultaneously</li>
               <li>Generates <span class="highlight">four complementary descriptions</span>: long/short positives and negatives</li>
               <li>Cost-efficient pipeline: SFT on compact LVLMs after GPT-4o curation</li>
-              <li>Extension of contrastive learning framework with two innovations:
+              <li>Extension of contrastive learning with two innovations:
                 <ul style="padding-left: 1.5rem;">
                   <li>Short-Tag Classification (STC) loss</li>
                   <li>Hard Negative Identification (HNI) mechanism</li>
@@ -747,60 +666,33 @@
       <div class="section-header">
         <h2>Approach Overview</h2>
       </div>
-      
-      <div class="approach-container">
-        <div class="approach-text content">
-            <p>Our approach creates a unified data generation pipeline where a single LVLM simultaneously processes both images and paired texts to generate enriched textual descriptions. The framework has two key design considerations:</p>
-            
-            <h3 style="color: var(--primary); margin: 1.5rem 0 1rem;">Model Selection Strategy</h3>
-            <p>To address the scalability challenge of using SoTA LVLMs (GPT-4o, Gemini) for large-scale datasets, we introduce a cost-efficient paradigm:</p>
-            <ol style="padding-left: 1.5rem;">
-              <li>Curate 10,000 high-quality recaption samples using GPT-4o</li>
-              <li>Perform supervised fine-tuning (SFT) on compact open-source LVLMs</li>
-              <li>Deploy fine-tuned LVLMs for efficient large-scale data processing</li>
-            </ol>
-            
-            <h3 style="color: var(--primary); margin: 1.5rem 0 1rem;">Multi-Formulation Description</h3>
-            <p>Our methodology synthesizes four complementary textual formulations:</p>
-        </div>
-        
-        <div class="approach-image">
-          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 450' width='800' height='450'%3E%3Cdefs%3E%3Cstyle%3E.bg%7Bfill:%23f8f9fa;%7D.p%7Bfill:%232c5e92;%7D.s%7Bfill:%234a7bab;%7D.a%7Bfill:%23e63946;%7D.light%7Bfill:%23fff;%7D.text%7Bfont-family:Roboto,sans-serif;font-size:16px;fill:%23333;%7D.title%7Bfont-family:Libre Baskerville,serif;font-size:20px;font-weight:bold;fill:%232c5e92;%7D%3C/style%3E%3C/defs%3E%3Crect class='bg' width='800' height='450'/%3E%3C!-- Data Pipeline --%3E%3Crect x='50' y='50' width='300' height='150' rx='10' class='s'/%3E%3Ctext x='200' y='80' class='title' fill='%23fff' text-anchor='middle'%3ELVLM Data Pipeline%3C/text%3E%3Ctext x='70' y='120' class='text' fill='%23fff'%3E1. Image + Raw Text Input%3C/text%3E%3Ctext x='70' y='150' class='text' fill='%23fff'%3E2. SFT LVLM Processing%3C/text%3E%3Ctext x='70' y='180' class='text' fill='%23fff'%3E3. Generate 4 Descriptions%3C/text%3E%3C!-- Arrow --%3E%3Cpath d='M200,200 v40 l-10,-10 m10,10 l10,-10' stroke='%23e63946' stroke-width='3' fill='none'/%3E%3C!-- HQ-CLIP Training --%3E%3Crect x='50' y='250' width='300' height='150' rx='10' class='p'/%3E%3Ctext x='200' y='280' class='title' fill='%23fff' text-anchor='middle'%3EHQ-CLIP Training%3C/text%3E%3Ctext x='70' y='320' class='text' fill='%23fff'%3E- Contrastive Loss%3C/text%3E%3Ctext x='70' y='350' class='text' fill='%23fff'%3E- HNI (Hard Negatives)%3C/text%3E%3Ctext x='70' y='380' class='text' fill='%23fff'%3E- STC (Short Tags)%3C/text%3E%3C!-- Output Descriptions --%3E%3Cg transform='translate(450, 50)'%3E%3Crect width='300' height='80' rx='5' class='light' stroke='%23ccc'/%3E%3Ctext x='150' y='30' class='title' text-anchor='middle'%3ELong Positive%3C/text%3E%3Ctext x='150' y='55' class='text' text-anchor='middle'%3E'A detailed photo of...'%3C/text%3E%3C/g%3E%3Cg transform='translate(450, 150)'%3E%3Crect width='300' height='80' rx='5' class='light' stroke='%23ccc'/%3E%3Ctext x='150' y='30' class='title' text-anchor='middle'%3ELong Negative%3C/text%3E%3Ctext x='150' y='55' class='text' text-anchor='middle'%3E'A drawing of...'%3C/text%3E%3C/g%3E%3Cg transform='translate(450, 250)'%3E%3Crect width='300' height='80' rx='5' class='light' stroke='%23ccc'/%3E%3Ctext x='150' y='30' class='title' text-anchor='middle'%3EShort Positive Tags%3C/text%3E%3Ctext x='150' y='55' class='text' text-anchor='middle'%3E'animal, dog, outdoor'%3C/text%3E%3C/g%3E%3Cg transform='translate(450, 350)'%3E%3Crect width='300' height='80' rx='5' class='light' stroke='%23ccc'/%3E%3Ctext x='150' y='30' class='title' text-anchor='middle'%3EShort Negative Tags%3C/text%3E%3Ctext x='150' y='55' class='text' text-anchor='middle'%3E'cat, indoor, vehicle'%3C/text%3E%3C/g%3E%3C!-- Connecting Lines --%3E%3Cpath d='M350,125 h50 l20,-20' stroke='%23a0a0a0' stroke-width='2' fill='none' stroke-dasharray='5,5'/%3E%3Cpath d='M350,125 h50 l20,70' stroke='%23a0a0a0' stroke-width='2' fill='none' stroke-dasharray='5,5'/%3E%3Cpath d='M350,325 h50 l20,-20' stroke='%23a0a0a0' stroke-width='2' fill='none' stroke-dasharray='5,5'/%3E%3Cpath d='M350,325 h50 l20,70' stroke='%23a0a0a0' stroke-width='2' fill='none' stroke-dasharray='5,5'/%3E%3C/svg%3E" alt="HQ-CLIP Framework">
-          <p class="approach-caption">Figure: LVLM-driven data processing pipeline and HQ-CLIP training paradigm</p>
-        </div>
+      <div class="content">
+        <p>Our approach consists of two main stages: an LVLM-driven data refinement pipeline to generate high-quality, multi-grained annotations, and a novel training paradigm, HQ-CLIP, that effectively utilizes this enriched data. The entire framework is designed for efficiency and scalability.</p>
       </div>
-      
+      <div class="full-width-image-container">
+        <img src="static/framework.jpg" alt="Diagram of the HQ-CLIP framework, showing the data refinement pipeline and the training process.">
+        <p class="image-caption">The overall framework of HQ-CLIP. We first use a fine-tuned LVLM to process raw image-text pairs into four types of textual descriptions. Then, we train the CLIP model using these multi-grained signals, incorporating Hard Negative Identification (HNI) and Short-Tag Classification (STC).</p>
+      </div>
       <div class="methodology-items">
         <div class="method-item">
           <div class="method-icon">📜</div>
           <h3 class="method-title">Long Positive Descriptions</h3>
-          <div class="content">
-            <p>Detailed, contextual descriptions aligned with the image content, providing richer information over raw text data.</p>
-          </div>
+          <p>Detailed, contextual descriptions aligned with the image content, providing richer information over raw text data.</p>
         </div>
-        
         <div class="method-item">
           <div class="method-icon">🚫</div>
           <h3 class="method-title">Long Negative Descriptions</h3>
-          <div class="content">
-            <p>Contradictory descriptions used in Hard Negative Identification (HNI) to strengthen CLIP's ability to discern subtle discrepancies.</p>
-          </div>
+          <p>Contradictory descriptions used in Hard Negative Identification (HNI) to strengthen CLIP's ability to discern subtle discrepancies.</p>
         </div>
-        
         <div class="method-item">
           <div class="method-icon">🏷️</div>
           <h3 class="method-title">Short Positive Tags</h3>
-          <div class="content">
-            <p>Concise categorical tags enabling Short-Tag Classification (STC) for discrete classification targets.</p>
-          </div>
+          <p>Concise categorical tags enabling Short-Tag Classification (STC) for discrete classification targets.</p>
         </div>
-        
         <div class="method-item">
           <div class="method-icon">⛔</div>
           <h3 class="method-title">Short Negative Tags</h3>
-          <div class="content">
-            <p>Contrastive tags providing fine-grained discriminative signals for visual-textual alignment.</p>
-          </div>
+          <p>Contrastive tags providing fine-grained discriminative signals for visual-textual alignment.</p>
         </div>
       </div>
     </div>
@@ -812,45 +704,33 @@
       <div class="section-header">
         <h2>Experimental Results</h2>
       </div>
-      
       <div class="content">
-        <p>We evaluated HQ-CLIP on a comprehensive set of 38 benchmark datasets across multiple domains. Our method demonstrates:</p>
-        <ul style="padding-left: 1.5rem;">
-          <li><span class="highlight">State-of-the-art performance</span> in zero-shot classification with comparable training data</li>
-          <li>Exceptional cross-modal retrieval capabilities surpassing models trained on 10x more data</li>
-          <li>Superior performance as a vision backbone for LLaVA-1.5</li>
-        </ul>
+        <p>We evaluated HQ-CLIP on a comprehensive set of 38 benchmark datasets. Our method demonstrates state-of-the-art performance in zero-shot classification and cross-modal retrieval, significantly outperforming models trained on comparable or even much larger datasets. The benefits also extend to downstream tasks, where HQ-CLIP serves as a superior vision backbone for LVLMs like LLaVA-1.5.</p>
       </div>
       
-      <div class="results-grid">
-        <div class="results-item">
-          <div class="result-image">
-            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 200'%3E%3Crect width='400' height='200' fill='%232c5e92'/%3E%3Ctext x='50%25' y='50%25' fill='white' font-family='Roboto, sans-serif' font-size='20' dy='.3em' text-anchor='middle'%3EZero-Shot Classification%3C/text%3E%3Cpath d='M50,150 C100,100 150,160 200,120 S280,80 350,130' stroke='%23e63946' stroke-width='4' fill='none'/%3E%3Cpath d='M50,160 C120,130 180,170 250,150 S300,120 350,140' stroke='rgba(255,255,255,0.5)' stroke-width='3' fill='none' stroke-dasharray='5,5'/%3E%3C/svg%3E" alt="Zero-shot Classification Results">
-          </div>
-          <div class="result-content">
-            <h3 class="result-title">Zero-Shot Classification</h3>
-            <p>HQ-CLIP outperforms competitive baselines across multiple datasets and data scales.</p>
-          </div>
+      <div class="results-container">
+        <div class="result-block">
+            <h3 class="result-title">Comparison with State-of-the-Art Models</h3>
+            <p class="result-description">HQ-CLIP achieves top performance on zero-shot ImageNet classification and cross-modal retrieval benchmarks (Flickr30K, MSCOCO), surpassing previous methods trained on similar data scales.</p>
+            <div class="full-width-image-container">
+                <img src="static/table2.png" alt="Table comparing HQ-CLIP with SoTA models on zero-shot and retrieval tasks.">
+            </div>
         </div>
-        
-        <div class="results-item">
-          <div class="result-image">
-            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 200'%3E%3Crect width='400' height='200' fill='%234a7bab'/%3E%3Ctext x='50%25' y='50%25' fill='white' font-family='Roboto, sans-serif' font-size='20' dy='.3em' text-anchor='middle'%3ECross-Modal Retrieval%3C/text%3E%3Ccircle cx='100' cy='120' r='30' fill='rgba(255,255,255,0.3)'/%3E%3Crect x='270' y='90' width='60' height='60' fill='rgba(255,255,255,0.3)'/%3E%3Cpath d='M135,120 Q200,80 265,120' stroke='%23e63946' stroke-width='3' fill='none' stroke-dasharray='4,4'/%3E%3C/svg%3E" alt="Cross-Modal Retrieval Results">
-          </div>
-          <div class="result-content">
-            <h3 class="result-title">Cross-Modal Retrieval</h3>
-            <p>Superior retrieval performance despite using only 15% of training data compared to DFN-2B.</p>
-          </div>
+
+        <div class="result-block">
+            <h3 class="result-title">Ablation Studies</h3>
+            <p class="result-description">Our ablation studies validate the effectiveness of each component of HQ-CLIP, including the multi-grained descriptions (long/short, positive/negative) and the proposed HNI and STC training mechanisms.</p>
+            <div class="full-width-image-container">
+                <img src="static/table34.png" alt="Table showing ablation study results for different components of HQ-CLIP.">
+            </div>
         </div>
-        
-        <div class="results-item">
-          <div class="result-image">
-            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 200'%3E%3Crect width='400' height='200' fill='%23e63946'/%3E%3Ctext x='50%25' y='50%25' fill='white' font-family='Roboto, sans-serif' font-size='20' dy='.3em' text-anchor='middle'%3ELVLM Visual Backbone%3C/text%3E%3Crect x='50' y='100' width='100' height='50' fill='rgba(255,255,255,0.4)' rx='5'/%3E%3Cpath d='M155,125 H245' stroke='white' stroke-width='3' fill='none'/%3E%3Cpath d='M240,120 l5,5 l-5,5' stroke='white' stroke-width='3' fill='none'/%3E%3Crect x='250' y='100' width='100' height='50' fill='rgba(44,94,146,0.7)' rx='5'/%3E%3C/svg%3E" alt="LVLM Visual Backbone Results">
-          </div>
-          <div class="result-content">
-            <h3 class="result-title">LVLM Visual Backbone</h3>
-            <p>When integrated into LLaVA-1.5, HQ-CLIP achieves performance improvements on VQA and captioning tasks.</p>
-          </div>
+
+        <div class="result-block">
+            <h3 class="result-title">Performance as an LVLM Visual Encoder</h3>
+            <p class="result-description">When used as the vision backbone for LLaVA-1.5, our pre-trained HQ-CLIP leads to improved performance on various visual question answering and understanding benchmarks compared to the standard CLIP backbone.</p>
+            <div class="full-width-image-container">
+                <img src="static/table5.png" alt="Table showing the performance of HQ-CLIP as a visual encoder in LLaVA-1.5.">
+            </div>
         </div>
       </div>
     </div>
@@ -862,16 +742,12 @@
       <div class="section-header">
         <h2>Key Contributions</h2>
       </div>
-      
       <div class="content">
         <ul class="contrib-list">
-          <li>We introduce an <span class="highlight">efficient and effective LVLM-driven data refinement pipeline</span> and apply it to DFN-Large, creating <span class="highlight">VLM-150M</span>, a high-quality dataset comprising 150 million image-text pairs with multi-grained descriptions generated by state-of-the-art LVLMs.</li>
-          
+          <li>We introduce an <span class="highlight">efficient and effective LVLM-driven data refinement pipeline</span> and apply it to DFN-Large, creating <span class="highlight">VLM-150M</span>, a high-quality dataset with multi-grained descriptions.</li>
           <li>We propose <span class="highlight">HQ-CLIP</span>, a specialized framework that combines Hard Negative Identification (HNI) for fine-grained understanding and Short-Tag Classification (STC) for categorical semantic recognition.</li>
-          
-          <li>Through large-scale experiments across three orders of magnitude (1M to 150M samples) and evaluation across 38 benchmark datasets, HQ-CLIP demonstrates <span class="highlight">state-of-the-art zero-shot generalization</span>. The model demonstrates exceptional cross-modal retrieval capabilities, surpassing the DFN-2B.</li>
-          
-          <li>When deployed as the visual backbone for LLaVA-1.5, HQ-CLIP <span class="highlight">outperforms other ViT-B architectures</span> at comparable pre-training scales, showcasing its potential as a superior vision encoder for LVLMs.</li>
+          <li>Through large-scale experiments, HQ-CLIP demonstrates <span class="highlight">state-of-the-art zero-shot generalization</span> and exceptional cross-modal retrieval capabilities, surpassing models trained on 10x more data.</li>
+          <li>When deployed as the visual backbone for LLaVA-1.5, HQ-CLIP <span class="highlight">outperforms other ViT-B architectures</span>, showcasing its potential as a superior vision encoder for LVLMs.</li>
         </ul>
       </div>
     </div>
@@ -883,7 +759,6 @@
       <div class="section-header">
         <h2>Citation</h2>
       </div>
-      
       <div class="bibtex-code">
 @inproceedings{wei2025hqclip,
   title     = {{HQ-CLIP}: Leveraging Large Vision-Language Models to Create High-Quality Image-Text Datasets and {CLIP} Models},
