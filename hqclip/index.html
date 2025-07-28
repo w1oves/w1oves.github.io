@@ -429,6 +429,7 @@
       color: rgba(255,255,255,0.5);
     }
     
+    /* --- DROPDOWN MENU REWORK --- */
     .dropdown {
       position: relative;
       display: inline-block;
@@ -441,12 +442,13 @@
       transition: transform 0.3s ease;
     }
     
-    .dropdown:hover .dropdown-btn::after {
+    /* Rotate arrow when dropdown is active */
+    .dropdown-btn.active::after {
       transform: rotate(180deg);
     }
     
     .dropdown-content {
-      display: none;
+      display: none; /* Hidden by default */
       position: absolute;
       background-color: white;
       min-width: 100%;
@@ -458,6 +460,11 @@
       left: 0;
       animation: fadeIn 0.3s ease;
       text-align: left;
+    }
+    
+    /* New class to be toggled by JavaScript */
+    .dropdown-content.show {
+      display: block;
     }
     
     .dropdown-content::before {
@@ -490,9 +497,8 @@
       color: var(--accent);
     }
     
-    .dropdown:hover .dropdown-content {
-      display: block;
-    }
+    /* Removed the old hover-based rule */
+    /* .dropdown:hover .dropdown-content { display: block; } */
     
     @keyframes fadeIn {
       from { opacity: 0; transform: translateY(-10px); }
@@ -513,9 +519,11 @@
         max-width: 320px;
         box-shadow: none;
         border: 1px solid var(--border);
-        display: none;
+        display: none; /* Ensure it's hidden by default on mobile too */
       }
-      .dropdown:hover .dropdown-content { display: block; }
+      .dropdown-content.show {
+        display: block; /* JS will handle showing it */
+      }
       .dropdown-content::before { display: none; }
     }
     
@@ -753,6 +761,19 @@
     </div>
   </section>
 
+  <!-- Poster Section (MOVED) -->
+  <section id="poster-section">
+    <div class="container">
+      <div class="section-header">
+        <h2>Poster</h2>
+      </div>
+      <div class="full-width-image-container">
+        <img src="static/posters.jpg" alt="Conference poster for the HQ-CLIP paper">
+        <p class="image-caption">Official conference poster for HQ-CLIP presented at ICCV 2025.</p>
+      </div>
+    </div>
+  </section>
+
   <!-- BibTeX Section -->
   <section class="bibtex-section">
     <div class="container">
@@ -769,19 +790,6 @@
     </div>
   </section>
 
-  <!-- Poster Section (NEW) -->
-  <section id="poster-section">
-    <div class="container">
-      <div class="section-header">
-        <h2>Poster</h2>
-      </div>
-      <div class="full-width-image-container">
-        <img src="static/posters.jpg" alt="Conference poster for the HQ-CLIP paper">
-        <p class="image-caption">Official conference poster for HQ-CLIP presented at ICCV 2025.</p>
-      </div>
-    </div>
-  </section>
-
   <!-- Footer -->
   <footer>
     <div class="container">
@@ -791,6 +799,52 @@
       </div>
     </div>
   </footer>
+
+  <!-- JavaScript for Dropdown Menu -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const dropdowns = document.querySelectorAll('.dropdown');
+
+      // Function to close all open dropdowns
+      function closeAllDropdowns() {
+        dropdowns.forEach(dropdown => {
+          const content = dropdown.querySelector('.dropdown-content');
+          const button = dropdown.querySelector('.dropdown-btn');
+          if (content.classList.contains('show')) {
+            content.classList.remove('show');
+            button.classList.remove('active');
+          }
+        });
+      }
+
+      dropdowns.forEach(dropdown => {
+        const button = dropdown.querySelector('.dropdown-btn');
+        const content = dropdown.querySelector('.dropdown-content');
+
+        button.addEventListener('click', function (event) {
+          // Prevent the window click event from closing the menu immediately
+          event.stopPropagation();
+          
+          // Check if this dropdown is already open
+          const isAlreadyOpen = content.classList.contains('show');
+
+          // First, close all dropdowns
+          closeAllDropdowns();
+
+          // If it wasn't open, open it now
+          if (!isAlreadyOpen) {
+            content.classList.add('show');
+            button.classList.add('active');
+          }
+        });
+      });
+
+      // Add a click listener to the window to close dropdowns when clicking outside
+      window.addEventListener('click', function () {
+        closeAllDropdowns();
+      });
+    });
+  </script>
 
 </body>
 </html>
