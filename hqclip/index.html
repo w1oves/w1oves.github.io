@@ -484,52 +484,113 @@
 </head>
 <body>
 
-  <!-- Hero Section -->
-  <section class="hero">
-    <div class="container">
-      <div class="hero-body">
-        <h1 class="publication-title">HQ-CLIP</h1>
-        <h2 class="hero-subtitle">Leveraging Large Vision-Language Models to Create High-Quality Image-Text Datasets and CLIP Models</h2>
+<!-- Hero Section -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-body">
+      <h1 class="publication-title">HQ-CLIP</h1>
+      <h2 class="hero-subtitle">Leveraging Large Vision-Language Models to Create High-Quality Image-Text Datasets and CLIP Models</h2>
+
+      <div class="authors">
+        <div class="author-block">Zhixiang Wei<sup>1,2,*</sup></div>
+        <div class="author-block">Guangting Wang<sup>2,*</sup></div>
+        <div class="author-block">Xiaoxiao Ma<sup>1</sup></div>
+        <div class="author-block">Ke Mei<sup>2</sup></div>
+        <div class="author-block">Huaian Chen<sup>1</sup></div>
+        <div class="author-block">Yi Jin<sup>1</sup></div>
+        <div class="author-block">Fengyun Rao<sup>2</sup></div>
+      </div>
+
+      <div class="affiliations">
+        <div><sup>1</sup>University of Science and Technology of China</div>
+        <div><sup>2</sup>WeChat Vision, Tencent Inc.</div>
+        <div><sup>*</sup>Equal Contribution</div>
+        <div class="conference">ICCV 2025</div>
+      </div>
+
+      <div class="divider"></div>
+
+      <div class="publication-links">
+        <a href="https://arxiv.org/abs/xxxx" class="btn btn-primary">
+          <span class="icon">📄</span> Paper
+        </a>
+        <a href="https://github.com/w1oves/hqclip" class="btn">
+          <span class="icon">💻</span> Code
+        </a>
+        <a href="https://huggingface.co/spaces/zhixiangwei/hqclip" class="btn">
+          <span class="icon">🚀</span> Demo
+        </a>
         
-        <div class="authors">
-          <div class="author-block">Zhixiang Wei<sup>1,2,*</sup></div>
-          <div class="author-block">Guangting Wang<sup>2,*</sup></div>
-          <div class="author-block">Xiaoxiao Ma<sup>1</sup></div>
-          <div class="author-block">Ke Mei<sup>2</sup></div>
-          <div class="author-block">Huaian Chen<sup>1</sup></div>
-          <div class="author-block">Yi Jin<sup>1</sup></div>
-          <div class="author-block">Fengyun Rao<sup>2</sup></div>
+        <!-- 数据集链接 -->
+        <div class="dropdown">
+          <button class="btn">
+            <span class="icon">📊</span> Datasets
+          </button>
+          <div class="dropdown-content">
+            <a href="https://huggingface.co/datasets/zhixiangwei/VLM-150M">VLM-150M (147M samples)</a>
+            <a href="https://huggingface.co/datasets/zhixiangwei/VLM-1B">VLM-1B</a>
+          </div>
         </div>
         
-        <div class="affiliations">
-          <div><sup>1</sup>University of Science and Technology of China</div>
-          <div><sup>2</sup>WeChat Vision, Tencent Inc.</div>
-          <div><sup>*</sup>Equal Contribution</div>
-          <div class="conference">ICCV 2025</div>
-        </div>
-        
-        <div class="divider"></div>
-        
-        <div class="publication-links">
-          <a href="https://arxiv.org/abs/2312.04265" class="btn btn-primary">
-            <span class="icon">📄</span> Paper
-          </a>
-          <a href="https://github.com/w1oves/hqclip" class="btn">
-            <span class="icon">💻</span> Code
-          </a>
-          <a href="https://huggingface.co/spaces/zhixiangwei/hqclip" class="btn">
-            <span class="icon">🚀</span> Demo
-          </a>
-          <a href="https://huggingface.co/datasets/zhixiangwei/VLM-150M" class="btn">
-            <span class="icon">📊</span> Dataset
-          </a>
-          <a href="https://huggingface.co/zhixiangwei/vlm150m-hqclip-large-vitb16" class="btn">
-            <span class="icon">🧠</span> Model
-          </a>
+        <!-- 模型链接 -->
+        <div class="dropdown">
+          <button class="btn">
+            <span class="icon">🧠</span> Models
+          </button>
+          <div class="dropdown-content">
+            <a href="https://huggingface.co/zhixiangwei/vlm150m-hqclip-large-vitb16">CLIP-B-16 (VLM-150M)</a>
+            <a href="https://huggingface.co/zhixiangwei/vlm1b-hqclip-xlarge-vitl14-clipa">CLIP-L-14-CLIPA (VLM-1B)</a>
+            <a href="https://huggingface.co/zhixiangwei/hqclip-openai-large-ft-vlm1b">CLIP-L-14-OPENAI (VLM-1B)</a>
+            <a href="https://huggingface.co/zhixiangwei/qwen2-7b-full">Recaption Model (Qwen2VL)</a>
+          </div>
         </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
+
+<!-- 添加下拉菜单样式 -->
+<style>
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 220px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    z-index: 1;
+    border-radius: 6px;
+    overflow: hidden;
+    margin-top: 5px;
+  }
+  
+  .dropdown-content a {
+    color: #2c5e92;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-size: 0.95rem;
+    transition: background-color 0.3s;
+    border-bottom: 1px solid #f0f0f0;
+  }
+  
+  .dropdown-content a:last-child {
+    border-bottom: none;
+  }
+  
+  .dropdown-content a:hover {
+    background-color: #f0f7ff;
+    color: #e63946;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+</style>
 
   <!-- Abstract Section -->
   <section>
