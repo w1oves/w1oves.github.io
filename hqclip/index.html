@@ -610,7 +610,7 @@
       <div class="content">
         <p>Large-scale but noisy image-text pair data have paved the way for the success of Contrastive Language-Image Pretraining (CLIP). As the foundation vision encoder, CLIP in turn serves as the cornerstone for most large vision-language models (LVLMs). This interdependence naturally raises an interesting question: Can we reciprocally leverage LVLMs to enhance the quality of image-text pair data, thereby opening the possibility of a self-reinforcing cycle for continuous improvement? In this work, we take a significant step toward this vision by introducing an LVLM-driven data refinement pipeline.</p>
         <p>Our framework leverages LVLMs to process images and their raw alt-text, generating <span class="highlight">four complementary textual formulas</span>: long positive descriptions, long negative descriptions, short positive tags, and short negative tags. Applying this pipeline to the curated DFN-Large dataset yields <span class="highlight">VLM-150M</span>, a refined dataset enriched with multi-grained annotations. Based on this dataset, we further propose a training paradigm that extends conventional contrastive learning by incorporating negative descriptions and short tags as additional supervised signals.</p>
-        <p>The resulting model, <span class="highlight">HQ-CLIP</span>, demonstrates remarkable improvements across diverse benchmarks. Within a comparable training data scale, our approach achieves state-of-the-art performance in zero-shot classification, cross-modal retrieval, and fine-grained visual understanding tasks. In retrieval benchmarks, HQ-CLIP even surpasses standard CLIP models trained on the DFN-2B dataset, which contains <span class="highlight">10x more training data than ours</span>.</p>
+        <p>The resulting model, <span class="highlight">HQ-CLIP</span>, demonstrates remarkable improvements across diverse benchmarks. Within a comparable training data scale, our approach achieves <span class="highlight"></span>state-of-the-art performance</span> in zero-shot classification, cross-modal retrieval, and fine-grained visual understanding tasks. In retrieval benchmarks, HQ-CLIP even surpasses standard CLIP models trained on the DFN-2B dataset, which contains 10x more training data than ours.</p>
       </div>
     </div>
   </section>
@@ -641,7 +641,7 @@
               <li>Hybrid methods (CapFusion, VeCLIP) introduce computational complexity</li>
               <li>Cascade pipelines cause potential error propagation</li>
               <li>Information asymmetry between visual and textual modalities</li>
-              <li>High computational cost of using SoTA LVLMs at scale</li>
+              <li>High computational cost of using SoTA close-source LVLMs at scale</li>
             </ul>
           </div>
         </div>
@@ -725,7 +725,7 @@
 
         <div class="result-block">
             <h3 class="result-title">Ablation Studies</h3>
-            <p class="result-description">Our ablation studies validate the effectiveness of each component of HQ-CLIP, including the multi-grained descriptions (long/short, positive/negative) and the proposed HNI and STC training mechanisms.</p>
+            <p class="result-description">Our ablation studies validate the effectiveness of VLM-150M and HQ-CLIP.</p>
             <div class="full-width-image-container">
                 <img src="static/table34.png" alt="Table showing ablation study results for different components of HQ-CLIP.">
             </div>
@@ -733,7 +733,7 @@
 
         <div class="result-block">
             <h3 class="result-title">Performance as an LVLM Visual Encoder</h3>
-            <p class="result-description">When used as the vision backbone for LLaVA-1.5, our pre-trained HQ-CLIP leads to improved performance on various visual question answering and understanding benchmarks compared to the standard CLIP backbone.</p>
+            <p class="result-description">When used as the vision backbone for LLaVA-1.5, our pre-trained HQ-CLIP leads to improved performance compared to the other CLIP backbones.</p>
             <div class="full-width-image-container">
                 <img src="static/table5.png" alt="Table showing the performance of HQ-CLIP as a visual encoder in LLaVA-1.5.">
             </div>
