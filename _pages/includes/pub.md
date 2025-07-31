@@ -7,7 +7,7 @@
 <div class='paper-box-text' markdown="1">
 
 ### First Author
-HQCLIP: Leveraging Vision-Language Models to Create High-Quality Image-Text Datasets and CLIP Models (arXiV comming soon) \\
+HQCLIP: Leveraging Vision-Language Models to Create High-Quality Image-Text Datasets and CLIP Models (https://arxiv.org/abs/2507.22431) \\
 
 [**Zhixiang Wei**](https://zxwei.site)\*, [Guangting Wang](https://scholar.google.com/citations?user=cKY8e8sAAAAJ&hl=zh-CN)\*, [Xiaoxiao Ma](https://krennic999.github.io/), et al.
 
