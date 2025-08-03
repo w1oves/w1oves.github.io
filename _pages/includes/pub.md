@@ -25,7 +25,7 @@
 [Stronger, Fewer, & Superior: Harnessing Vision Foundation Models for Domain Generalized Semantic Segmentation](https://arxiv.org/pdf/2312.04265.pdf) \\
 [**Zhixiang Wei**](https://zxwei.site)\*, [Lin Chen](https://lin-chen.site/)\*, Yi Jin\*, [Xiaoxiao Ma](https://krennic999.github.io/), et al.
 
-[[Project page](https://zxwei.site/rein/)]  [![](https://img.shields.io/github/stars/w1oves/Rein?style=social&label=Rein+Stars)](https://github.com/w1oves/Rein) <strong><span class='show_paper_citations' data='4FA6C0AAAAAJ:qjMakFHDy7sC'></span></strong>
+[[Project page](https://zxwei.site/rein/)]  [![](https://img.shields.io/github/stars/w1oves/Rein?style=social&label=Rein+Stars)](https://github.com/w1oves/Rein)  <strong><span class='show_paper_citations' data='4FA6C0AAAAAJ:qjMakFHDy7sC'></span></strong>
 
 - We propose the Reins framework, which efficiently fine-tunes vision foundation models for the domain generalized semantic segmentation (DGSS) task with just 1% trainable parameters, surprisingly surpassing full parameter fine-tuning. And Reins builds a new SOTA in various DGSS benchmarks.
 </div>
