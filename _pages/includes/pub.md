@@ -7,7 +7,7 @@
 <div class='paper-box-text' markdown="1">
 
 ### First Author
-[HQCLIP: Leveraging Vision-Language Models to Create High-Quality Image-Text Datasets and CLIP Models](https://arxiv.org/abs/2507.22431) \\
+[HQCLIP: Leveraging Vision-Language Models to Create High-Quality Image-Text Datasets and CLIP Models](https://arxiv.org/abs/2507.22431)
 
 [**Zhixiang Wei**](https://zxwei.site)\*, [Guangting Wang](https://scholar.google.com/citations?user=cKY8e8sAAAAJ&hl=zh-CN)\*, [Xiaoxiao Ma](https://krennic999.github.io/), et al.
 
@@ -22,7 +22,7 @@
 <div class='paper-box-text' markdown="1">
 
 ### First Author
-[Stronger, Fewer, & Superior: Harnessing Vision Foundation Models for Domain Generalized Semantic Segmentation](https://arxiv.org/pdf/2312.04265.pdf)<span class='show_paper_citations' data='i5W4i9YAAAAJ:Y0pCki6q_DkC'></span> \\
+[Stronger, Fewer, & Superior: Harnessing Vision Foundation Models for Domain Generalized Semantic Segmentation](https://arxiv.org/pdf/2312.04265.pdf) \\
 [**Zhixiang Wei**](https://zxwei.site)\*, [Lin Chen](https://lin-chen.site/)\*, Yi Jin\*, [Xiaoxiao Ma](https://krennic999.github.io/), et al.
 
 [[Project page](https://zxwei.site/rein/)]  [![](https://img.shields.io/github/stars/w1oves/Rein?style=social&label=Rein+Stars)](https://github.com/w1oves/Rein) <strong><span class='show_paper_citations' data='4FA6C0AAAAAJ:qjMakFHDy7sC'></span></strong>
