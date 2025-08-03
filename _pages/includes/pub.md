@@ -22,7 +22,7 @@ GitHub comming soon
 <div class='paper-box-text' markdown="1">
 
 ### First Author
-[Stronger, Fewer, & Superior: Harnessing Vision Foundation Models for Domain Generalized Semantic Segmentation](https://arxiv.org/pdf/2312.04265.pdf) \\
+[Stronger, Fewer, & Superior: Harnessing Vision Foundation Models for Domain Generalized Semantic Segmentation](https://arxiv.org/pdf/2312.04265.pdf)<span class='show_paper_citations' data='i5W4i9YAAAAJ:Y0pCki6q_DkC'></span> \\
 [**Zhixiang Wei**](https://zxwei.site)\*, [Lin Chen](https://lin-chen.site/)\*, Yi Jin\*, [Xiaoxiao Ma](https://krennic999.github.io/), et al.
 
 [[Project page](https://zxwei.site/rein/)]  [![](https://img.shields.io/github/stars/w1oves/Rein?style=social&label=Rein+Stars)](https://github.com/w1oves/Rein) <strong><span class='show_paper_citations' data='4FA6C0AAAAAJ:qjMakFHDy7sC'></span></strong>
@@ -36,7 +36,7 @@ GitHub comming soon
 <div class='paper-box-text' markdown="1">
 
 ### First Author
-[Disentangle then Parse: Night-time Semantic Segmentation with Illumination Disentanglement](https://arxiv.org/pdf/2307.09362.pdf) \\
+[Disentangle then Parse: Night-time Semantic Segmentation with Illumination Disentanglement](https://arxiv.org/pdf/2307.09362.pdf)<span class='show_paper_citations' data='i5W4i9YAAAAJ:UeHWp8X0CEIC'></span> \\
 [**Zhixiang Wei**](https://zxwei.site)\*, [Lin Chen](https://lin-chen.site/)\*, et al.
 
 [![](https://img.shields.io/github/stars/w1oves/DTP?style=social&label=DTP+Stars)](https://github.com/w1oves/DTP)
@@ -48,7 +48,7 @@ GitHub comming soon
 <div class='paper-box-text' markdown="1">
 
 ### Co-First Author
-[Deliberated Domain Bridging for Domain Adaptive Semantic Segmentation](https://arxiv.org/pdf/2209.07695.pdf) \\
+[Deliberated Domain Bridging for Domain Adaptive Semantic Segmentation](https://arxiv.org/pdf/2209.07695.pdf)<span class='show_paper_citations' data='i5W4i9YAAAAJ:2osOgNQ5qMEC'></span> \\
 [Lin Chen](https://lin-chen.site/)\*, [**Zhixiang Wei**](https://zxwei.site)\*, [Xin Jin](https://www.eitech.edu.cn/?tid=40&p=teacher)\*, et al.
 
 [![](https://img.shields.io/github/stars/xiaoachen98/DDB?style=social&label=DDB+Stars)](https://github.com/xiaoachen98/DDB)
@@ -72,7 +72,7 @@ GitHub comming soon
 <div class='paper-box-text' markdown="1">
 
 ### Co-Author
-[Reusing the Task-specific Classifier as a Discriminator: Discriminator-free Adversarial Domain Adaptation](https://openaccess.thecvf.com/content/CVPR2022/papers/Chen_Reusing_the_Task-Specific_Classifier_as_a_Discriminator_Discriminator-Free_Adversarial_Domain_CVPR_2022_paper.pdf) \\
+[Reusing the Task-specific Classifier as a Discriminator: Discriminator-free Adversarial Domain Adaptation](https://openaccess.thecvf.com/content/CVPR2022/papers/Chen_Reusing_the_Task-Specific_Classifier_as_a_Discriminator_Discriminator-Free_Adversarial_Domain_CVPR_2022_paper.pdf)<span class='show_paper_citations' data='i5W4i9YAAAAJ:9yKSN-GCB0IC'></span> \\
 [Lin Chen](https://lin-chen.site/), [**Zhixiang Wei**](https://zxwei.site), [Xin Jin](https://www.eitech.edu.cn/?tid=40&p=teacher), [Enhong Chen](http://staff.ustc.edu.cn/~cheneh/).
 
 [![](https://img.shields.io/github/stars/xiaoachen98/DALN?style=social&label=DALN+Stars)](https://github.com/xiaoachen98/DALN)
