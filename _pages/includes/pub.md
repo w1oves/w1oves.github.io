@@ -11,7 +11,7 @@
 
 [**Zhixiang Wei**](https://zxwei.site)\*, [Guangting Wang](https://scholar.google.com/citations?user=cKY8e8sAAAAJ&hl=zh-CN)\*, [Xiaoxiao Ma](https://krennic999.github.io/), et al.
 
-GitHub comming soon
+[[Project page](https://zxwei.site/hqclip/)] [![](https://img.shields.io/github/stars/w1oves/hqclip?style=social&label=hqclip+Stars)](https://github.com/w1oves/hqclip)
 
 - We generated detailed, bidirectional long-text descriptions for **1.3 billion** images and pretrained/fine-tuned CLIP based on this dataset. Building upon this foundation, we propose a novel CLIP training framework that combines both bidirectional supervision and label classification losses. This framework achieves SoTA results on zero-shot classification, retrieval, and other tasks at the same data scale.
 </div>
