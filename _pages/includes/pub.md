@@ -80,4 +80,6 @@
 </div>
 </div>
 
+``NeurIPS 2025`` [Towards Better & Faster Autoregressive Image Generation: From the Perspective of Entropy](), [Xiaoxiao Ma](https://krennic999.github.io/), [**Zhixiang Wei**](https://zxwei.site).
+
 

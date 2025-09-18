@@ -1,4 +1,5 @@
 # 🔥 News
+- *2025.09*: 🔥 Delighted to announce that [Towards Better & Faster Autoregressive Image Generation: From the Perspective of Entropy]() were accepted by NeurIPS 2025!
 - *2025.06*: 🔥 Delighted to announce that [HQCLIP: Leveraging Vision-Language Models to Create High-Quality Image-Text Datasets and CLIP Models](https://arxiv.org/abs/2507.22431) were accepted by ICCV 2025!
 - *2024.09*: 🔥 Delighted to announce that [Masked Pre-trained Model Enables Universal Zero-shot Denoiser](https://arxiv.org/abs/2401.14966) were accepted by NeurIPS 2024!
 - *2024.02*: 🔥 Rein is accepted in CVPR 2024! [[Project Page](https://zxwei.site/rein/)]

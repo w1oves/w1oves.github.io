@@ -20,5 +20,10 @@
 
 
 ### Co-Author
+- ``NeurIPS 2025`` [Towards Better & Faster Autoregressive Image Generation: From the Perspective of Entropy](), [Xiaoxiao Ma](https://krennic999.github.io/), [**Zhixiang Wei**](https://zxwei.site).
+
 - ``CVPR 2022`` [Reusing the Task-specific Classifier as a Discriminator: Discriminator-free Adversarial Domain Adaptation](https://openaccess.thecvf.com/content/CVPR2022/papers/Chen_Reusing_the_Task-Specific_Classifier_as_a_Discriminator_Discriminator-Free_Adversarial_Domain_CVPR_2022_paper.pdf), [Lin Chen](https://lin-chen.site/)\*, Huaian Chen\*, [**Zhixiang Wei**](https://zxwei.site), [Xin Jin](https://www.eitech.edu.cn/?tid=40&p=teacher), Xiao Tan, Yi Jin, [Enhong Chen](http://staff.ustc.edu.cn/~cheneh/).
   [![](https://img.shields.io/github/stars/xiaoachen98/DALN?style=social&label=DALN+Stars)](https://github.com/xiaoachen98/DALN)
+
+
+
