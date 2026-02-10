@@ -1,9 +1,11 @@
 # 📝 Publications 
 *(\* denotes equal contribution.)*
 ### First Author
+- ``Technical Report`` [Youtu-VL: Unleashing Visual Potential via Unified Vision-Language Supervision](https://arxiv.org/abs/2601.19798), [**Zhixiang Wei**](https://zxwei.site), Youtu-VL Team.
+  [[🤗Huggingface](https://huggingface.co/tencent/Youtu-VL-4B-Instruct)] [![](https://img.shields.io/github/stars/TencentCloudADP/youtu-vl?style=social&label=youtu-vl+Stars)](https://github.com/TencentCloudADP/youtu-vl)
 
 - ``ICCV 2025`` [HQCLIP: Leveraging Vision-Language Models to Create High-Quality Image-Text Datasets and CLIP Models](https://arxiv.org/abs/2507.22431), [**Zhixiang Wei**](https://zxwei.site)\*, [Guangting Wang](https://scholar.google.com/citations?user=cKY8e8sAAAAJ&hl=zh-CN)\*, [Xiaoxiao Ma](https://krennic999.github.io/), Ke Mei, Fengyun Rao, Huaian Chen, et al.
-  GitHub comming soon
+  [[Project page](https://zxwei.site/hqclip/)] [![](https://img.shields.io/github/stars/w1oves/hqclip?style=social&label=hqclip+Stars)](https://github.com/w1oves/hqclip)
 
 - ``CVPR 2024`` [Stronger, Fewer, & Superior: Harnessing Vision Foundation Models for Domain Generalized Semantic Segmentation](https://arxiv.org/pdf/2312.04265.pdf), [**Zhixiang Wei**](https://zxwei.site)\*, [Lin Chen](https://lin-chen.site/)\*, Yi Jin\*, [Xiaoxiao Ma](https://krennic999.github.io/), et al.
   [![](https://img.shields.io/github/stars/w1oves/Rein?style=social&label=Rein+Stars)](https://github.com/w1oves/Rein) <strong><span class='show_paper_citations' data='4FA6C0AAAAAJ:qjMakFHDy7sC'></span></strong> [[Project page](https://https://zxwei.site/rein/)]
@@ -17,6 +19,8 @@
 
 - ``NeurIPS 2024`` [Masked Pre-trained Model Enables Universal Zero-shot Denoiser](https://arxiv.org/abs/2401.14966), [Xiaoxiao Ma](https://krennic999.github.io/)\*, [**Zhixiang Wei**](https://zxwei.site)\*, Yi Jin, et al. 
   [![](https://img.shields.io/github/stars/krennic999/MPI?style=social&label=MPI+Stars)](https://github.com/krennic999/MPI)
+- ``TPAMI 2025`` [CrossEarth: Geospatial Vision Foundation Model for Domain Generalizable Remote Sensing Semantic Segmentation](https://arxiv.org/pdf/2410.22629), [Xiaoxiao Ma](https://krennic999.github.io/)\*, [Ziyang Gong](https://github.com/Cuzyoung)\*, [**Zhixiang Wei**](https://zxwei.site)\*, et al.
+  [![](https://img.shields.io/github/stars/VisionXLab/CrossEarth?style=social&label=CrossEarth+Stars)](https://github.com/VisionXLab/CrossEarth)
 
 
 ### Co-Author

@@ -1,7 +1,7 @@
 
 # 📝 Publications 
 *(\* denotes equal contribution.)*
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">Youtu-VL</div><img src='images/youtu-vl-overview.png' alt="sym" width="100%"></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">Technical Report</div><img src='images/youtu-vl-overview.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
 ### Core Author
@@ -104,6 +104,15 @@
 </div>
 </div>
 
-``NeurIPS 2025`` [Towards Better & Faster Autoregressive Image Generation: From the Perspective of Entropy](), [Xiaoxiao Ma](https://krennic999.github.io/), [**Zhixiang Wei**](https://zxwei.site).
 
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">NeurIPS 2025</div><img src='images/arsample.png' alt="sym" width="100%"></div></div>
+<div class='paper-box-text' markdown="1">
 
+### Co-Author
+[Towards Better & Faster Autoregressive Image Generation: From the Perspective of Entropy](https://arxiv.org/pdf/2510.09012) \\
+[Xiaoxiao Ma](https://krennic999.github.io/), [**Zhixiang Wei**](https://zxwei.site), et al.
+
+[![](https://img.shields.io/github/stars/krennic999/ARsample?style=social&label=ARsample+Stars)](https://github.com/krennic999/ARsample)
+- We reuse the category classifier as a discriminator to form a discriminator-free adversarial learning framework.
+</div>
+</div>

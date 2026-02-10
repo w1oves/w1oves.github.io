@@ -1,5 +1,7 @@
 # 🔥 News
-- *2025.09*: 🔥 Delighted to announce that [Towards Better & Faster Autoregressive Image Generation: From the Perspective of Entropy]() were accepted by NeurIPS 2025!
+- *2026.01*: 🔥 Delighted to announce that [Youtu-VL: Unleashing Visual Potential via Unified Vision-Language Supervision](https://arxiv.org/abs/2601.19798) is released!
+- *2025.12*: 🔥 Delighted to announce that [CrossEarth: Geospatial Vision Foundation Model for Domain Generalizable Remote Sensing Semantic Segmentation](https://arxiv.org/pdf/2410.22629) were accepted by NeurIPS 2025!
+- *2025.09*: 🔥 Delighted to announce that [Towards Better & Faster Autoregressive Image Generation: From the Perspective of Entropy](https://arxiv.org/pdf/2510.09012) were accepted by NeurIPS 2025!
 - *2025.06*: 🔥 Delighted to announce that [HQCLIP: Leveraging Vision-Language Models to Create High-Quality Image-Text Datasets and CLIP Models](https://arxiv.org/abs/2507.22431) were accepted by ICCV 2025!
 - *2024.09*: 🔥 Delighted to announce that [Masked Pre-trained Model Enables Universal Zero-shot Denoiser](https://arxiv.org/abs/2401.14966) were accepted by NeurIPS 2024!
 - *2024.02*: 🔥 Rein is accepted in CVPR 2024! [[Project Page](https://zxwei.site/rein/)]
