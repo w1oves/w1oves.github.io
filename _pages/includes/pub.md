@@ -4,7 +4,7 @@
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge">Youtu-VL</div><img src='images/youtu-vl-overview.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
-### First Author
+### Core Author
 [Youtu-VL: Unleashing Visual Potential via Unified Vision-Language Supervision](https://arxiv.org/abs/2601.19798)
 
 [**Zhixiang Wei**](https://zxwei.site), Youtu-VL Team.
