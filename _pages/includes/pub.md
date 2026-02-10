@@ -1,7 +1,19 @@
 
 # 📝 Publications 
 *(\* denotes equal contribution.)*
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">arXiV</div><img src='https://github.com/TencentCloudADP/youtu-vl/blob/main/assets/youtu-vl-overview.png' alt="sym" width="100%"></div></div>
+<div class='paper-box-text' markdown="1">
 
+### First Author
+[Youtu-VL: Unleashing Visual Potential via Unified Vision-Language Supervision](https://arxiv.org/abs/2601.19798)
+
+[**Zhixiang Wei**](https://zxwei.site), Youtu-VL Team.
+
+[[🤗Huggingface](https://huggingface.co/tencent/Youtu-VL-4B-Instruct)] [![](https://img.shields.io/github/stars/w1oves/youtu-vl?style=social&label=youtu-vl+Stars)](https://github.com/TencentCloudADP/youtu-vl)
+
+- Youtu-VL is a lightweight yet robust Vision-Language Model (VLM) built on the Youtu-LLM with 4B parameters. It pioneers Vision-Language Unified Autoregressive Supervision (VLUAS), which markedly strengthens visual perception and multimodal understanding. This enables a standard VLM to perform vision-centric tasks without task-specific additions. Across benchmarks, Youtu-VL stands out for its versatility, achieving competitive results on both vision-centric and general multimodal tasks.
+</div>
+</div>
 
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge">ICCV 2025</div><img src='images/iccv25.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
@@ -44,8 +56,18 @@
 </div>
 </div>
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">NeurIPS 2022 <span style="color:yellow">(Spotlight)</span></div><img src='images/ddb.png' alt="sym" width="100%"></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">TPAMI 2025 <img src='images/ddb.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
+
+### Co-First Author
+[CrossEarth: Geospatial Vision Foundation Model for Domain Generalizable Remote Sensing Semantic Segmentation](https://arxiv.org/pdf/2410.22629)<span class='show_paper_citations' data='i5W4i9YAAAAJ:2osOgNQ5qMEC'></span> \\
+[Ziyang Gong](https://github.com/Cuzyoung)\*, [**Zhixiang Wei**](https://zxwei.site)\*, et al.
+
+https://github.com/VisionXLab/CrossEarth
+[![](https://img.shields.io/github/stars/VisionXLab/CrossEarth?style=social&label=CrossEarth+Stars)](https://github.com/VisionXLab/CrossEarth)
+- we introduce the first vision foundation model for Remote Sensing Domain Generalizatio semantic segmentation, CrossEarth.
+</div>
+</div>
 
 ### Co-First Author
 [Deliberated Domain Bridging for Domain Adaptive Semantic Segmentation](https://arxiv.org/pdf/2209.07695.pdf)<span class='show_paper_citations' data='i5W4i9YAAAAJ:2osOgNQ5qMEC'></span> \\
