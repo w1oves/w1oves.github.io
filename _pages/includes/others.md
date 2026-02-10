@@ -1,6 +1,6 @@
 # 💻 Experiences
-2025.07 - Persent, Tencent Youtu Lab.
-2024.07 - 2025.07, WeChat Vision, Tencent Inc.
+- 2025.07 - Persent, Tencent Youtu Lab.
+- 2024.07 - 2025.07, WeChat Vision, Tencent Inc.
 
 # 📝 Academic Service (Reviewer)
 - IEEE TPAMI
