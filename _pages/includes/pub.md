@@ -1,7 +1,7 @@
 
 # 📝 Publications 
 *(\* denotes equal contribution.)*
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">arXiV</div><img src='images/youtu-vl-overview.png' alt="sym" width="100%"></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">Youtu-VL</div><img src='images/youtu-vl-overview.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
 ### First Author
@@ -63,9 +63,8 @@
 [CrossEarth: Geospatial Vision Foundation Model for Domain Generalizable Remote Sensing Semantic Segmentation](https://arxiv.org/pdf/2410.22629)<span class='show_paper_citations' data='i5W4i9YAAAAJ:2osOgNQ5qMEC'></span> \\
 [Ziyang Gong](https://github.com/Cuzyoung)\*, [**Zhixiang Wei**](https://zxwei.site)\*, et al.
 
-https://github.com/VisionXLab/CrossEarth
 [![](https://img.shields.io/github/stars/VisionXLab/CrossEarth?style=social&label=CrossEarth+Stars)](https://github.com/VisionXLab/CrossEarth)
-- we introduce the first vision foundation model for Remote Sensing Domain Generalizatio semantic segmentation, CrossEarth.
+  - we introduce the first vision foundation model for Remote Sensing Domain Generalizatio semantic segmentation, CrossEarth.
 </div>
 </div>
 
