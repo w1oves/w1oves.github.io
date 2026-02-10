@@ -56,11 +56,11 @@
 </div>
 </div>
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">TPAMI 2025 <img src='images/crossearth.png' alt="sym" width="100%"></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">TPAMI 2025 </div><img src='images/crossearth.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
 ### Co-First Author
-[CrossEarth: Geospatial Vision Foundation Model for Domain Generalizable Remote Sensing Semantic Segmentation](https://arxiv.org/pdf/2410.22629)<span class='show_paper_citations' data='i5W4i9YAAAAJ:2osOgNQ5qMEC'></span> \\
+[CrossEarth: Geospatial Vision Foundation Model for Domain Generalizable Remote Sensing Semantic Segmentation](https://arxiv.org/pdf/2410.22629)\\
 [Ziyang Gong](https://github.com/Cuzyoung)\*, [**Zhixiang Wei**](https://zxwei.site)\*, et al.
 
 [![](https://img.shields.io/github/stars/VisionXLab/CrossEarth?style=social&label=CrossEarth+Stars)](https://github.com/VisionXLab/CrossEarth)
